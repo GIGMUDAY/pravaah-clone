@@ -1,0 +1,85 @@
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Send, Mail, Phone, MapPin } from "lucide-react";
+
+const ContactSection = () => {
+  return (
+    <section id="contact" className="py-24">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+            Talk to Us & <span className="text-gradient">Get Started</span>
+          </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Get a 30-min free digital transformation consultation from experts. Validate your idea for free and get a detailed quote.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div className="flex items-center gap-4 glass rounded-xl p-5">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Mail className="text-primary" size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Email</p>
+                <p className="text-foreground font-medium">info@pravaahconsulting.com</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 glass rounded-xl p-5">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Phone className="text-primary" size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Phone</p>
+                <p className="text-foreground font-medium">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 glass rounded-xl p-5">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <MapPin className="text-primary" size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Location</p>
+                <p className="text-foreground font-medium">California, USA</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.form
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="glass rounded-2xl p-8 space-y-4"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Input placeholder="Name" className="bg-secondary/50 border-border" />
+              <Input type="email" placeholder="Email" className="bg-secondary/50 border-border" />
+            </div>
+            <Input type="tel" placeholder="Phone" className="bg-secondary/50 border-border" />
+            <Input placeholder="Our Services" className="bg-secondary/50 border-border" />
+            <Textarea placeholder="Tell us about your project..." rows={4} className="bg-secondary/50 border-border resize-none" />
+            <Button className="w-full bg-gradient-primary text-primary-foreground font-semibold gap-2">
+              Submit <Send size={16} />
+            </Button>
+          </motion.form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
