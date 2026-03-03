@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services", hasDropdown: true },
-  { label: "AI Solutions", href: "#about", hasDropdown: true },
-  { label: "Company", href: "#projects", hasDropdown: true },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services", hasDropdown: true },
+  { label: "AI Solutions", href: "/#about", hasDropdown: true },
+  { label: "Company", href: "/#projects", hasDropdown: true },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl">
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo - dot grid */}
-        <a href="#home" className="flex items-center">
+        <a href="/#home" className="flex items-center">
           <div className="grid grid-cols-2 gap-1.5">
             <span className="w-3 h-3 rounded-full bg-foreground" />
             <span className="w-3 h-3 rounded-full bg-foreground" />
