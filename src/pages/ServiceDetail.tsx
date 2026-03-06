@@ -1167,6 +1167,59 @@ const caseStudies = [
   },
 ];
 
+const marketingProjectStories = [
+  {
+    title: "The Love of people",
+    image: serviceMarketingImg,
+    summaryTitle: "Engineering the Future: Our Portfolio of High-Impact Solutions",
+    summary:
+      "Explore how Pravaah Consulting empowers global enterprises to ignite growth through transformative product engineering services. From Agentic AI and custom software development to high-level digital strategy, our work showcases the measurable business value we deliver. Join over 100 satisfied clients who have scaled with our future-ready, accelerated solutions.",
+  },
+  {
+    title: "Northstar Wellness",
+    image:
+      "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    summaryTitle: "Engineering the Future: Our Portfolio of High-Impact Solutions",
+    summary:
+      "We combine data-led performance marketing, lifecycle automation, and conversion-focused creative to drive sustained demand. The result is stronger customer acquisition, better retention, and measurable revenue growth.",
+  },
+  {
+    title: "Peakline Commerce",
+    image:
+      "https://images.pexels.com/photos/6476258/pexels-photo-6476258.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    summaryTitle: "Engineering the Future: Our Portfolio of High-Impact Solutions",
+    summary:
+      "Pravaah orchestrates SEO, paid media, and social campaigns into one growth engine. This integrated approach improves marketing efficiency and delivers consistent ROI across channels.",
+  },
+];
+
+const marketingTestimonials = [
+  {
+    quote:
+      "Pravaah Consulting transformed our SEO strategy, boosting organic traffic by 150% in just six months. Their data-driven approach and responsive team made all the difference.",
+    name: "Olivia Mitchell,",
+    role: "Marketing Director",
+  },
+  {
+    quote:
+      "From social media campaigns to PPC, Pravaah delivered a 200% increase in leads while staying within budget. True partners in our growth!",
+    name: "David Reynolds,",
+    role: "CEO",
+  },
+  {
+    quote:
+      "Their custom content and email strategies exceeded expectations, driving a 300% CTR uplift. Professional, innovative, and results-focused.",
+    name: "Lisa Chen,",
+    role: "Founder",
+  },
+  {
+    quote:
+      "Pravaah rebuilt our online presence with stunning website design and reputation management. Engagement soared, and sales followed. Highly recommend!",
+    name: "Mark Thompson,",
+    role: "Owner",
+  },
+];
+
 const agenticTestimonials = [
   {
     quote:
@@ -1215,6 +1268,7 @@ const ServiceDetail = () => {
   const [openMarketingIndustry, setOpenMarketingIndustry] = useState("");
   const [activeEcommerceShowcaseIndex, setActiveEcommerceShowcaseIndex] = useState(0);
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [activeMarketingProjectIndex, setActiveMarketingProjectIndex] = useState(0);
 
   if (!service) {
     return <Navigate to="/not-found" replace />;
@@ -1225,6 +1279,7 @@ const ServiceDetail = () => {
   const isEcommerce = service.slug === "ecommerce";
   const isMarketing = service.slug === "marketing";
   const activeProject = projectStories[activeProjectIndex];
+  const activeMarketingProject = marketingProjectStories[activeMarketingProjectIndex];
   const activeEcommerceShowcase = ecommerceShowcaseProjects[activeEcommerceShowcaseIndex];
   const approachIcons = [Search, ClipboardCheck, Rocket, RefreshCw, ShieldCheck];
 
@@ -2735,6 +2790,88 @@ const ServiceDetail = () => {
                   })}
                 </div>
               </motion.div>
+            </section>
+
+            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#bf3d00_0%,#4f1700_62%,#140300_100%)]">
+              <div className={pageWidthClass}>
+                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 md:mb-14">
+                  Our Projects &amp; Success Stories
+                </h2>
+
+                <div className="grid grid-cols-1 xl:grid-cols-[1fr_auto_1.1fr_auto] gap-8 md:gap-10 items-center">
+                  <div className="max-w-3xl">
+                    <h3 className="text-3xl md:text-5xl font-heading font-semibold leading-snug mb-6">
+                      {activeMarketingProject.summaryTitle}
+                    </h3>
+                    <p className="text-xl md:text-2xl leading-relaxed text-foreground/95">
+                      {activeMarketingProject.summary}
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveMarketingProjectIndex((prev) =>
+                        prev === 0 ? marketingProjectStories.length - 1 : prev - 1,
+                      )
+                    }
+                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-white text-[#cf4300] inline-flex items-center justify-center"
+                    aria-label="Previous project"
+                  >
+                    <ArrowLeft size={18} />
+                  </button>
+
+                  <div className="w-full">
+                    <div className="rounded-[14px] overflow-hidden border border-white/40 bg-[#f2ece8] p-4 md:p-6">
+                      <img
+                        src={activeMarketingProject.image}
+                        alt={activeMarketingProject.title}
+                        className="w-full h-[250px] md:h-[340px] object-cover rounded-md"
+                      />
+                    </div>
+                    <h4 className="text-center text-4xl md:text-5xl font-heading font-bold mt-5">
+                      {activeMarketingProject.title}
+                    </h4>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveMarketingProjectIndex((prev) =>
+                        prev === marketingProjectStories.length - 1 ? 0 : prev + 1,
+                      )
+                    }
+                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-white text-[#cf4300] inline-flex items-center justify-center"
+                    aria-label="Next project"
+                  >
+                    <ArrowRight size={18} />
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#6f2100_55%,#bf3d00_100%)]">
+              <div className={pageWidthClass}>
+                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                  Testimonials
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+                  {marketingTestimonials.map((item) => (
+                    <article
+                      key={item.name}
+                      className="rounded-[20px] bg-[#c0581d] p-7 md:p-8 min-h-[390px] flex flex-col text-center"
+                    >
+                      <p className="text-6xl leading-none mb-6">"</p>
+                      <p className="text-2xl leading-relaxed text-foreground/95 flex-1">"{item.quote}"</p>
+                      <div className="pt-7">
+                        <h3 className="text-4xl font-heading font-bold mb-2">{item.name}</h3>
+                        <p className="text-xl text-foreground/95">{item.role}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </section>
           </>
         ) : null}

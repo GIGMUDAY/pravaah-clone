@@ -6,7 +6,7 @@ import { Send, Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-24 scroll-mt-24">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,7 +14,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+          <h2 id="talk-to-us" className="text-3xl md:text-5xl font-heading font-bold mb-4 scroll-mt-24">
             Talk to Us & <span className="text-gradient">Get Started</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
