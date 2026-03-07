@@ -498,23 +498,23 @@ const aiIndustrySolutions = [
 const endToEndApproach = [
   {
     title: "Strategic Discovery & Outcome Roadmapping",
-    desc: "We don't just build models; we solve critical business challenges. We begin by uncovering your organization's most pressing opportunities for transformation, then define success metrics and craft a clear AI-led roadmap that connects your challenge to measurable impact.",
+    desc: "We start by identifying your most critical business challenge, define measurable success metrics, and map a focused AI roadmap tied to real outcomes.",
   },
   {
     title: "Enterprise Data Audit & Feasibility Check",
-    desc: "Data readiness is the foundation of successful AI. Our experts assess your existing data assets, structure, quality, and compliance to determine enterprise AI/ML feasibility and eliminate technical or compliance roadblocks before execution.",
+    desc: "Our team audits data quality, structure, and compliance to validate AI/ML feasibility and remove technical or regulatory blockers before build.",
   },
   {
     title: "Accelerated Deployment: From POC to Enterprise Scale",
-    desc: "Our methodology is built for speed and stability. We start with a Proof of Concept (POC), pressure-test it rapidly, and evolve it into a validated MVP before scaling to full production with security, performance, and integration in place.",
+    desc: "We rapidly launch a Proof of Concept, validate it as an MVP, then scale to production with security, performance, and integration built in.",
   },
   {
     title: "Agile & Iterative Model Development Sprints",
-    desc: "Our teams operate in short, agile sprints focused on continuous learning, experimentation, evaluation, and precision tuning. This balances deployment velocity with operational stability while staying aligned with stakeholder and market needs.",
+    desc: "We work in short agile sprints for continuous testing, learning, and tuning so deployment speed stays aligned with quality and business goals.",
   },
   {
     title: "Responsible AI (RAI) & Trust by Design",
-    desc: "Responsible and ethical guardrails are integrated into every model from the beginning. Our trust-by-design approach includes bias monitoring, robust privacy controls, and explainability practices to ensure reliable and trustworthy AI outcomes.",
+    desc: "From day one, we embed ethical guardrails including bias monitoring, privacy controls, and explainability to deliver reliable and trusted AI systems.",
   },
 ];
 
@@ -1302,22 +1302,22 @@ const ServiceDetail = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="max-w-4xl"
                 >
-                  <h1 className="text-4xl md:text-7xl font-heading font-bold text-white mb-4">
+                  <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
                     Product Engineering Services
                   </h1>
-                  <p className="text-white/90 text-xl md:text-4xl leading-relaxed max-w-3xl mb-8">
+                  <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-3xl mb-8">
                     Maximize the potential of your product from beginning to end with our top engineering expertise.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <a
                       href="#service-overview"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all"
+                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                     >
                       Learn More
                     </a>
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-foreground text-2xl font-medium hover:bg-white/90 transition-all"
+                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-black text-lg font-semibold hover:bg-white/90 transition-all"
                     >
                       Contact Us
                     </a>
@@ -1327,7 +1327,7 @@ const ServiceDetail = () => {
             </section>
 
             <section className={`${pageWidthClass} py-20 md:py-24`}>
-              <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight max-w-6xl mb-8">
+              <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
                 Innovate Competitive Solutions With End-to-End product engineering
               </h2>
               <div className="relative mb-10">
@@ -1336,7 +1336,7 @@ const ServiceDetail = () => {
               </div>
 
               <div className="grid lg:grid-cols-[1fr_1.25fr] gap-8 lg:gap-12 items-center">
-                <p className="text-2xl leading-relaxed text-foreground/95">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
                   Pravaah Consulting accelerates digital innovation and maximizes business impact through full-cycle product engineering (from concept to launch). The team transforms bold ideas into scalable, secure, market-ready products using agile methodologies, AI-accelerated engineering, rapid prototyping, and advanced tools like React JS, Python, and Node JS. This user-centric approach navigates technology complexities and reduces time-to-market and cost, ensuring future-readiness with cloud-native architectures across industries such as healthcare, finance, and ecommerce.
                 </p>
 
@@ -1348,7 +1348,7 @@ const ServiceDetail = () => {
                   />
                   <a
                     href="#contact"
-                    className="absolute right-4 bottom-4 inline-flex items-center gap-3 h-12 px-6 rounded-full bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all"
+                    className="absolute right-4 bottom-4 inline-flex items-center gap-3 h-12 px-6 rounded-full bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                   >
                     <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-primary">
                       <MessageCircle size={18} />
@@ -1361,7 +1361,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#170602_0%,#7b2a04_52%,#b54109_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
                   Product Engineering Services for Next-Gen Digital Solutions
                 </h2>
                 <div className="relative mb-10">
@@ -1378,10 +1378,10 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-white/95 text-primary text-lg font-medium mb-6">
                         {String(index + 1).padStart(2, "0")}
                       </div>
-                      <h3 className="text-4xl font-heading font-bold leading-tight mb-4">
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">
                         {capability.title}
                       </h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{capability.desc}</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{capability.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -1390,7 +1390,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#b54109_0%,#7b2a04_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold leading-tight max-w-6xl mb-6">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-6">
                   Product Engineering Across Industries
                 </h2>
                 <div className="relative mb-10">
@@ -1451,7 +1451,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-black">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10">
                   Our Product Engineering Process
                 </h2>
 
@@ -1462,10 +1462,10 @@ const ServiceDetail = () => {
                       className="rounded-3xl border border-primary/80 bg-black p-6 md:p-7"
                     >
                       <p className="text-center text-3xl mb-2">{process.step}</p>
-                      <h3 className="text-4xl font-heading font-bold text-center mb-4">
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold text-center mb-4">
                         {process.title}
                       </h3>
-                      <p className="text-2xl leading-relaxed text-center text-foreground/90">
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/90">
                         {process.desc}
                       </p>
                     </article>
@@ -1476,7 +1476,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#1b0500_0%,#7b2a04_58%,#b54109_100%)]">
               <div className={`${pageWidthClass} relative overflow-hidden`}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-14">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-14">
                   Why Partner With Us?
                 </h2>
 
@@ -1514,8 +1514,8 @@ const ServiceDetail = () => {
                           </div>
                         </div>
                         <div>
-                          <h3 className="text-4xl font-heading font-bold mb-2">{item.title}</h3>
-                          <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                          <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2">{item.title}</h3>
+                          <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                         </div>
                       </article>
                     ))}
@@ -1526,7 +1526,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#cf4300]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Our Digital Toolbox and Technological Resources
                 </h2>
 
@@ -1542,7 +1542,7 @@ const ServiceDetail = () => {
                         className="w-14 h-14 md:w-16 md:h-16 object-contain mb-4"
                         loading="lazy"
                       />
-                      <h3 className="text-3xl font-medium text-black/90">{tool.name}</h3>
+                      <h3 className="text-xl md:text-2xl font-medium text-black/90">{tool.name}</h3>
                     </article>
                   ))}
                 </div>
@@ -1551,16 +1551,16 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#cf4300]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 md:mb-14">
+                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14">
                   Our Projects & Success Stories
                 </h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 md:gap-10 items-center">
                   <div className="max-w-3xl">
-                    <h3 className="text-4xl md:text-5xl font-heading font-semibold leading-snug mb-6">
+                    <h3 className="text-2xl md:text-3xl font-heading font-semibold leading-snug mb-6">
                       {activeProject.summaryTitle}
                     </h3>
-                    <p className="text-2xl leading-relaxed text-foreground/95">{activeProject.summary}</p>
+                    <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{activeProject.summary}</p>
                   </div>
 
                   <div className="relative">
@@ -1607,7 +1607,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#cf4300_0%,#2a0b00_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Testimonials
                 </h2>
 
@@ -1618,11 +1618,11 @@ const ServiceDetail = () => {
                       className="rounded-[20px] bg-[#c0581d] p-6 md:p-7 min-h-[360px] flex flex-col"
                     >
                       <p className="text-center text-3xl leading-none mb-6">"</p>
-                      <p className="text-2xl leading-relaxed text-center text-foreground/95 flex-1">
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95 flex-1">
                         "{item.quote}"
                       </p>
                       <div className="pt-6 text-center">
-                        <h3 className="text-4xl font-heading font-bold mb-1">{item.name}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1">{item.name}</h3>
                         <p className="text-xl text-foreground/95">{item.role}</p>
                       </div>
                     </article>
@@ -1647,25 +1647,25 @@ const ServiceDetail = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="max-w-5xl"
+                  className="max-w-4xl"
                 >
-                  <h1 className="text-4xl md:text-7xl font-heading font-bold text-white mb-4 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-5 leading-[1.08] tracking-tight">
                     Artificial Intelligence &amp; Machine Learning Services: Drive Innovation with AI
                   </h1>
-                  <p className="text-white/90 text-xl md:text-4xl leading-relaxed max-w-4xl mb-8">
+                  <p className="text-white/90 text-lg sm:text-xl md:text-2xl leading-[1.3] max-w-3xl mb-8">
                     Open the strength of AI to enhance human capabilities, optimize operations, and drive
                     business growth with Pravaah Consulting&apos;s AI/ML services.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <a
                       href="#service-overview"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all"
+                      className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                     >
                       Learn More
                     </a>
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-foreground text-2xl font-medium hover:bg-white/90 transition-all"
+                      className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-white !text-black text-lg font-semibold hover:bg-white/90 transition-all"
                     >
                       Contact Us
                     </a>
@@ -1679,7 +1679,7 @@ const ServiceDetail = () => {
               className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#7a2602_52%,#cc4300_100%)]"
             >
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
                   Unleash the Power of AI &amp; ML for Transformative Growth
                 </h2>
                 <div className="relative mb-12">
@@ -1688,7 +1688,7 @@ const ServiceDetail = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-12 items-center">
-                  <p className="text-2xl leading-relaxed text-foreground/95">
+                  <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
                     Artificial Intelligence and Machine Learning are revolutionizing industries, reshaping how
                     businesses operate and compete. Pravaah Consulting empowers you to harness the full potential of
                     these transformative technologies. We help you navigate the complexities of AI/ML adoption, from
@@ -1710,7 +1710,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#cf4300]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8">Our AI &amp; ML Services</h2>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Our AI &amp; ML Services</h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
@@ -1725,8 +1725,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-white/95 text-black text-lg font-medium mb-6">
                         {item.id}
                       </div>
-                      <h3 className="text-4xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -1735,7 +1735,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#cf4300_0%,#360f00_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">
                   AI &amp; ML Solutions Across Key Industries
                 </h2>
                 <div className="relative mb-10">
@@ -1792,7 +1792,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#2a0b00_0%,#cf4300_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8">
                   Our End-to-End Approach
                 </h2>
                 <div className="relative mb-10">
@@ -1806,15 +1806,15 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className={`rounded-3xl border border-white/80 p-6 md:p-7 min-h-[390px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] hover:scale-[1.01] ${
+                        className={`rounded-3xl border border-white/80 p-5 md:p-6 min-h-[430px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] hover:scale-[1.01] ${
                           index === endToEndApproach.length - 1
                             ? "bg-[#c0581d] hover:bg-[#ce6a31]"
                             : "bg-[#6f2201]/80 hover:bg-[#8b2c03]"
                         }`}
                       >
                         <Icon size={34} className="mx-auto mb-5" />
-                        <h3 className="text-4xl font-heading font-bold text-center leading-tight mb-4">{item.title}</h3>
-                        <p className="text-2xl leading-relaxed text-center text-foreground/95">{item.desc}</p>
+                        <h3 className="text-xl md:text-2xl font-heading font-bold text-center leading-tight mb-3">{item.title}</h3>
+                        <p className="text-sm md:text-base leading-relaxed text-center text-foreground/95">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -1824,7 +1824,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#bf3d00]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">
                   The Pravaah AI &amp; ML Transformation Journey
                 </h2>
                 <div className="relative mb-10">
@@ -1841,8 +1841,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-4xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -1851,7 +1851,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#cf4300_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Why Choose Us
                 </h2>
 
@@ -1864,7 +1864,7 @@ const ServiceDetail = () => {
                         className="rounded-3xl bg-[#f2f2f2] text-black min-h-[145px] px-4 py-6 flex flex-col items-center justify-center text-center"
                       >
                         <Icon size={36} className="mb-4" />
-                        <h3 className="text-3xl font-medium leading-snug">{item.title}</h3>
+                        <h3 className="text-xl md:text-2xl font-medium leading-snug">{item.title}</h3>
                       </article>
                     );
                   })}
@@ -1874,7 +1874,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#cf4300]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Our AI &amp; ML Tech Stack
                 </h2>
 
@@ -1885,7 +1885,7 @@ const ServiceDetail = () => {
                       className="rounded-3xl overflow-hidden bg-[#e9e9e9] grid grid-cols-1 md:grid-cols-[260px_1fr]"
                     >
                       <div className="bg-black text-white px-5 py-6 md:px-6 md:py-8 flex items-center justify-center text-center">
-                        <h3 className="text-3xl font-medium leading-snug">{row.category}</h3>
+                        <h3 className="text-xl md:text-2xl font-medium leading-snug">{row.category}</h3>
                       </div>
 
                       <div className="px-4 py-5 md:px-7 md:py-7 flex flex-wrap gap-2.5 md:gap-3 items-start">
@@ -1910,7 +1910,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#bf3d00]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-8">Case Study</h2>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8">Case Study</h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
@@ -1927,8 +1927,8 @@ const ServiceDetail = () => {
                         }`}
                       >
                         <Icon size={44} className="mx-auto mb-6" />
-                        <h3 className="text-4xl font-heading font-bold text-center leading-tight mb-5">{item.title}</h3>
-                        <p className="text-2xl leading-relaxed text-center text-foreground/95">{item.desc}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-center leading-tight mb-5">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -1938,7 +1938,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-black">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Testimonials
                 </h2>
 
@@ -1949,11 +1949,11 @@ const ServiceDetail = () => {
                       className="rounded-[20px] bg-[#c0581d] p-6 md:p-7 min-h-[360px] flex flex-col"
                     >
                       <p className="text-center text-3xl leading-none mb-6">"</p>
-                      <p className="text-2xl leading-relaxed text-center text-foreground/95 flex-1">
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95 flex-1">
                         "{item.quote}"
                       </p>
                       <div className="pt-6 text-center">
-                        <h3 className="text-5xl font-heading font-bold mb-1">{item.name}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1">{item.name}</h3>
                         <p className="text-2xl text-foreground/95">{item.role}</p>
                       </div>
                     </article>
@@ -1982,23 +1982,23 @@ const ServiceDetail = () => {
                   className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-end"
                 >
                   <div className="max-w-5xl">
-                    <h1 className="text-4xl md:text-7xl font-heading font-bold text-white mb-4 leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight">
                       Ecommerce Website Design &amp; Development Services
                     </h1>
-                    <p className="text-white/90 text-xl md:text-4xl leading-relaxed max-w-4xl mb-8">
+                    <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-4xl mb-8">
                       Drive sales with Pravaah Consulting&apos;s expert eCommerce development, delivering fast,
                       mobile-first stores and seamless checkout experiences.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <a
                         href="#service-overview"
-                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all"
+                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                       >
                         Learn More
                       </a>
                       <a
                         href="#contact"
-                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-foreground text-2xl font-medium hover:bg-white/90 transition-all"
+                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-foreground text-lg font-semibold hover:bg-white/90 transition-all"
                       >
                         Contact Us
                       </a>
@@ -2018,7 +2018,7 @@ const ServiceDetail = () => {
 
             <section id="service-overview" className="py-16 md:py-20 bg-black">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
                   A Leading Ecommerce Development Company Crafting High-Conversion Stores
                 </h2>
                 <div className="relative mb-10">
@@ -2028,13 +2028,13 @@ const ServiceDetail = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-10 items-center">
                   <div>
-                    <p className="text-2xl leading-relaxed text-foreground/95 mb-4">
+                    <p className="text-lg md:text-xl leading-relaxed text-foreground/95 mb-4">
                       Looking for an eCommerce store that converts? Pravaah Consulting builds high-performance online
                       stores that turn visitors into loyal customers. Our award-winning designers focus on{" "}
                       <span className="underline">UX/UI excellence</span>, while our certified developers implement
                       intuitive, custom functionality on platforms like Shopify, Magento, and WooCommerce.
                     </p>
-                    <ul className="list-disc pl-7 text-2xl leading-relaxed text-foreground/95 space-y-1">
+                    <ul className="list-disc pl-7 text-lg md:text-xl leading-relaxed text-foreground/95 space-y-1">
                       <li>Mobile-First Design: 100% responsive across all devices.</li>
                       <li>Lightning Speed: Optimized for Core Web Vitals to reduce bounce rates.</li>
                       <li>Scalable Code: Built to grow as your inventory and traffic expand.</li>
@@ -2054,7 +2054,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#160400_0%,#7a2602_48%,#bf3d00_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10">
                   Get Expert Guidance for Your Ecommerce Platform
                 </h2>
 
@@ -2067,8 +2067,8 @@ const ServiceDetail = () => {
                         className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[300px]"
                       >
                         <Icon size={34} className="mb-5" />
-                        <h3 className="text-4xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                        <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -2083,8 +2083,8 @@ const ServiceDetail = () => {
                         className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[300px]"
                       >
                         <Icon size={34} className="mb-5" />
-                        <h3 className="text-4xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                        <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -2094,7 +2094,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#bf3d00]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10">
+                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10">
                   Ecommerce Areas of Expertise
                 </h2>
 
@@ -2107,11 +2107,11 @@ const ServiceDetail = () => {
                         className="rounded-3xl bg-[#efefef] text-black p-6 md:p-7 min-h-[380px] flex flex-col items-center text-center"
                       >
                         <Icon size={44} className="mb-5" />
-                        <h3 className="text-5xl font-heading font-bold mb-4 leading-tight">{item.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4 leading-tight">{item.title}</h3>
                         <p className="text-2xl text-black/65 leading-relaxed flex-1">{item.desc}</p>
                         <a
                           href="#contact"
-                          className="mt-7 inline-flex items-center justify-center h-12 px-7 rounded-md bg-[#c0581d] text-white text-2xl font-medium hover:brightness-110 transition-all"
+                          className="mt-7 inline-flex items-center justify-center h-12 px-7 rounded-md bg-[#c0581d] text-white text-lg font-semibold hover:brightness-110 transition-all"
                         >
                           Learn More
                         </a>
@@ -2124,7 +2124,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#1a0500_0%,#7a2602_45%,#bf3d00_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
                   Ecommerce Solutions for Any Business Model
                 </h2>
                 <div className="relative mb-10">
@@ -2141,8 +2141,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-5xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2156,8 +2156,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-5xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2166,10 +2166,10 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#cf4300]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-4">
+                <h2 className="text-3xl md:text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">
                   Create Experiences with New-Age Techs
                 </h2>
-                <p className="text-2xl leading-relaxed text-foreground/95 mb-10 max-w-6xl">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground/95 mb-10 max-w-6xl">
                   Pravaah Consulting integrates <span className="underline">innovative AI tools</span> to transform
                   your online store into an interactive powerhouse, boosting engagement and conversions across devices.
                 </p>
@@ -2180,8 +2180,8 @@ const ServiceDetail = () => {
                       key={item.title}
                       className="rounded-3xl bg-black text-white p-6 md:p-7 min-h-[190px]"
                     >
-                      <h3 className="text-4xl font-heading font-bold mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-white/85">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-white/85">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2192,8 +2192,8 @@ const ServiceDetail = () => {
                       key={item.title}
                       className="rounded-3xl bg-black text-white p-6 md:p-7 min-h-[190px]"
                     >
-                      <h3 className="text-4xl font-heading font-bold mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-white/85">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-white/85">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2202,7 +2202,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#c84400_0%,#2a0b00_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
                   We Build Resilient, AI-Powered Ecommerce Operations
                 </h2>
                 <div className="relative mb-10">
@@ -2251,7 +2251,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-black">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-center leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center leading-tight mb-8">
                   How Can Our Ecommerce Services Transform Your Business?
                 </h2>
                 <div className="relative mb-10">
@@ -2268,8 +2268,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-5xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-white/85">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-white/85">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2278,13 +2278,13 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-black">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10">
                   Transforming Visions into High-Performance Stores
                 </h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 md:gap-10 items-center">
                   <div className="max-w-3xl">
-                    <p className="text-2xl leading-relaxed text-foreground/95 mb-6">
+                    <p className="text-lg md:text-xl leading-relaxed text-foreground/95 mb-6">
                       {activeEcommerceShowcase.summary}
                     </p>
                     <button
@@ -2309,7 +2309,7 @@ const ServiceDetail = () => {
                         className="w-full h-[260px] md:h-[340px] object-contain rounded-[22px] bg-white"
                       />
                     </div>
-                    <h3 className="text-center text-5xl font-heading font-bold mt-5">
+                    <h3 className="text-center text-2xl md:text-3xl font-heading font-bold mt-5">
                       {activeEcommerceShowcase.title}
                     </h3>
 
@@ -2332,7 +2332,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[#7b2602]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10">
                   How We Work: The Secret to Our Success
                 </h2>
 
@@ -2345,8 +2345,8 @@ const ServiceDetail = () => {
                         className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[290px] text-center"
                       >
                         <Icon size={38} className="mx-auto mb-5" />
-                        <h3 className="text-5xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                        <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -2356,7 +2356,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#bf3d00_0%,#140300_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   What It&apos;s Like Working With Pravaah Consulting
                 </h2>
 
@@ -2367,11 +2367,11 @@ const ServiceDetail = () => {
                       className="rounded-[20px] bg-[#c0581d] p-6 md:p-7 min-h-[390px] flex flex-col"
                     >
                       <p className="text-center text-3xl leading-none mb-6">"</p>
-                      <p className="text-2xl leading-relaxed text-center text-foreground/95 flex-1">
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95 flex-1">
                         "{item.quote}"
                       </p>
                       <div className="pt-6 text-center">
-                        <h3 className="text-5xl font-heading font-bold mb-1">{item.name}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1">{item.name}</h3>
                         <p className="text-xl md:text-2xl text-foreground/95">{item.role}</p>
                       </div>
                     </article>
@@ -2394,16 +2394,16 @@ const ServiceDetail = () => {
 
               <div className={`${pageWidthClass} relative z-10 pb-16 md:pb-20`}>
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl">
-                  <h1 className="text-4xl md:text-7xl font-heading font-bold text-white mb-4 leading-tight">
+                  <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight">
                     Results-Driven Digital Marketing Services to Grow Your Business
                   </h1>
-                  <p className="text-white/90 text-xl md:text-4xl leading-relaxed max-w-4xl mb-8">
+                  <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-4xl mb-8">
                     Your all-in-one partner: a full-service digital marketing agency that turns clicks into
                     customers.
                   </p>
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all"
+                    className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                   >
                     Contact Us
                   </a>
@@ -2416,7 +2416,7 @@ const ServiceDetail = () => {
               className="py-16 md:py-20 bg-[linear-gradient(180deg,#180400_0%,#7a2602_52%,#bf3d00_100%)]"
             >
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
                   Your Comprehensive Marketing Solutions to Amplify Your Brand
                 </h2>
                 <div className="relative mb-10">
@@ -2425,7 +2425,7 @@ const ServiceDetail = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-10 items-center">
-                  <p className="text-2xl leading-relaxed text-foreground/95">
+                  <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
                     Maximize your brand&apos;s impact with Pravaah Consulting&apos;s innovative marketing strategies.
                     From digital marketing to brand development, our team helps you reach new audiences, boost
                     engagement, and drive business growth. By integrating AI-driven personalization and omnichannel
@@ -2454,7 +2454,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
                   Next-Gen Digital Marketing Services for Measurable Success
                 </h2>
                 <div className="relative mb-10">
@@ -2476,8 +2476,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-white/95 text-black text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-5xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </motion.article>
                   ))}
                 </div>
@@ -2518,14 +2518,14 @@ const ServiceDetail = () => {
                         <div className={`flex flex-col justify-center ${shouldReverse ? "lg:order-1" : "lg:order-2"}`}>
                           <div className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-2 text-[#cf4300] mb-4">
                             <Icon size={20} />
-                            <span className="text-2xl md:text-3xl font-medium">{item.label}</span>
+                            <span className="text-xl md:text-2xl font-medium">{item.label}</span>
                           </div>
-                          <h3 className="text-4xl md:text-6xl font-heading font-bold leading-tight mb-4">
+                          <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">
                             {item.title}
                           </h3>
-                          <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                          <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                           {item.metric ? (
-                            <p className="mt-5 text-2xl md:text-3xl leading-snug text-foreground">
+                            <p className="mt-5 text-xl md:text-2xl leading-snug text-foreground">
                               <span className="text-6xl md:text-7xl font-heading font-bold mr-2">{item.metric}</span>
                               {item.metricText}
                             </p>
@@ -2547,7 +2547,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
                   Industries We Serve
                 </h2>
                 <div className="relative mb-10">
@@ -2613,13 +2613,13 @@ const ServiceDetail = () => {
                   </div>
 
                   <div className="max-w-3xl">
-                    <h3 className="text-4xl md:text-6xl font-heading font-bold leading-tight mb-5">
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-5">
                       Don&apos;t see your industry? <span className="font-normal">No worries!</span> Contact our team to
                       craft a custom digital marketing strategy specific to your business model.
                     </h3>
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all"
+                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                     >
                       Contact Us
                     </a>
@@ -2637,7 +2637,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
                   How Can Our Marketing Services Transform Your Business?
                 </h2>
                 <div className="relative mb-10">
@@ -2659,8 +2659,8 @@ const ServiceDetail = () => {
                       <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-white/95 text-black text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-5xl font-heading font-bold leading-tight mb-3">{item.title}</h3>
-                      <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </motion.article>
                   ))}
                 </div>
@@ -2676,7 +2676,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Our Experts Have Experience In
                 </h2>
 
@@ -2694,7 +2694,7 @@ const ServiceDetail = () => {
                         transition={{ duration: 0.35, delay: index * 0.04, ease: "easeOut" }}
                       >
                         <Icon size={38} className="mb-4" />
-                        <h3 className="text-4xl font-heading font-bold leading-snug">{item.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
                   })}
@@ -2714,7 +2714,7 @@ const ServiceDetail = () => {
                         transition={{ duration: 0.35, delay: index * 0.05, ease: "easeOut" }}
                       >
                         <Icon size={38} className="mb-4" />
-                        <h3 className="text-4xl font-heading font-bold leading-snug">{item.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
                   })}
@@ -2731,7 +2731,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   How We Work: The Secret to Our Success
                 </h2>
 
@@ -2748,8 +2748,8 @@ const ServiceDetail = () => {
                     >
                       <img src={item.image} alt={item.title} className="w-full h-[180px] object-cover" />
                       <div className="p-6 text-center">
-                        <h3 className="text-5xl font-heading font-bold leading-tight mb-3">{item.title}</h3>
-                        <p className="text-2xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                       </div>
                     </motion.article>
                   ))}
@@ -2766,7 +2766,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Why Choose Us
                 </h2>
 
@@ -2784,7 +2784,7 @@ const ServiceDetail = () => {
                         transition={{ duration: 0.35, delay: index * 0.05, ease: "easeOut" }}
                       >
                         <Icon size={38} className="mb-4 text-[#cf4300]" />
-                        <h3 className="text-4xl font-heading font-bold leading-snug">{item.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
                   })}
@@ -2794,16 +2794,16 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#bf3d00_0%,#4f1700_62%,#140300_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 md:mb-14">
+                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14">
                   Our Projects &amp; Success Stories
                 </h2>
 
                 <div className="grid grid-cols-1 xl:grid-cols-[1fr_auto_1.1fr_auto] gap-8 md:gap-10 items-center">
                   <div className="max-w-3xl">
-                    <h3 className="text-3xl md:text-5xl font-heading font-semibold leading-snug mb-6">
+                    <h3 className="text-2xl md:text-3xl font-heading font-semibold leading-snug mb-6">
                       {activeMarketingProject.summaryTitle}
                     </h3>
-                    <p className="text-xl md:text-2xl leading-relaxed text-foreground/95">
+                    <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
                       {activeMarketingProject.summary}
                     </p>
                   </div>
@@ -2852,7 +2852,7 @@ const ServiceDetail = () => {
 
             <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#6f2100_55%,#bf3d00_100%)]">
               <div className={pageWidthClass}>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
                   Testimonials
                 </h2>
 
@@ -2863,9 +2863,9 @@ const ServiceDetail = () => {
                       className="rounded-[20px] bg-[#c0581d] p-7 md:p-8 min-h-[390px] flex flex-col text-center"
                     >
                       <p className="text-6xl leading-none mb-6">"</p>
-                      <p className="text-2xl leading-relaxed text-foreground/95 flex-1">"{item.quote}"</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95 flex-1">"{item.quote}"</p>
                       <div className="pt-7">
-                        <h3 className="text-4xl font-heading font-bold mb-2">{item.name}</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2">{item.name}</h3>
                         <p className="text-xl text-foreground/95">{item.role}</p>
                       </div>
                     </article>
@@ -2920,7 +2920,7 @@ const ServiceDetail = () => {
       {isProductEngineering || isAgenticAiEngineering || isEcommerce || isMarketing ? (
         <a
           href="#contact"
-          className="fixed z-40 right-5 bottom-5 inline-flex items-center gap-3 h-14 px-7 rounded-full bg-primary text-primary-foreground text-2xl font-medium hover:brightness-110 transition-all shadow-card"
+          className="fixed z-40 right-5 bottom-5 inline-flex items-center gap-3 h-14 px-7 rounded-full bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all shadow-card"
         >
           <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white text-primary">
             <MessageCircle size={18} />
@@ -2936,3 +2936,6 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
+
+
+

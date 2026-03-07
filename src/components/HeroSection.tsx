@@ -38,13 +38,13 @@ const HeroSection = () => {
       {/* Floating Contact Us button */}
       <a
         href="#contact"
-        className="fixed bottom-6 right-6 z-50 bg-gradient-primary text-primary-foreground font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-glow hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-6 z-50 bg-gradient-primary text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-glow hover:scale-105 transition-transform"
       >
         <span className="grid grid-cols-2 gap-0.5">
-          <span className="w-2 h-2 rounded-full bg-primary-foreground" />
-          <span className="w-2 h-2 rounded-full bg-primary-foreground" />
-          <span className="w-2 h-2 rounded-full bg-primary-foreground" />
-          <span className="w-2 h-2 rounded-full bg-primary-foreground" />
+          <span className="w-2 h-2 rounded-full bg-black" />
+          <span className="w-2 h-2 rounded-full bg-black" />
+          <span className="w-2 h-2 rounded-full bg-black" />
+          <span className="w-2 h-2 rounded-full bg-black" />
         </span>
         Contact Us
       </a>

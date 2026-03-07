@@ -70,21 +70,21 @@ const SolutionsSection = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:sticky lg:top-32 lg:self-start"
+            className="lg:sticky lg:top-[40%] lg:-translate-y-1/2 lg:self-start text-center"
           >
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
               Our <span className="text-gradient">Solutions</span>
             </h2>
-            <p className="font-semibold text-foreground mb-4">
+            <p className="font-semibold text-foreground mb-4 max-w-2xl mx-auto">
               Looking for AI that actually solves real industry problems?
             </p>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-muted-foreground mb-4 leading-relaxed max-w-2xl mx-auto">
               Most companies experiment with AI. We deploy it where it matters!
               Inside core workflows, revenue engines, and operational systems. At
               Pravaah, we build industry-ready intelligence systems designed to
               deliver measurable impact.
             </p>
-            <p className="text-muted-foreground font-medium">
+            <p className="text-muted-foreground font-medium max-w-2xl mx-auto">
               Here's how we transform industries:
             </p>
           </motion.div>

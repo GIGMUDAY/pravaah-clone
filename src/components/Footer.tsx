@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { services } from "@/data/services";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border py-12 bg-card">
@@ -12,21 +15,22 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-3">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>AI & ML Services</li>
-              <li>Digital Transformation</li>
-              <li>Custom Software</li>
-              <li>Low Code / No Code</li>
-              <li>E-commerce Solutions</li>
-              <li>Marketing</li>
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link to={`/services/${service.slug}`} className="hover:text-primary transition-colors">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-3">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="/#home" className="hover:text-primary transition-colors">Home</a></li>
+              <li><a href="/services/agentic-ai-engineering" className="hover:text-primary transition-colors">AI Solutions</a></li>
+              <li><a href="/about-us" className="hover:text-primary transition-colors">Company</a></li>
+              <li><a href="/#talk-to-us" className="hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>

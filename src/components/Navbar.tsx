@@ -12,7 +12,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl">
@@ -34,35 +34,31 @@ const Navbar = () => {
           <a
             href="/#home"
             className="flex items-center gap-1 text-sm text-foreground border border-primary/60 rounded-full px-5 py-2 hover:bg-primary/10 transition-colors"
-            onClick={() => setServicesOpen(false)}
+            onClick={() => setMobileServicesOpen(false)}
           >
             Home
           </a>
 
-          <div className="relative">
+          <div className="relative group">
             <button
               type="button"
-              onClick={() => setServicesOpen((prev) => !prev)}
               className="flex items-center gap-1 text-sm text-foreground border border-primary/60 rounded-full px-5 py-2 hover:bg-primary/10 transition-colors"
             >
               Services
-              <ChevronDown size={14} className={servicesOpen ? "rotate-180 transition-transform" : "transition-transform"} />
+              <ChevronDown size={14} className="transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
             </button>
 
-            {servicesOpen && (
-              <div className="absolute left-0 top-[calc(100%+10px)] min-w-[260px] rounded-2xl border border-primary/50 bg-background/95 backdrop-blur-xl p-2 shadow-card">
-                {services.map((service) => (
-                  <Link
-                    key={service.slug}
-                    to={`/services/${service.slug}`}
-                    className="block rounded-xl px-4 py-3 text-sm text-foreground hover:bg-primary/15 transition-colors"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <div className="invisible absolute left-0 top-full min-w-[260px] rounded-2xl border border-primary/50 bg-background/95 backdrop-blur-xl p-2 opacity-0 shadow-card transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  to={`/services/${service.slug}`}
+                  className="block rounded-xl px-4 py-3 text-sm text-foreground hover:bg-primary/15 transition-colors"
+                >
+                  {service.title}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {navLinks.filter((link) => link.label !== "Home").map((link) => (
@@ -70,7 +66,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               className="flex items-center gap-1 text-sm text-foreground border border-primary/60 rounded-full px-5 py-2 hover:bg-primary/10 transition-colors"
-              onClick={() => setServicesOpen(false)}
+              onClick={() => setMobileServicesOpen(false)}
             >
               {link.label}
               {link.hasDropdown && <ChevronDown size={14} />}
@@ -93,7 +89,7 @@ const Navbar = () => {
               className="flex items-center gap-1 text-foreground border border-primary/60 rounded-full px-5 py-2.5 hover:bg-primary/10 transition-colors"
               onClick={() => {
                 setOpen(false);
-                setServicesOpen(false);
+                setMobileServicesOpen(false);
               }}
             >
               Home
@@ -102,13 +98,13 @@ const Navbar = () => {
             <button
               type="button"
               className="flex items-center justify-between text-foreground border border-primary/60 rounded-full px-5 py-2.5 hover:bg-primary/10 transition-colors"
-              onClick={() => setServicesOpen((prev) => !prev)}
+              onClick={() => setMobileServicesOpen((prev) => !prev)}
             >
               <span>Services</span>
-              <ChevronDown size={14} className={servicesOpen ? "rotate-180 transition-transform" : "transition-transform"} />
+              <ChevronDown size={14} className={mobileServicesOpen ? "rotate-180 transition-transform" : "transition-transform"} />
             </button>
 
-            {servicesOpen && (
+            {mobileServicesOpen && (
               <div className="px-2 pb-1 space-y-2">
                 {services.map((service) => (
                   <Link
@@ -117,7 +113,7 @@ const Navbar = () => {
                     className="block rounded-xl px-4 py-2.5 border border-border/70 text-foreground hover:bg-primary/10 transition-colors"
                     onClick={() => {
                       setOpen(false);
-                      setServicesOpen(false);
+                      setMobileServicesOpen(false);
                     }}
                   >
                     {service.title}
@@ -133,7 +129,7 @@ const Navbar = () => {
                 className="flex items-center gap-1 text-foreground border border-primary/60 rounded-full px-5 py-2.5 hover:bg-primary/10 transition-colors"
                 onClick={() => {
                   setOpen(false);
-                  setServicesOpen(false);
+                  setMobileServicesOpen(false);
                 }}
               >
                 {link.label}
