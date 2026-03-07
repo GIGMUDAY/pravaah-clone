@@ -38,7 +38,7 @@ const ServicesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/75 to-black/90" />
 
               <div className="relative z-10 h-full flex flex-col p-6 md:p-8">
-                <h3 className="text-3xl md:text-5xl font-heading font-bold text-center mb-4">{service.title}</h3>
+                <h3 className="text-3xl md:text-5xl font-heading font-bold text-center mb-4 text-white">{service.title}</h3>
                 <div className="flex-1" />
 
                 <div className="pt-1 md:pt-2 flex justify-center">

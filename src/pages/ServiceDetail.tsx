@@ -1359,43 +1359,43 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#170602_0%,#7b2a04_52%,#b54109_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground">
                   Product Engineering Services for Next-Gen Digital Solutions
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                   {productEngineeringCapabilities.map((capability, index) => (
                     <article
                       key={capability.title}
-                      className="rounded-3xl border border-primary/80 bg-black/10 p-6 md:p-7 min-h-[350px]"
+                      className="rounded-3xl border border-primary-foreground/30 bg-white/10 p-6 md:p-7 min-h-[350px]"
                     >
-                      <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-white/95 text-primary text-lg font-medium mb-6">
+                      <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-primary-foreground text-primary text-lg font-medium mb-6">
                         {String(index + 1).padStart(2, "0")}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">
                         {capability.title}
                       </h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{capability.desc}</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{capability.desc}</p>
                     </article>
                   ))}
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#b54109_0%,#7b2a04_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-6">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-6 text-primary-foreground">
                   Product Engineering Across Industries
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.25fr] gap-6 lg:gap-8 lg:items-stretch">
@@ -1413,30 +1413,25 @@ const ServiceDetail = () => {
                       return (
                         <article
                           key={industry.title}
-                          className="rounded-2xl overflow-hidden"
-                          style={{ opacity: 1 }}
+                          className="rounded-3xl overflow-hidden border border-transparent"
                         >
                           <button
                             type="button"
                             onClick={() => setOpenIndustry(isOpen ? "" : industry.title)}
-                            className="w-full bg-white text-black px-5 py-4 flex items-center justify-between text-left"
-                            style={{ color: "#000000", opacity: 1 }}
+                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left hover:bg-accent/10 transition-colors"
                           >
-                            <span className="text-2xl font-semibold text-black" style={{ color: "#000000" }}>
+                            <span className="text-2xl font-semibold">
                               {industry.title}
                             </span>
                             {isOpen ? (
-                              <ChevronUp size={20} className="text-black" style={{ color: "#000000" }} />
+                              <ChevronUp size={22} className="text-foreground" />
                             ) : (
-                              <ChevronDown size={20} className="text-black" style={{ color: "#000000" }} />
+                              <ChevronDown size={22} className="text-foreground" />
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-white px-5 pb-5">
-                              <p
-                                className="text-black text-lg leading-relaxed"
-                                style={{ color: "#000000", opacity: 1 }}
-                              >
+                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                              <p className="text-foreground/90 text-lg leading-relaxed">
                                 {industry.desc}
                               </p>
                             </div>
@@ -1449,9 +1444,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-black">
+            <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 text-foreground">
                   Our Product Engineering Process
                 </h2>
 
@@ -1459,7 +1454,7 @@ const ServiceDetail = () => {
                   {productEngineeringProcess.map((process) => (
                     <article
                       key={process.step}
-                      className="rounded-3xl border border-primary/80 bg-black p-6 md:p-7"
+                      className="rounded-3xl border border-primary/60 bg-background p-6 md:p-7"
                     >
                       <p className="text-center text-3xl mb-2">{process.step}</p>
                       <h3 className="text-2xl md:text-3xl font-heading font-bold text-center mb-4">
@@ -1474,9 +1469,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#1b0500_0%,#7b2a04_58%,#b54109_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={`${pageWidthClass} relative overflow-hidden`}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-14">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-14 text-primary-foreground">
                   Why Partner With Us?
                 </h2>
 
@@ -1509,13 +1504,13 @@ const ServiceDetail = () => {
                         <div className="pt-1">
                           <div className="grid grid-cols-2 gap-1 w-5">
                             {Array.from({ length: 6 }).map((_, index) => (
-                              <span key={`${item.title}-${index}`} className="w-1.5 h-1.5 rounded-full bg-primary" />
+                              <span key={`${item.title}-${index}`} className="w-1.5 h-1.5 rounded-full bg-primary-foreground" />
                             ))}
                           </div>
                         </div>
                         <div>
-                          <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2">{item.title}</h3>
-                          <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                          <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary-foreground">{item.title}</h3>
+                          <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                         </div>
                       </article>
                     ))}
@@ -1524,9 +1519,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
                   Our Digital Toolbox and Technological Resources
                 </h2>
 
@@ -1534,7 +1529,7 @@ const ServiceDetail = () => {
                   {digitalToolboxItems.map((tool) => (
                     <article
                       key={tool.name}
-                      className="rounded-[22px] bg-[#e8e8e8] min-h-[175px] md:min-h-[190px] flex flex-col items-center justify-center p-6 text-center"
+                      className="rounded-[22px] bg-card border border-border min-h-[175px] md:min-h-[190px] flex flex-col items-center justify-center p-6 text-center"
                     >
                       <img
                         src={tool.logo}
@@ -1542,17 +1537,17 @@ const ServiceDetail = () => {
                         className="w-14 h-14 md:w-16 md:h-16 object-contain mb-4"
                         loading="lazy"
                       />
-                      <h3 className="text-xl md:text-2xl font-medium text-black/90">{tool.name}</h3>
+                      <h3 className="text-xl md:text-2xl font-medium text-foreground">{tool.name}</h3>
                     </article>
                   ))}
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14">
-                  Our Projects & Success Stories
+                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14 text-foreground">
+                  Our Projects &amp; Success Stories
                 </h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 md:gap-10 items-center">
@@ -1571,13 +1566,13 @@ const ServiceDetail = () => {
                           prev === 0 ? projectStories.length - 1 : prev - 1,
                         )
                       }
-                      className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-white text-[#cf4300] inline-flex items-center justify-center"
+                      className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
                       aria-label="Previous project"
                     >
                       <ArrowLeft size={14} />
                     </button>
 
-                    <div className="rounded-[28px] overflow-hidden border border-white/40 bg-[#f2ece8] p-4 md:p-6">
+                    <div className="rounded-[28px] overflow-hidden border border-border bg-card p-4 md:p-6">
                       <img
                         src={activeProject.image}
                         alt={activeProject.title}
@@ -1595,7 +1590,7 @@ const ServiceDetail = () => {
                           prev === projectStories.length - 1 ? 0 : prev + 1,
                         )
                       }
-                      className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-white text-[#cf4300] inline-flex items-center justify-center"
+                      className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
                       aria-label="Next project"
                     >
                       <ArrowRight size={14} />
@@ -1605,9 +1600,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#cf4300_0%,#2a0b00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   Testimonials
                 </h2>
 
@@ -1615,15 +1610,15 @@ const ServiceDetail = () => {
                   {testimonials.map((item) => (
                     <article
                       key={item.name}
-                      className="rounded-[20px] bg-[#c0581d] p-6 md:p-7 min-h-[360px] flex flex-col"
+                      className="rounded-[20px] bg-white/10 border border-primary-foreground/20 p-6 md:p-7 min-h-[360px] flex flex-col"
                     >
-                      <p className="text-center text-3xl leading-none mb-6">"</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95 flex-1">
-                        "{item.quote}"
+                      <p className="text-center text-3xl leading-none mb-6 text-primary-foreground">&quot;</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-primary-foreground/90 flex-1">
+                        &quot;{item.quote}&quot;
                       </p>
                       <div className="pt-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1">{item.name}</h3>
-                        <p className="text-xl text-foreground/95">{item.role}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1 text-primary-foreground">{item.name}</h3>
+                        <p className="text-xl text-primary-foreground/80">{item.role}</p>
                       </div>
                     </article>
                   ))}
@@ -1676,19 +1671,19 @@ const ServiceDetail = () => {
 
             <section
               id="service-overview"
-              className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#7a2602_52%,#cc4300_100%)]"
+              className="py-16 md:py-20 bg-primary"
             >
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
                   Unleash the Power of AI &amp; ML for Transformative Growth
                 </h2>
                 <div className="relative mb-12">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-12 items-center">
-                  <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
+                  <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/95">
                     Artificial Intelligence and Machine Learning are revolutionizing industries, reshaping how
                     businesses operate and compete. Pravaah Consulting empowers you to harness the full potential of
                     these transformative technologies. We help you navigate the complexities of AI/ML adoption, from
@@ -1697,7 +1692,7 @@ const ServiceDetail = () => {
                     ensures you&apos;re at the forefront of this wave of innovation.
                   </p>
 
-                  <div className="rounded-3xl overflow-hidden border border-primary/80">
+                  <div className="rounded-3xl overflow-hidden border border-primary-foreground/30">
                     <img
                       src={agenticSectionImage}
                       alt="AI and ML innovation"
@@ -1708,9 +1703,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Our AI &amp; ML Services</h2>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground">Our AI &amp; ML Services</h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
@@ -1720,12 +1715,12 @@ const ServiceDetail = () => {
                   {aiMlServices.map((item) => (
                     <article
                       key={item.id}
-                      className="rounded-3xl border border-primary/80 bg-[#cc4300] p-5 md:p-7 min-h-[330px]"
+                      className="rounded-3xl border border-border bg-card p-5 md:p-7 min-h-[330px]"
                     >
-                      <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-white/95 text-black text-lg font-medium mb-6">
+                      <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-6">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
                       <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </article>
                   ))}
@@ -1733,18 +1728,18 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#cf4300_0%,#360f00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-primary-foreground">
                   AI &amp; ML Solutions Across Key Industries
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.28fr] gap-6 lg:gap-8 lg:items-stretch">
-                  <div className="rounded-3xl overflow-hidden border border-primary/80 h-[340px] lg:h-full">
+                  <div className="rounded-3xl overflow-hidden border border-primary-foreground/20 h-[340px] lg:h-full">
                     <img
                       src={aiIndustriesImage}
                       alt="AI and ML solutions across industries"
@@ -1763,19 +1758,19 @@ const ServiceDetail = () => {
                           <button
                             type="button"
                             onClick={() => setOpenAiIndustry(isOpen ? "" : industry.title)}
-                            className="w-full bg-white text-black px-6 py-4 flex items-center justify-between text-left"
+                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left hover:bg-accent/10 transition-colors"
                           >
-                            <span className="text-3xl font-medium text-black">{industry.title}</span>
+                            <span className="text-3xl font-medium text-foreground">{industry.title}</span>
                             {isOpen ? (
-                              <ChevronUp size={22} className="text-black" />
+                              <ChevronUp size={22} className="text-foreground" />
                             ) : (
-                              <ChevronDown size={22} className="text-black" />
+                              <ChevronDown size={22} className="text-foreground" />
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-white px-6 pb-5">
-                              <p className="text-[#374151] text-xl leading-relaxed mb-3">{industry.intro}</p>
-                              <ul className="space-y-1.5 text-[#374151] text-xl leading-relaxed list-disc pl-6">
+                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                              <p className="text-foreground/90 text-xl leading-relaxed mb-3">{industry.intro}</p>
+                              <ul className="space-y-1.5 text-foreground/90 text-xl leading-relaxed list-disc pl-6">
                                 {industry.points.map((point) => (
                                   <li key={point}>{point}</li>
                                 ))}
@@ -1790,14 +1785,14 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#2a0b00_0%,#cf4300_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-primary-foreground">
                   Our End-to-End Approach
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
@@ -1806,15 +1801,14 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className={`rounded-3xl border border-white/80 p-5 md:p-6 min-h-[430px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)] hover:scale-[1.01] ${
-                          index === endToEndApproach.length - 1
-                            ? "bg-[#c0581d] hover:bg-[#ce6a31]"
-                            : "bg-[#6f2201]/80 hover:bg-[#8b2c03]"
-                        }`}
+                        className={`rounded-3xl border border-primary-foreground/30 p-5 md:p-6 min-h-[430px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.1)] hover:scale-[1.01] ${index === endToEndApproach.length - 1
+                          ? "bg-background text-foreground hover:bg-background/90"
+                          : "bg-white/10 text-primary-foreground hover:bg-white/20"
+                          }`}
                       >
                         <Icon size={34} className="mx-auto mb-5" />
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-center leading-tight mb-3">{item.title}</h3>
-                        <p className="text-sm md:text-base leading-relaxed text-center text-foreground/95">{item.desc}</p>
+                        <p className={`text-sm md:text-base leading-relaxed text-center ${index === endToEndApproach.length - 1 ? 'text-foreground/90' : 'text-primary-foreground/90'}`}>{item.desc}</p>
                       </article>
                     );
                   })}
@@ -1822,9 +1816,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#bf3d00]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground">
                   The Pravaah AI &amp; ML Transformation Journey
                 </h2>
                 <div className="relative mb-10">
@@ -1836,12 +1830,12 @@ const ServiceDetail = () => {
                   {aiMlJourney.map((item) => (
                     <article
                       key={item.id}
-                      className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-5 md:p-7 min-h-[340px]"
+                      className="rounded-3xl border border-border bg-card p-5 md:p-7 min-h-[340px]"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
+                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
                       <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                     </article>
                   ))}
@@ -1849,9 +1843,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#cf4300_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   Why Choose Us
                 </h2>
 
@@ -1861,9 +1855,9 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className="rounded-3xl bg-[#f2f2f2] text-black min-h-[145px] px-4 py-6 flex flex-col items-center justify-center text-center"
+                        className="rounded-3xl bg-background border border-border text-foreground min-h-[145px] px-4 py-6 flex flex-col items-center justify-center text-center"
                       >
-                        <Icon size={36} className="mb-4" />
+                        <Icon size={36} className="mb-4 text-primary" />
                         <h3 className="text-xl md:text-2xl font-medium leading-snug">{item.title}</h3>
                       </article>
                     );
@@ -1872,9 +1866,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
                   Our AI &amp; ML Tech Stack
                 </h2>
 
@@ -1882,9 +1876,9 @@ const ServiceDetail = () => {
                   {aiMlTechStack.map((row) => (
                     <article
                       key={row.category}
-                      className="rounded-3xl overflow-hidden bg-[#e9e9e9] grid grid-cols-1 md:grid-cols-[260px_1fr]"
+                      className="rounded-3xl overflow-hidden bg-card border border-border grid grid-cols-1 md:grid-cols-[260px_1fr]"
                     >
-                      <div className="bg-black text-white px-5 py-6 md:px-6 md:py-8 flex items-center justify-center text-center">
+                      <div className="bg-primary text-primary-foreground px-5 py-6 md:px-6 md:py-8 flex items-center justify-center text-center">
                         <h3 className="text-xl md:text-2xl font-medium leading-snug">{row.category}</h3>
                       </div>
 
@@ -1892,11 +1886,10 @@ const ServiceDetail = () => {
                         {row.tools.map((tool, index) => (
                           <span
                             key={`${row.category}-${tool}`}
-                            className={`inline-flex items-center rounded-md border px-3 py-1.5 text-xl md:text-2xl ${
-                              index === 0
-                                ? "bg-[#cf4300] border-[#cf4300] text-white"
-                                : "bg-transparent border-black/80 text-black"
-                            }`}
+                            className={`inline-flex items-center rounded-md border px-3 py-1.5 text-xl md:text-2xl ${index === 0
+                              ? "bg-primary border-primary text-primary-foreground"
+                              : "bg-transparent border-border text-foreground"
+                              }`}
                           >
                             {tool}
                           </span>
@@ -1908,9 +1901,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#bf3d00]">
+            <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8">Case Study</h2>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-foreground">Case Study</h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
@@ -1922,13 +1915,12 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className={`rounded-3xl border border-white/75 p-6 md:p-7 min-h-[430px] ${
-                          index === 2 ? "bg-[#c0581d]" : "bg-[#8a2a00]"
-                        }`}
+                        className={`rounded-3xl border border-border p-6 md:p-7 min-h-[430px] ${index === 2 ? "bg-primary text-primary-foreground" : "bg-background text-foreground"
+                          }`}
                       >
                         <Icon size={44} className="mx-auto mb-6" />
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-center leading-tight mb-5">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95">{item.desc}</p>
+                        <p className={`text-lg md:text-xl leading-relaxed text-center ${index === 2 ? "text-primary-foreground/90" : "text-foreground/90"}`}>{item.desc}</p>
                       </article>
                     );
                   })}
@@ -1936,9 +1928,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-black">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   Testimonials
                 </h2>
 
@@ -1946,15 +1938,15 @@ const ServiceDetail = () => {
                   {agenticTestimonials.map((item) => (
                     <article
                       key={item.name}
-                      className="rounded-[20px] bg-[#c0581d] p-6 md:p-7 min-h-[360px] flex flex-col"
+                      className="rounded-[20px] bg-white/10 border border-primary-foreground/20 p-6 md:p-7 min-h-[360px] flex flex-col"
                     >
-                      <p className="text-center text-3xl leading-none mb-6">"</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95 flex-1">
-                        "{item.quote}"
+                      <p className="text-center text-3xl leading-none mb-6 text-primary-foreground">&quot;</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-primary-foreground/90 flex-1">
+                        &quot;{item.quote}&quot;
                       </p>
                       <div className="pt-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1">{item.name}</h3>
-                        <p className="text-2xl text-foreground/95">{item.role}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1 text-primary-foreground">{item.name}</h3>
+                        <p className="text-xl text-primary-foreground/80">{item.role}</p>
                       </div>
                     </article>
                   ))}
@@ -2016,13 +2008,13 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section id="service-overview" className="py-16 md:py-20 bg-black">
+            <section id="service-overview" className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-foreground">
                   A Leading Ecommerce Development Company Crafting High-Conversion Stores
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
+                  <div className="h-px bg-border-70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
                 </div>
 
@@ -2041,7 +2033,7 @@ const ServiceDetail = () => {
                     </ul>
                   </div>
 
-                  <div className="rounded-3xl overflow-hidden border border-primary/80">
+                  <div className="rounded-3xl overflow-hidden border border-border">
                     <img
                       src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Ecommerce laptop storefront"
@@ -2052,9 +2044,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#160400_0%,#7a2602_48%,#bf3d00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-primary-foreground">
                   Get Expert Guidance for Your Ecommerce Platform
                 </h2>
 
@@ -2064,11 +2056,11 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[300px]"
+                        className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[300px]"
                       >
-                        <Icon size={34} className="mb-5" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <Icon size={34} className="mb-5 text-primary-foreground" />
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -2080,11 +2072,11 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[300px]"
+                        className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[300px]"
                       >
-                        <Icon size={34} className="mb-5" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <Icon size={34} className="mb-5 text-primary-foreground" />
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -2092,9 +2084,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#bf3d00]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10">
+                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 text-foreground">
                   Ecommerce Areas of Expertise
                 </h2>
 
@@ -2104,14 +2096,14 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className="rounded-3xl bg-[#efefef] text-black p-6 md:p-7 min-h-[380px] flex flex-col items-center text-center"
+                        className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[380px] flex flex-col items-center text-center"
                       >
-                        <Icon size={44} className="mb-5" />
+                        <Icon size={44} className="mb-5 text-primary" />
                         <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4 leading-tight">{item.title}</h3>
-                        <p className="text-2xl text-black/65 leading-relaxed flex-1">{item.desc}</p>
+                        <p className="text-2xl text-foreground/75 leading-relaxed flex-1">{item.desc}</p>
                         <a
                           href="#contact"
-                          className="mt-7 inline-flex items-center justify-center h-12 px-7 rounded-md bg-[#c0581d] text-white text-lg font-semibold hover:brightness-110 transition-all"
+                          className="mt-7 inline-flex items-center justify-center h-12 px-7 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
                         >
                           Learn More
                         </a>
@@ -2122,27 +2114,27 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#1a0500_0%,#7a2602_45%,#bf3d00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
                   Ecommerce Solutions for Any Business Model
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                   {ecommerceBusinessModelSolutions.slice(0, 6).map((item) => (
                     <article
                       key={item.title}
-                      className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[280px] text-center"
+                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[280px] text-center"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
+                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2151,25 +2143,25 @@ const ServiceDetail = () => {
                   {ecommerceBusinessModelSolutions.slice(6).map((item) => (
                     <article
                       key={item.title}
-                      className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[280px] text-center"
+                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[280px] text-center"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
+                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                     </article>
                   ))}
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">
+                <h2 className="text-3xl md:text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">
                   Create Experiences with New-Age Techs
                 </h2>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground/95 mb-10 max-w-6xl">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground/90 mb-10 max-w-6xl">
                   Pravaah Consulting integrates <span className="underline">innovative AI tools</span> to transform
                   your online store into an interactive powerhouse, boosting engagement and conversions across devices.
                 </p>
@@ -2178,10 +2170,10 @@ const ServiceDetail = () => {
                   {ecommerceNewAgeTechs.slice(0, 6).map((item) => (
                     <article
                       key={item.title}
-                      className="rounded-3xl bg-black text-white p-6 md:p-7 min-h-[190px]"
+                      className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[190px]"
                     >
                       <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-white/85">{item.desc}</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
                     </article>
                   ))}
                 </div>
@@ -2190,24 +2182,24 @@ const ServiceDetail = () => {
                   {ecommerceNewAgeTechs.slice(6).map((item) => (
                     <article
                       key={item.title}
-                      className="rounded-3xl bg-black text-white p-6 md:p-7 min-h-[190px]"
+                      className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[190px]"
                     >
                       <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-white/85">{item.desc}</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
                     </article>
                   ))}
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#c84400_0%,#2a0b00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
                   We Build Resilient, AI-Powered Ecommerce Operations
                 </h2>
                 <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-6 lg:gap-8 lg:items-stretch">
@@ -2227,18 +2219,18 @@ const ServiceDetail = () => {
                           <button
                             type="button"
                             onClick={() => setOpenEcommerceOperation(isOpen ? "" : item.title)}
-                            className="w-full bg-white text-black px-6 py-4 flex items-center justify-between text-left"
+                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left"
                           >
-                            <span className="text-3xl font-medium text-black">{item.title}</span>
+                            <span className="text-3xl font-medium text-foreground">{item.title}</span>
                             {isOpen ? (
-                              <ChevronUp size={22} className="text-black" />
+                              <ChevronUp size={22} className="text-foreground" />
                             ) : (
-                              <ChevronDown size={22} className="text-black" />
+                              <ChevronDown size={22} className="text-foreground" />
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-white px-6 pb-5">
-                              <p className="text-[#374151] text-xl leading-relaxed">{item.desc}</p>
+                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                              <p className="text-foreground/90 text-xl leading-relaxed">{item.desc}</p>
                             </div>
                           ) : null}
                         </article>
@@ -2249,9 +2241,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-black">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center leading-tight mb-8 text-foreground">
                   How Can Our Ecommerce Services Transform Your Business?
                 </h2>
                 <div className="relative mb-10">
@@ -2263,22 +2255,22 @@ const ServiceDetail = () => {
                   {ecommerceTransformationBenefits.map((item) => (
                     <article
                       key={item.id}
-                      className="rounded-3xl border border-primary/80 bg-black p-6 md:p-7 min-h-[260px] text-center"
+                      className="rounded-3xl border border-border bg-card p-6 md:p-7 min-h-[260px] text-center"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-[#d1662a] text-white text-lg font-medium mb-5">
+                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-white/85">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
                     </article>
                   ))}
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-black">
+            <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-foreground">
                   Transforming Visions into High-Performance Stores
                 </h2>
 
@@ -2294,7 +2286,7 @@ const ServiceDetail = () => {
                           prev === 0 ? ecommerceShowcaseProjects.length - 1 : prev - 1,
                         )
                       }
-                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#f4e2d6] text-[#cf4300] hover:brightness-95 transition-all"
+                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-primary hover:brightness-95 transition-all"
                       aria-label="Previous showcase project"
                     >
                       <ArrowLeft size={20} />
@@ -2302,14 +2294,14 @@ const ServiceDetail = () => {
                   </div>
 
                   <div className="relative">
-                    <div className="rounded-[30px] bg-white p-4 md:p-5 border border-white/80">
+                    <div className="rounded-[30px] bg-background p-4 md:p-5 border border-border">
                       <img
                         src={activeEcommerceShowcase.image}
                         alt={activeEcommerceShowcase.title}
-                        className="w-full h-[260px] md:h-[340px] object-contain rounded-[22px] bg-white"
+                        className="w-full h-[260px] md:h-[340px] object-contain rounded-[22px] bg-background"
                       />
                     </div>
-                    <h3 className="text-center text-2xl md:text-3xl font-heading font-bold mt-5">
+                    <h3 className="text-center text-2xl md:text-3xl font-heading font-bold mt-5 text-foreground">
                       {activeEcommerceShowcase.title}
                     </h3>
 
@@ -2320,7 +2312,7 @@ const ServiceDetail = () => {
                           prev === ecommerceShowcaseProjects.length - 1 ? 0 : prev + 1,
                         )
                       }
-                      className="absolute right-0 md:-right-7 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#f4e2d6] text-[#cf4300] hover:brightness-95 transition-all"
+                      className="absolute right-0 md:-right-7 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-primary hover:brightness-95 transition-all"
                       aria-label="Next showcase project"
                     >
                       <ArrowRight size={20} />
@@ -2330,9 +2322,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#7b2602]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-primary-foreground">
                   How We Work: The Secret to Our Success
                 </h2>
 
@@ -2342,11 +2334,11 @@ const ServiceDetail = () => {
                     return (
                       <article
                         key={item.title}
-                        className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[290px] text-center"
+                        className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[290px] text-center"
                       >
-                        <Icon size={38} className="mx-auto mb-5" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <Icon size={38} className="mx-auto mb-5 text-primary-foreground" />
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                       </article>
                     );
                   })}
@@ -2354,9 +2346,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#bf3d00_0%,#140300_100%)]">
+            <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
                   What It&apos;s Like Working With Pravaah Consulting
                 </h2>
 
@@ -2364,15 +2356,15 @@ const ServiceDetail = () => {
                   {ecommerceTestimonials.map((item) => (
                     <article
                       key={item.name}
-                      className="rounded-[20px] bg-[#c0581d] p-6 md:p-7 min-h-[390px] flex flex-col"
+                      className="rounded-[20px] bg-card border border-border p-6 md:p-7 min-h-[390px] flex flex-col"
                     >
-                      <p className="text-center text-3xl leading-none mb-6">"</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/95 flex-1">
-                        "{item.quote}"
+                      <p className="text-center text-3xl leading-none mb-6 text-primary">&quot;</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/80 flex-1">
+                        &quot;{item.quote}&quot;
                       </p>
                       <div className="pt-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1">{item.name}</h3>
-                        <p className="text-xl md:text-2xl text-foreground/95">{item.role}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1 text-foreground">{item.name}</h3>
+                        <p className="text-xl md:text-2xl text-foreground/75">{item.role}</p>
                       </div>
                     </article>
                   ))}
@@ -2413,10 +2405,10 @@ const ServiceDetail = () => {
 
             <section
               id="service-overview"
-              className="py-16 md:py-20 bg-[linear-gradient(180deg,#180400_0%,#7a2602_52%,#bf3d00_100%)]"
+              className="py-16 md:py-20 bg-background"
             >
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-foreground">
                   Your Comprehensive Marketing Solutions to Amplify Your Brand
                 </h2>
                 <div className="relative mb-10">
@@ -2434,7 +2426,7 @@ const ServiceDetail = () => {
                     loyalty. Explore how our marketing services can boost your brand&apos;s presence today!
                   </p>
 
-                  <div className="rounded-3xl overflow-hidden border border-primary/80">
+                  <div className="rounded-3xl overflow-hidden border border-border">
                     <img
                       src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Marketing team collaboration"
@@ -2445,7 +2437,7 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-primary">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2454,7 +2446,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground">
                   Next-Gen Digital Marketing Services for Measurable Success
                 </h2>
                 <div className="relative mb-10">
@@ -2466,33 +2458,26 @@ const ServiceDetail = () => {
                   {marketingServices.map((item, index) => (
                     <motion.article
                       key={item.id}
-                      className="rounded-3xl border border-primary/80 bg-[#c84400] p-6 md:p-7 min-h-[300px]"
+                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[300px]"
                       variants={revealUp}
                       initial="hidden"
                       whileInView="visible"
                       viewport={scrollViewport}
                       transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-white/95 text-black text-lg font-medium mb-5">
+                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                     </motion.article>
                   ))}
                 </div>
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#cf4300_0%,#140300_100%)]">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
+            <section className="py-16 md:py-20 bg-background">
+              <div className={pageWidthClass}>
                 <div className="space-y-16 md:space-y-24">
                   {marketingFeatureHighlights.map((item, index) => {
                     const Icon = item.icon;
@@ -2508,25 +2493,24 @@ const ServiceDetail = () => {
                         transition={{ duration: 0.45, delay: index * 0.03, ease: "easeOut" }}
                       >
                         <div
-                          className={`rounded-3xl overflow-hidden border border-primary/70 ${
-                            shouldReverse ? "lg:order-2" : "lg:order-1"
-                          }`}
+                          className={`rounded-3xl overflow-hidden border border-border ${shouldReverse ? "lg:order-2" : "lg:order-1"
+                            }`}
                         >
                           <img src={item.image} alt={item.label} className="w-full h-[300px] md:h-[390px] object-cover" />
                         </div>
 
                         <div className={`flex flex-col justify-center ${shouldReverse ? "lg:order-1" : "lg:order-2"}`}>
-                          <div className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-2 text-[#cf4300] mb-4">
+                          <div className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-5 py-2 text-primary mb-4 self-start">
                             <Icon size={20} />
                             <span className="text-xl md:text-2xl font-medium">{item.label}</span>
                           </div>
-                          <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4">
+                          <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">
                             {item.title}
                           </h3>
-                          <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                          <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
                           {item.metric ? (
-                            <p className="mt-5 text-xl md:text-2xl leading-snug text-foreground">
-                              <span className="text-6xl md:text-7xl font-heading font-bold mr-2">{item.metric}</span>
+                            <p className="mt-5 text-xl md:text-2xl leading-snug text-foreground/90">
+                              <span className="text-6xl md:text-7xl font-heading font-bold mr-2 text-primary">{item.metric}</span>
                               {item.metricText}
                             </p>
                           ) : null}
@@ -2535,10 +2519,10 @@ const ServiceDetail = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#bf3d00_0%,#2a0b00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2547,7 +2531,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
                   Industries We Serve
                 </h2>
                 <div className="relative mb-10">
@@ -2556,7 +2540,7 @@ const ServiceDetail = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.28fr] gap-6 lg:gap-8 lg:items-stretch">
-                  <div className="rounded-3xl overflow-hidden border border-primary/80 h-[360px] lg:h-full">
+                  <div className="rounded-3xl overflow-hidden border border-border h-[360px] lg:h-full">
                     <img
                       src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Digital marketing industries"
@@ -2572,18 +2556,18 @@ const ServiceDetail = () => {
                           <button
                             type="button"
                             onClick={() => setOpenMarketingIndustry(isOpen ? "" : industry.title)}
-                            className="w-full bg-white text-black px-6 py-4 flex items-center justify-between text-left"
+                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left"
                           >
-                            <span className="text-3xl font-medium text-black">{industry.title}</span>
+                            <span className="text-3xl font-medium text-foreground">{industry.title}</span>
                             {isOpen ? (
-                              <ChevronUp size={22} className="text-black" />
+                              <ChevronUp size={22} className="text-foreground" />
                             ) : (
-                              <ChevronDown size={22} className="text-black" />
+                              <ChevronDown size={22} className="text-foreground" />
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-white px-6 pb-5">
-                              <p className="text-[#374151] text-xl leading-relaxed">{industry.desc}</p>
+                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                              <p className="text-foreground/90 text-xl leading-relaxed">{industry.desc}</p>
                             </div>
                           ) : null}
                         </article>
@@ -2594,7 +2578,7 @@ const ServiceDetail = () => {
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-black">
+            <section className="py-16 md:py-20 bg-background">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2604,7 +2588,7 @@ const ServiceDetail = () => {
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.02fr] gap-8 lg:gap-10 items-center">
-                  <div className="rounded-3xl overflow-hidden border border-white/20">
+                  <div className="rounded-3xl overflow-hidden border border-border">
                     <img
                       src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Custom digital marketing strategy"
@@ -2613,8 +2597,8 @@ const ServiceDetail = () => {
                   </div>
 
                   <div className="max-w-3xl">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-5">
-                      Don&apos;t see your industry? <span className="font-normal">No worries!</span> Contact our team to
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-5 text-foreground">
+                      Don&apos;t see your industry? <span className="font-normal text-foreground/80">No worries!</span> Contact our team to
                       craft a custom digital marketing strategy specific to your business model.
                     </h3>
                     <a
@@ -2628,7 +2612,7 @@ const ServiceDetail = () => {
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#bf3d00]">
+            <section className="py-16 md:py-20 bg-primary">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2649,25 +2633,25 @@ const ServiceDetail = () => {
                   {marketingTransformationBenefits.map((item, index) => (
                     <motion.article
                       key={item.id}
-                      className="rounded-3xl border border-primary/80 bg-[#8a2a00] p-6 md:p-7 min-h-[230px] text-center"
+                      className="rounded-3xl border border-border bg-card p-6 md:p-7 min-h-[230px] text-center"
                       variants={revealUp}
                       initial="hidden"
                       whileInView="visible"
                       viewport={scrollViewport}
                       transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-white/95 text-black text-lg font-medium mb-5">
+                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3 text-foreground">{item.title}</h3>
+                      <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
                     </motion.article>
                   ))}
                 </div>
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#cf4300]">
+            <section className="py-16 md:py-20 bg-background">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2676,7 +2660,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
                   Our Experts Have Experience In
                 </h2>
 
@@ -2686,14 +2670,14 @@ const ServiceDetail = () => {
                     return (
                       <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-primary/80 bg-[#c84400] min-h-[170px] p-6 md:p-7 flex flex-col items-center justify-center text-center"
+                        className="rounded-3xl border border-border bg-card min-h-[170px] p-6 md:p-7 flex flex-col items-center justify-center text-center text-foreground"
                         variants={revealUp}
                         initial="hidden"
                         whileInView="visible"
                         viewport={scrollViewport}
                         transition={{ duration: 0.35, delay: index * 0.04, ease: "easeOut" }}
                       >
-                        <Icon size={38} className="mb-4" />
+                        <Icon size={38} className="mb-4 text-primary" />
                         <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
@@ -2706,14 +2690,14 @@ const ServiceDetail = () => {
                     return (
                       <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-primary/80 bg-[#c84400] min-h-[170px] p-6 md:p-7 flex flex-col items-center justify-center text-center"
+                        className="rounded-3xl border border-border bg-card min-h-[170px] p-6 md:p-7 flex flex-col items-center justify-center text-center text-foreground"
                         variants={revealUp}
                         initial="hidden"
                         whileInView="visible"
                         viewport={scrollViewport}
                         transition={{ duration: 0.35, delay: index * 0.05, ease: "easeOut" }}
                       >
-                        <Icon size={38} className="mb-4" />
+                        <Icon size={38} className="mb-4 text-primary" />
                         <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
@@ -2722,7 +2706,7 @@ const ServiceDetail = () => {
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[#bf3d00]">
+            <section className="py-16 md:py-20 bg-primary">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2731,7 +2715,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   How We Work: The Secret to Our Success
                 </h2>
 
@@ -2739,7 +2723,7 @@ const ServiceDetail = () => {
                   {marketingWorkflowCards.map((item, index) => (
                     <motion.article
                       key={item.title}
-                      className="rounded-3xl border border-primary/80 bg-[#7b2602] overflow-hidden"
+                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 overflow-hidden"
                       variants={revealUp}
                       initial="hidden"
                       whileInView="visible"
@@ -2748,8 +2732,8 @@ const ServiceDetail = () => {
                     >
                       <img src={item.image} alt={item.title} className="w-full h-[180px] object-cover" />
                       <div className="p-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3 text-primary-foreground">{item.title}</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                       </div>
                     </motion.article>
                   ))}
@@ -2757,7 +2741,7 @@ const ServiceDetail = () => {
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-black">
+            <section className="py-16 md:py-20 bg-background">
               <motion.div
                 className={pageWidthClass}
                 variants={revealUp}
@@ -2766,7 +2750,7 @@ const ServiceDetail = () => {
                 viewport={scrollViewport}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
                   Why Choose Us
                 </h2>
 
@@ -2776,14 +2760,14 @@ const ServiceDetail = () => {
                     return (
                       <motion.article
                         key={item.title}
-                        className="rounded-3xl bg-[#f1f1f1] text-black p-6 md:p-7 min-h-[170px] flex flex-col items-center justify-center text-center"
+                        className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[170px] flex flex-col items-center justify-center text-center"
                         variants={revealUp}
                         initial="hidden"
                         whileInView="visible"
                         viewport={scrollViewport}
                         transition={{ duration: 0.35, delay: index * 0.05, ease: "easeOut" }}
                       >
-                        <Icon size={38} className="mb-4 text-[#cf4300]" />
+                        <Icon size={38} className="mb-4 text-primary" />
                         <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
@@ -2792,9 +2776,9 @@ const ServiceDetail = () => {
               </motion.div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#bf3d00_0%,#4f1700_62%,#140300_100%)]">
+            <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14">
+                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14 text-foreground">
                   Our Projects &amp; Success Stories
                 </h2>
 
@@ -2815,21 +2799,21 @@ const ServiceDetail = () => {
                         prev === 0 ? marketingProjectStories.length - 1 : prev - 1,
                       )
                     }
-                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-white text-[#cf4300] inline-flex items-center justify-center"
+                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
                     aria-label="Previous project"
                   >
                     <ArrowLeft size={18} />
                   </button>
 
                   <div className="w-full">
-                    <div className="rounded-[14px] overflow-hidden border border-white/40 bg-[#f2ece8] p-4 md:p-6">
+                    <div className="rounded-[14px] overflow-hidden border border-border bg-background p-4 md:p-6">
                       <img
                         src={activeMarketingProject.image}
                         alt={activeMarketingProject.title}
                         className="w-full h-[250px] md:h-[340px] object-cover rounded-md"
                       />
                     </div>
-                    <h4 className="text-center text-4xl md:text-5xl font-heading font-bold mt-5">
+                    <h4 className="text-center text-4xl md:text-5xl font-heading font-bold mt-5 text-foreground">
                       {activeMarketingProject.title}
                     </h4>
                   </div>
@@ -2841,7 +2825,7 @@ const ServiceDetail = () => {
                         prev === marketingProjectStories.length - 1 ? 0 : prev + 1,
                       )
                     }
-                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-white text-[#cf4300] inline-flex items-center justify-center"
+                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
                     aria-label="Next project"
                   >
                     <ArrowRight size={18} />
@@ -2850,9 +2834,9 @@ const ServiceDetail = () => {
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#140300_0%,#6f2100_55%,#bf3d00_100%)]">
+            <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   Testimonials
                 </h2>
 
@@ -2860,13 +2844,13 @@ const ServiceDetail = () => {
                   {marketingTestimonials.map((item) => (
                     <article
                       key={item.name}
-                      className="rounded-[20px] bg-[#c0581d] p-7 md:p-8 min-h-[390px] flex flex-col text-center"
+                      className="rounded-[20px] bg-white/10 border border-primary-foreground/20 p-7 md:p-8 min-h-[390px] flex flex-col text-center"
                     >
-                      <p className="text-6xl leading-none mb-6">"</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95 flex-1">"{item.quote}"</p>
+                      <p className="text-6xl leading-none mb-6 text-primary-foreground">&quot;</p>
+                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 flex-1">&quot;{item.quote}&quot;</p>
                       <div className="pt-7">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2">{item.name}</h3>
-                        <p className="text-xl text-foreground/95">{item.role}</p>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary-foreground">{item.name}</h3>
+                        <p className="text-xl text-primary-foreground/80">{item.role}</p>
                       </div>
                     </article>
                   ))}

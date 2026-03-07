@@ -35,18 +35,14 @@ const ProjectsSuccessSection = () => {
 
   return (
     <section
-      className="py-24"
-      style={{
-        background:
-          "linear-gradient(180deg, hsl(20 98% 35%) 0%, hsl(15 95% 22%) 58%, hsl(220 25% 7%) 100%)",
-      }}
+      className="py-24 bg-primary"
     >
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-6xl font-heading font-bold mb-12 text-white"
+          className="text-3xl md:text-6xl font-heading font-bold mb-12 text-primary-foreground"
         >
           Our Projects &amp; Success Stories
         </motion.h2>
@@ -58,10 +54,10 @@ const ProjectsSuccessSection = () => {
             viewport={{ once: true }}
             className="max-w-xl"
           >
-            <h3 className="text-xl md:text-3xl font-heading font-semibold text-white mb-6">
+            <h3 className="text-xl md:text-3xl font-heading font-semibold text-primary-foreground mb-6">
               Engineering the Future: Our Portfolio of High-Impact Solutions
             </h3>
-            <p className="text-white/90 text-lg leading-relaxed">
+            <p className="text-primary-foreground/90 text-lg leading-relaxed">
               Explore how Pravaah Consulting empowers global enterprises to ignite growth through
               transformative product engineering services. From Agentic AI and custom software
               development to high-level digital strategy, our work showcases the measurable business
@@ -74,7 +70,7 @@ const ProjectsSuccessSection = () => {
             type="button"
             onClick={prevProject}
             aria-label="Previous project"
-            className="mx-auto lg:mx-0 h-12 w-12 rounded-full bg-white/90 text-[hsl(20_98%_35%)] hover:bg-white transition-all duration-200 flex items-center justify-center"
+            className="mx-auto lg:mx-0 h-12 w-12 rounded-full bg-primary-foreground text-primary hover:brightness-95 transition-all duration-200 flex items-center justify-center"
           >
             <ArrowLeft size={20} />
           </button>
@@ -86,14 +82,14 @@ const ProjectsSuccessSection = () => {
             viewport={{ once: true }}
             className="w-full"
           >
-            <div className="rounded-lg overflow-hidden bg-[#e9dfdb] p-4 md:p-6">
+            <div className="rounded-lg overflow-hidden border border-border bg-background p-4 md:p-6">
               <img
                 src={activeProject.image}
                 alt={activeProject.title}
-                className="w-full aspect-[16/9] object-cover"
+                className="w-full aspect-[16/9] object-cover rounded-md"
               />
             </div>
-            <h3 className="text-center text-3xl md:text-5xl font-heading font-bold mt-6 text-white">
+            <h3 className="text-center text-3xl md:text-5xl font-heading font-bold mt-6 text-primary-foreground">
               {activeProject.title}
             </h3>
           </motion.div>
@@ -102,7 +98,7 @@ const ProjectsSuccessSection = () => {
             type="button"
             onClick={nextProject}
             aria-label="Next project"
-            className="mx-auto lg:mx-0 h-12 w-12 rounded-full bg-white/90 text-[hsl(20_98%_35%)] hover:bg-white transition-all duration-200 flex items-center justify-center"
+            className="mx-auto lg:mx-0 h-12 w-12 rounded-full bg-primary-foreground text-primary hover:brightness-95 transition-all duration-200 flex items-center justify-center"
           >
             <ArrowRight size={20} />
           </button>

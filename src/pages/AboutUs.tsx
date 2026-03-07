@@ -16,7 +16,7 @@ import teamImg from "@/assets/team-collab.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
       <main>
@@ -32,7 +32,7 @@ const AboutUs = () => {
                 <h1 className="text-5xl md:text-7xl font-heading font-bold leading-[1.06] mb-5">
                   Introducing Pravaah Consulting
                 </h1>
-                <p className="text-2xl md:text-4xl text-white/95 leading-relaxed mb-8">
+                <p className="text-2xl md:text-4xl text-foreground/95 leading-relaxed mb-8">
                   Smart AI Solutions | Winning Strategies | Record-Breaking Growth
                 </p>
                 <a
@@ -46,8 +46,7 @@ const AboutUs = () => {
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
-                className="rounded-2xl overflow-hidden border border-white/20"
+                className="rounded-2xl overflow-hidden border border-border"
               >
                 <img
                   src={teamImg}
@@ -59,12 +58,12 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-[linear-gradient(90deg,#210700_0%,#bf3d00_100%)]">
+        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container text-center">
-            <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6">
+            <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-white">
               Transform Today Lead Tomorrow
             </h2>
-            <p className="text-lg md:text-2xl text-white/95 max-w-5xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-2xl text-primary-foreground/95 max-w-5xl mx-auto leading-relaxed">
               Founded with a vision to accelerate businesses with AI solutions and digital transformation, we
               are a leading consulting partner for forward-thinking businesses worldwide. With over 250
               successful projects, a core team of 50+ experts, and a family of 100+ happy clients, Pravaah
@@ -74,12 +73,12 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-black">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.05fr] gap-8 xl:gap-12 items-center">
               <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6">Our Mission</h2>
-                <p className="text-lg md:text-2xl text-white/95 leading-relaxed">
+                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">Our Mission</h2>
+                <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   At Pravaah Consulting, we&apos;re on a mission to bring your digital dreams to life fast,
                   smart, and seamless. Using advanced AI and innovative tech, we create opportunities for
                   your business to grow and lead. Ready to transform, innovate, and accelerate? Together,
@@ -88,7 +87,7 @@ const AboutUs = () => {
                 </p>
               </div>
 
-              <div className="rounded-lg overflow-hidden border border-white/15">
+              <div className="rounded-lg overflow-hidden border border-border">
                 <img
                   src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Team discussing strategy in a mission workshop"
@@ -99,11 +98,11 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-[linear-gradient(180deg,#5f1700_0%,#bf3d00_100%)]">
+        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5">What We Do?</h2>
-              <p className="text-lg md:text-3xl text-white/95">
+              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5 text-white">What We Do?</h2>
+              <p className="text-lg md:text-3xl text-primary-foreground/95">
                 IMAGINE | STRATEGIZE | ARCHITECT | DESIGN | BUILD | EXECUTE | MEASURE
               </p>
             </div>
@@ -143,18 +142,18 @@ const AboutUs = () => {
               ].map((item) => (
                 <article
                   key={item.id}
-                  className="rounded-md border border-primary/80 bg-[#7a2300] p-5 md:p-6 min-h-[180px]"
+                  className="rounded-md border border-primary-foreground/20 bg-white/10 p-5 md:p-6 min-h-[180px]"
                 >
-                  <span className="inline-flex items-center justify-center h-10 min-w-10 px-2 rounded bg-primary text-white text-lg font-medium mb-5">
+                  <span className="inline-flex items-center justify-center h-10 min-w-10 px-2 rounded bg-background text-foreground text-lg font-medium mb-5">
                     {item.id}
                   </span>
-                  <h3 className="text-3xl md:text-5xl font-heading font-bold mb-3">{item.title}</h3>
-                  <p className="text-lg md:text-2xl leading-relaxed text-white/95">{item.desc}</p>
+                  <h3 className="text-3xl md:text-5xl font-heading font-bold mb-3 text-white">{item.title}</h3>
+                  <p className="text-lg md:text-2xl leading-relaxed text-primary-foreground/95">{item.desc}</p>
                 </article>
               ))}
             </div>
 
-            <p className="text-center text-lg md:text-3xl leading-relaxed text-white/95 max-w-6xl mx-auto">
+            <p className="text-center text-lg md:text-3xl leading-relaxed text-primary-foreground/95 max-w-6xl mx-auto">
               We see a world where technology sparks growth and transforms businesses, big or small. Our
               vision? To be your trusted partner in unlocking the power of AI, automation, and smart
               solutions that drive real results. Together, let&apos;s create innovative, agile, and impactful
@@ -163,10 +162,10 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-black">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
-              <div className="rounded-md overflow-hidden border border-white/20">
+              <div className="rounded-md overflow-hidden border border-border">
                 <img
                   src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Books representing knowledge and philosophy"
@@ -175,8 +174,8 @@ const AboutUs = () => {
               </div>
 
               <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6">Our Philosophy</h2>
-                <p className="text-lg md:text-2xl text-white/95 leading-relaxed">
+                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">Our Philosophy</h2>
+                <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   We believe that speed is key to digital transformation. By partnering with the world&apos;s
                   most innovative platforms and leveraging agentic AI frameworks, we deliver business
                   applications at a fraction of the time and cost of traditional solutions. Every project is
@@ -188,9 +187,9 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-[linear-gradient(90deg,#2a0b00_0%,#bf3d00_100%)]">
+        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container">
-            <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-10 md:mb-12">
+            <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-10 md:mb-12 text-white">
               Our Values
             </h2>
 
@@ -226,11 +225,11 @@ const AboutUs = () => {
                 return (
                   <article
                     key={item.title}
-                    className="rounded-md border border-primary/80 bg-[#6d1f00] p-6 md:p-7 min-h-[280px]"
+                    className="rounded-md border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[280px]"
                   >
                     <Icon size={42} className="text-white mb-8" />
-                    <h3 className="text-4xl font-heading font-bold mb-3">{item.title}</h3>
-                    <p className="text-xl leading-relaxed text-white/95">{item.desc}</p>
+                    <h3 className="text-4xl font-heading font-bold mb-3 text-white">{item.title}</h3>
+                    <p className="text-xl leading-relaxed text-primary-foreground/95">{item.desc}</p>
                   </article>
                 );
               })}
@@ -238,12 +237,12 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-black">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
               <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6">The Pravaah Journey</h2>
-                <p className="text-lg md:text-2xl text-white/95 leading-relaxed">
+                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">The Pravaah Journey</h2>
+                <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   Our inception as a trusted partner for global enterprises has consistently delivered
                   value through innovative technology solutions. Our portfolio spans healthcare, e-commerce,
                   marketing, and beyond, each project a testament to our commitment to excellence and
@@ -252,7 +251,7 @@ const AboutUs = () => {
                 </p>
               </div>
 
-              <div className="rounded-md overflow-hidden border border-white/15">
+              <div className="rounded-md overflow-hidden border border-border">
                 <img
                   src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Pravaah team journey and office collaboration"
@@ -263,9 +262,9 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-[linear-gradient(90deg,#4a1200_0%,#9f2f00_100%)]">
+        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container">
-            <h2 className="text-5xl md:text-7xl font-heading font-bold text-center leading-tight mb-8">
+            <h2 className="text-5xl md:text-7xl font-heading font-bold text-center leading-tight mb-8 text-white">
               Our Powerhouse Team: 50+ Experts, One Vision
             </h2>
 
@@ -275,7 +274,7 @@ const AboutUs = () => {
             </div>
 
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
-              <div className="rounded-md overflow-hidden border border-white/20">
+              <div className="rounded-md overflow-hidden border border-primary-foreground/20">
                 <img
                   src="https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Pravaah powerhouse team in a planning session"
@@ -283,7 +282,7 @@ const AboutUs = () => {
                 />
               </div>
 
-              <p className="text-lg md:text-2xl text-white/95 leading-relaxed max-w-4xl">
+              <p className="text-lg md:text-2xl text-primary-foreground/95 leading-relaxed max-w-4xl">
                 Meet the heart of Pravaah Consulting our people! A vibrant mix of strategists, architects,
                 engineers, designers, and marketers, all passionate about turning ideas into impact. From a
                 small group of passionate innovators to a powerhouse team of 50+ experts, our journey at
@@ -296,9 +295,9 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-black">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container">
-            <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-12 md:mb-14">
+            <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-12 md:mb-14 text-foreground">
               Why Pravaah Consulting?
             </h2>
 
@@ -333,9 +332,9 @@ const AboutUs = () => {
                 const Icon = item.icon;
                 return (
                   <article key={item.title} className="text-center">
-                    <Icon size={44} className="mx-auto mb-4 text-white" />
-                    <h3 className="text-3xl font-heading font-bold leading-snug mb-2">{item.title}</h3>
-                    <p className="text-lg md:text-xl leading-relaxed text-white/95">{item.desc}</p>
+                    <Icon size={44} className="mx-auto mb-4 text-primary" />
+                    <h3 className="text-3xl font-heading font-bold leading-snug mb-2 text-foreground">{item.title}</h3>
+                    <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
                   </article>
                 );
               })}
@@ -343,12 +342,12 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-black">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.05fr] gap-8 xl:gap-12 items-center">
               <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5">Join Us on the Journey</h2>
-                <p className="text-lg md:text-2xl text-white/95 leading-relaxed mb-7">
+                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5 text-foreground">Join Us on the Journey</h2>
+                <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed mb-7">
                   Ready to reimagine your business? Partner with Pravaah Consulting and experience the
                   power of innovation, intelligence, and impact. Your Vision. Our Expertise. Limitless
                   Possibilities.
@@ -362,7 +361,7 @@ const AboutUs = () => {
                 </a>
               </div>
 
-              <div className="rounded-md overflow-hidden border border-white/15">
+              <div className="rounded-md overflow-hidden border border-border">
                 <img
                   src="https://images.pexels.com/photos/4475524/pexels-photo-4475524.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Customer success journey with Pravaah Consulting"
