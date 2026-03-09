@@ -2,6 +2,27 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.22,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 44, filter: "blur(10px)" },
+  show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.85, ease: "easeOut" } },
+};
+
+const btnVariants = {
+  hidden: { opacity: 0, scale: 0.88, filter: "blur(6px)" },
+  show: { opacity: 1, scale: 1, filter: "blur(0px)", transition: { duration: 0.65, ease: "easeOut" } },
+};
+
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -13,25 +34,33 @@ const HeroSection = () => {
 
       <div className="container relative z-10 flex flex-col items-center text-center pt-24 pb-16">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
           className="flex flex-col items-center"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold leading-tight mb-4 text-foreground">
-            Pravaah Consulting
-          </h1>
-
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Empowering Your Business with Agentic AI
-          </p>
-
-          <Button
-            size="lg"
-            className="bg-gradient-primary text-primary-foreground font-semibold px-8 py-6 text-base rounded-lg"
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold leading-tight mb-4 text-foreground"
           >
-            Book a Consultation
-          </Button>
+            Pravaah Consulting
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-lg md:text-xl text-muted-foreground mb-8"
+          >
+            Empowering Your Business with Agentic AI
+          </motion.p>
+
+          <motion.div variants={btnVariants}>
+            <Button
+              size="lg"
+              className="bg-gradient-primary text-primary-foreground font-semibold px-8 py-6 text-base rounded-lg shadow-glow hover:scale-105 transition-transform"
+            >
+              Book a Consultation
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
 

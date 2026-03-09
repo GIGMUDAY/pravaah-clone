@@ -67,24 +67,25 @@ const SolutionsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
           {/* Left - Static */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="lg:sticky lg:top-[40%] lg:-translate-y-1/2 lg:self-start text-center"
+            initial={{ opacity: 0, x: -50, filter: "blur(12px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="lg:sticky lg:top-[40%] lg:-translate-y-1/2 lg:self-start text-center lg:text-left"
           >
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
               Our <span className="text-gradient">Solutions</span>
             </h2>
-            <p className="font-semibold text-foreground mb-4 max-w-2xl mx-auto">
+            <p className="font-semibold text-foreground mb-4 max-w-2xl mx-auto lg:mx-0">
               Looking for AI that actually solves real industry problems?
             </p>
-            <p className="text-muted-foreground mb-4 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-4 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Most companies experiment with AI. We deploy it where it matters!
               Inside core workflows, revenue engines, and operational systems. At
               Pravaah, we build industry-ready intelligence systems designed to
               deliver measurable impact.
             </p>
-            <p className="text-muted-foreground font-medium max-w-2xl mx-auto">
+            <p className="text-muted-foreground font-medium max-w-2xl mx-auto lg:mx-0">
               Here's how we transform industries:
             </p>
           </motion.div>
@@ -94,31 +95,50 @@ const SolutionsSection = () => {
             {solutions.map((sol, i) => (
               <motion.div
                 key={sol.num}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.05 }}
-                className="border-t border-border/40 pt-8"
+                transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                className="border-t border-border/40 pt-8 group"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <span className="text-muted-foreground font-heading text-lg font-bold mt-1">
+                  <span className="text-muted-foreground font-heading text-lg font-bold mt-1 group-hover:text-primary transition-colors duration-300">
                     {sol.num}
                   </span>
                   <div className="flex-1">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold mb-3">
+                    <motion.h3
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="text-2xl md:text-3xl font-heading font-bold mb-3"
+                    >
                       {sol.title}
-                    </h3>
+                    </motion.h3>
                     <p className="text-muted-foreground italic mb-4">{sol.hook}</p>
                     <p className="text-muted-foreground mb-4 leading-relaxed">{sol.desc}</p>
-                    <ul className="space-y-2 mb-6">
-                      {sol.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                    <ul className="space-y-3 mb-6">
+                      {sol.items.map((item, idx) => (
+                        <motion.li
+                          key={item}
+                          initial={{ opacity: 0, x: 20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.3 + (idx * 0.05) }}
+                          className="flex items-start gap-2 text-sm text-foreground"
+                        >
                           <span className="text-primary mt-1">•</span>
                           <span>{item}</span>
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
-                    <p className="text-muted-foreground text-sm font-medium">{sol.impact}</p>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.5 }}
+                      className="bg-secondary/30 p-4 rounded-xl border border-primary/10"
+                    >
+                      <p className="text-muted-foreground text-sm font-medium">{sol.impact}</p>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>

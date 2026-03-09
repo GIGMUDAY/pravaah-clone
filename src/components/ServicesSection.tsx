@@ -7,9 +7,10 @@ const ServicesSection = () => {
     <section id="services" className="py-24 bg-background">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
@@ -20,14 +21,26 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+            }
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto"
+        >
           {services.map((service, i) => (
             <motion.article
               key={service.slug}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              variants={{
+                hidden: { opacity: 0, y: 40, scale: 0.95, filter: "blur(5px)" },
+                show: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut" } }
+              }}
               className="group relative rounded-2xl overflow-hidden border border-border bg-card min-h-[300px] md:h-[320px] transition-colors duration-300 hover:border-primary/70"
             >
               <img
@@ -52,7 +65,7 @@ const ServicesSection = () => {
               </div>
             </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

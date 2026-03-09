@@ -23,14 +23,26 @@ const testimonials = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.93, filter: "blur(8px)" },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: { duration: 0.65, ease: "easeOut", delay: i * 0.1 },
+  }),
+};
+
 const TestimonialsSection = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
@@ -45,11 +57,13 @@ const TestimonialsSection = () => {
           {testimonials.map((item, index) => (
             <motion.article
               key={item.author}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.08 }}
-              className="bg-primary text-primary-foreground rounded-[2.25rem] p-7 md:p-8 min-h-[430px] flex flex-col justify-between"
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-40px" }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.25 } }}
+              className="bg-primary text-primary-foreground rounded-[2.25rem] p-7 md:p-8 min-h-[430px] flex flex-col justify-between cursor-default"
             >
               <p className="text-[1.07rem] leading-relaxed">{item.quote}</p>
               <p className="text-2xl leading-snug font-medium text-right mt-8">
