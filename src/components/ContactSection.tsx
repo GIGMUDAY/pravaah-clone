@@ -24,7 +24,7 @@ const ContactSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ amount: 0.2, margin: "-60px" }}
           transition={{ duration: 0.75, ease: "easeOut" }}
           className="text-center mb-16"
         >
@@ -41,7 +41,7 @@ const ContactSection = () => {
             variants={contactInfoVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ amount: 0.2, margin: "-60px" }}
             className="space-y-6"
           >
             <motion.div variants={infoItemVariants} className="flex items-center gap-4 glass rounded-xl p-5">
@@ -76,7 +76,7 @@ const ContactSection = () => {
           <motion.form
             initial={{ opacity: 0, x: 40, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ amount: 0.2, margin: "-60px" }}
             transition={{ duration: 0.75, ease: "easeOut", delay: 0.15 }}
             className="glass rounded-2xl p-8 space-y-4"
             onSubmit={(e) => e.preventDefault()}

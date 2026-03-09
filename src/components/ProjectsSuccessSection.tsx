@@ -59,7 +59,7 @@ const ProjectsSuccessSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
+          viewport={{ amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className="text-3xl md:text-6xl font-heading font-bold mb-12 text-primary-foreground text-center lg:text-left"
         >
@@ -70,7 +70,7 @@ const ProjectsSuccessSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -40, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-xl"
           >

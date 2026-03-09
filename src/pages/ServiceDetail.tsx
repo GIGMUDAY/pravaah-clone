@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import {
   ArrowLeft,
@@ -45,6 +45,9 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
+import InfiniteMovingCards from "@/components/InfiniteMovingCards";
+import LogoLoop from "@/components/LogoLoop";
+import SocialTestimonialCard from "@/components/SocialTestimonialCard";
 import { services } from "@/data/services";
 import teamImg from "@/assets/team-collab.jpg";
 import officeImg from "@/assets/office.jpg";
@@ -1269,6 +1272,11 @@ const ServiceDetail = () => {
   const [activeEcommerceShowcaseIndex, setActiveEcommerceShowcaseIndex] = useState(0);
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [activeMarketingProjectIndex, setActiveMarketingProjectIndex] = useState(0);
+  const [activeCapabilityIndex, setActiveCapabilityIndex] = useState(0);
+  const [isCapabilityCarouselPaused, setIsCapabilityCarouselPaused] = useState(false);
+  const capabilityCarouselRef = useRef<HTMLDivElement>(null);
+  const capabilityScrollAnimationRef = useRef<number | null>(null);
+  const capabilityAutoScrollRef = useRef<number | null>(null);
 
   if (!service) {
     return <Navigate to="/not-found" replace />;
@@ -1282,6 +1290,156 @@ const ServiceDetail = () => {
   const activeMarketingProject = marketingProjectStories[activeMarketingProjectIndex];
   const activeEcommerceShowcase = ecommerceShowcaseProjects[activeEcommerceShowcaseIndex];
   const approachIcons = [Search, ClipboardCheck, Rocket, RefreshCw, ShieldCheck];
+  const replayViewport = { amount: 0.2 };
+  const capabilityLoopItems = [...productEngineeringCapabilities, ...productEngineeringCapabilities];
+  const capabilityCardImages = [
+    serviceProductImg,
+    serviceAgenticImg,
+    serviceEcommerceImg,
+    serviceMarketingImg,
+    heroBgImg,
+    officeImg,
+  ];
+
+  const scrollToCapabilityCard = (index: number) => {
+    const container = capabilityCarouselRef.current;
+    if (!container) return;
+
+    const total = productEngineeringCapabilities.length;
+    if (!total) return;
+    const normalizedIndex = ((index % total) + total) % total;
+    const cards = Array.from(container.querySelectorAll<HTMLElement>("[data-capability-index]"));
+    const matchingCards = cards.filter(
+      (card) => Number(card.dataset.capabilityOriginalIndex) === normalizedIndex,
+    );
+    if (!matchingCards.length) return;
+    const targetCard = matchingCards.reduce((closest, current) => {
+      const currentDistance = Math.abs(current.offsetLeft - container.scrollLeft);
+      const closestDistance = Math.abs(closest.offsetLeft - container.scrollLeft);
+      return currentDistance < closestDistance ? current : closest;
+    });
+
+    if (capabilityScrollAnimationRef.current !== null) {
+      cancelAnimationFrame(capabilityScrollAnimationRef.current);
+      capabilityScrollAnimationRef.current = null;
+    }
+
+    const startLeft = container.scrollLeft;
+    const targetLeft = targetCard.offsetLeft;
+    const distance = targetLeft - startLeft;
+    const duration = 950;
+    const startTime = performance.now();
+
+    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    const animate = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      container.scrollLeft = startLeft + distance * easeOutCubic(progress);
+
+      if (progress < 1) {
+        capabilityScrollAnimationRef.current = requestAnimationFrame(animate);
+      } else {
+        capabilityScrollAnimationRef.current = null;
+      }
+    };
+
+    capabilityScrollAnimationRef.current = requestAnimationFrame(animate);
+    setActiveCapabilityIndex(normalizedIndex);
+  };
+
+  const handleCapabilityScroll = () => {
+    const container = capabilityCarouselRef.current;
+    if (!container) return;
+
+    const cards = Array.from(container.querySelectorAll<HTMLElement>("[data-capability-index]"));
+    if (!cards.length) return;
+
+    let closestIndex = 0;
+    let minDistance = Number.POSITIVE_INFINITY;
+
+    cards.forEach((card, index) => {
+      const distance = Math.abs(card.offsetLeft - container.scrollLeft);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    const originalIndex = Number(cards[closestIndex].dataset.capabilityOriginalIndex ?? 0);
+    setActiveCapabilityIndex(originalIndex);
+  };
+
+  const handleProcessSpotlightMove = (event: MouseEvent<HTMLElement>) => {
+    const card = event.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    card.style.setProperty("--spotlight-x", `${x}px`);
+    card.style.setProperty("--spotlight-y", `${y}px`);
+    card.style.setProperty("--spotlight-opacity", "1");
+  };
+
+  const handleProcessSpotlightLeave = (event: MouseEvent<HTMLElement>) => {
+    event.currentTarget.style.setProperty("--spotlight-opacity", "0");
+  };
+
+  const staggerCards = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (!isProductEngineering || isCapabilityCarouselPaused || !productEngineeringCapabilities.length) return;
+
+    const container = capabilityCarouselRef.current;
+    if (!container) return;
+
+    const step = () => {
+      const loopWidth = container.scrollWidth / 2;
+      container.scrollLeft += 0.45;
+
+      if (container.scrollLeft >= loopWidth) {
+        container.scrollLeft -= loopWidth;
+      }
+
+      capabilityAutoScrollRef.current = requestAnimationFrame(step);
+    };
+
+    capabilityAutoScrollRef.current = requestAnimationFrame(step);
+
+    return () => {
+      if (capabilityAutoScrollRef.current !== null) {
+        cancelAnimationFrame(capabilityAutoScrollRef.current);
+        capabilityAutoScrollRef.current = null;
+      }
+    };
+  }, [isCapabilityCarouselPaused, isProductEngineering]);
+
+  useEffect(() => {
+    if (!isProductEngineering || projectStories.length < 2) return;
+
+    const timer = setInterval(() => {
+      setActiveProjectIndex((prev) => (prev === projectStories.length - 1 ? 0 : prev + 1));
+    }, 4200);
+
+    return () => clearInterval(timer);
+  }, [isProductEngineering]);
+
+  useEffect(() => {
+    return () => {
+      if (capabilityScrollAnimationRef.current !== null) {
+        cancelAnimationFrame(capabilityScrollAnimationRef.current);
+      }
+      if (capabilityAutoScrollRef.current !== null) {
+        cancelAnimationFrame(capabilityAutoScrollRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -1369,20 +1527,93 @@ const ServiceDetail = () => {
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {productEngineeringCapabilities.map((capability, index) => (
-                    <article
-                      key={capability.title}
-                      className="rounded-3xl border border-primary-foreground/30 bg-white/10 p-6 md:p-7 min-h-[350px]"
+                <div className="flex items-center justify-end gap-3 mb-6">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      scrollToCapabilityCard(
+                        activeCapabilityIndex === 0
+                          ? productEngineeringCapabilities.length - 1
+                          : activeCapabilityIndex - 1,
+                      )
+                    }
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primary-foreground/35 text-primary-foreground hover:bg-white/10 transition-colors"
+                    aria-label="Previous capability card"
+                  >
+                    <ArrowLeft size={16} />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      scrollToCapabilityCard(
+                        activeCapabilityIndex === productEngineeringCapabilities.length - 1
+                          ? 0
+                          : activeCapabilityIndex + 1,
+                      )
+                    }
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primary-foreground/35 text-primary-foreground hover:bg-white/10 transition-colors"
+                    aria-label="Next capability card"
+                  >
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
+
+                <div
+                  ref={capabilityCarouselRef}
+                  onScroll={handleCapabilityScroll}
+                  onMouseEnter={() => setIsCapabilityCarouselPaused(true)}
+                  onMouseLeave={() => setIsCapabilityCarouselPaused(false)}
+                  className="flex gap-5 overflow-x-auto pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                >
+                  {capabilityLoopItems.map((capability, index) => {
+                    const originalIndex = index % productEngineeringCapabilities.length;
+                    return (
+                    <motion.article
+                      key={`${capability.title}-${index}`}
+                      data-capability-index={index}
+                      data-capability-original-index={originalIndex}
+                      initial={{ opacity: 0, y: 20, scale: 0.97 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.25), ease: "easeOut" }}
+                      whileHover={{ y: -6, scale: 1.01 }}
+                      className="group relative shrink-0 w-[86%] sm:w-[72%] md:w-[48%] xl:w-[32%] min-h-[410px] rounded-3xl overflow-hidden border border-primary-foreground/30"
                     >
-                      <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-primary-foreground text-primary text-lg font-medium mb-6">
-                        {String(index + 1).padStart(2, "0")}
+                      <img
+                        src={capabilityCardImages[originalIndex % capabilityCardImages.length]}
+                        alt={capability.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/55 to-black/85" />
+                      <div className="relative h-full p-6 md:p-7 flex flex-col">
+                        <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-primary-foreground text-primary text-lg font-medium mb-6 w-fit">
+                          {String(originalIndex + 1).padStart(2, "0")}
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">
+                          {capability.title}
+                        </h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">
+                          {capability.desc}
+                        </p>
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">
-                        {capability.title}
-                      </h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{capability.desc}</p>
-                    </article>
+                    </motion.article>
+                    );
+                  })}
+                </div>
+
+                <div className="mt-6 flex items-center justify-center gap-2">
+                  {productEngineeringCapabilities.map((capability, index) => (
+                    <button
+                      key={`capability-dot-${capability.title}`}
+                      type="button"
+                      onClick={() => scrollToCapabilityCard(index)}
+                      className={`h-2.5 rounded-full transition-all ${
+                        activeCapabilityIndex === index
+                          ? "w-7 bg-primary-foreground"
+                          : "w-2.5 bg-primary-foreground/35 hover:bg-primary-foreground/60"
+                      }`}
+                      aria-label={`Go to capability ${index + 1}`}
+                    />
                   ))}
                 </div>
               </div>
@@ -1452,18 +1683,38 @@ const ServiceDetail = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {productEngineeringProcess.map((process) => (
-                    <article
+                    <motion.article
                       key={process.step}
-                      className="rounded-3xl border border-primary/60 bg-background p-6 md:p-7"
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      whileHover={{ y: -5, scale: 1.01 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as CSSProperties
+                      }
+                      className="group relative rounded-3xl border border-primary/60 bg-background p-6 md:p-7 overflow-hidden"
                     >
-                      <p className="text-center text-3xl mb-2">{process.step}</p>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold text-center mb-4">
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                        style={{
+                          opacity: "var(--spotlight-opacity)",
+                          background:
+                            "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(201, 201, 201, 0.32), transparent 70%)",
+                        }}
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_60%)] dark:bg-[radial-gradient(circle_at_top,rgba(54,54,54,0.18),transparent_60%)]" />
+                      <p className="relative text-center text-3xl mb-2">{process.step}</p>
+                      <h3 className="relative text-2xl md:text-3xl font-heading font-bold text-center mb-4">
                         {process.title}
                       </h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/90">
+                      <p className="relative text-lg md:text-xl leading-relaxed text-center text-foreground/90">
                         {process.desc}
                       </p>
-                    </article>
+                    </motion.article>
                   ))}
                 </div>
               </div>
@@ -1525,21 +1776,23 @@ const ServiceDetail = () => {
                   Our Digital Toolbox and Technological Resources
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-                  {digitalToolboxItems.map((tool) => (
-                    <article
-                      key={tool.name}
-                      className="rounded-[22px] bg-card border border-border min-h-[175px] md:min-h-[190px] flex flex-col items-center justify-center p-6 text-center"
-                    >
-                      <img
-                        src={tool.logo}
-                        alt={`${tool.name} logo`}
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain mb-4"
-                        loading="lazy"
-                      />
-                      <h3 className="text-xl md:text-2xl font-medium text-foreground">{tool.name}</h3>
-                    </article>
-                  ))}
+                <div className="h-[220px] md:h-[240px] flex items-center">
+                  <LogoLoop
+                    logos={digitalToolboxItems.map((tool) => ({
+                      src: tool.logo,
+                      alt: `${tool.name} logo`,
+                      title: tool.name,
+                    }))}
+                    speed={110}
+                    direction="left"
+                    logoHeight={56}
+                    gap={26}
+                    hoverSpeed={0}
+                    scaleOnHover
+                    fadeOut
+                    fadeOutColor="hsl(var(--background))"
+                    ariaLabel="Our digital toolbox logos"
+                  />
                 </div>
               </div>
             </section>
@@ -1608,19 +1861,12 @@ const ServiceDetail = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                   {testimonials.map((item) => (
-                    <article
+                    <SocialTestimonialCard
                       key={item.name}
-                      className="rounded-[20px] bg-white/10 border border-primary-foreground/20 p-6 md:p-7 min-h-[360px] flex flex-col"
-                    >
-                      <p className="text-center text-3xl leading-none mb-6 text-primary-foreground">&quot;</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-primary-foreground/90 flex-1">
-                        &quot;{item.quote}&quot;
-                      </p>
-                      <div className="pt-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1 text-primary-foreground">{item.name}</h3>
-                        <p className="text-xl text-primary-foreground/80">{item.role}</p>
-                      </div>
-                    </article>
+                      quote={item.quote}
+                      name={item.name}
+                      role={item.role}
+                    />
                   ))}
                 </div>
               </div>
@@ -1673,7 +1919,14 @@ const ServiceDetail = () => {
               id="service-overview"
               className="py-16 md:py-20 bg-primary"
             >
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
                   Unleash the Power of AI &amp; ML for Transformative Growth
                 </h2>
@@ -1700,21 +1953,35 @@ const ServiceDetail = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-background">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground">Our AI &amp; ML Services</h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={replayViewport}
+                >
                   {aiMlServices.map((item) => (
-                    <article
+                    <motion.article
                       key={item.id}
+                      variants={revealUp}
                       className="rounded-3xl border border-border bg-card p-5 md:p-7 min-h-[330px]"
                     >
                       <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-6">
@@ -1722,14 +1989,21 @@ const ServiceDetail = () => {
                       </div>
                       <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
                       <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
-                    </article>
+                    </motion.article>
                   ))}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-primary">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-primary-foreground">
                   AI &amp; ML Solutions Across Key Industries
                 </h2>
@@ -1782,11 +2056,18 @@ const ServiceDetail = () => {
                     })}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-primary">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-primary-foreground">
                   Our End-to-End Approach
                 </h2>
@@ -1795,12 +2076,19 @@ const ServiceDetail = () => {
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={replayViewport}
+                >
                   {endToEndApproach.map((item, index) => {
                     const Icon = approachIcons[index];
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
+                        variants={revealUp}
                         className={`rounded-3xl border border-primary-foreground/30 p-5 md:p-6 min-h-[430px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.1)] hover:scale-[1.01] ${index === endToEndApproach.length - 1
                           ? "bg-background text-foreground hover:bg-background/90"
                           : "bg-white/10 text-primary-foreground hover:bg-white/20"
@@ -1809,15 +2097,22 @@ const ServiceDetail = () => {
                         <Icon size={34} className="mx-auto mb-5" />
                         <h3 className="text-xl md:text-2xl font-heading font-bold text-center leading-tight mb-3">{item.title}</h3>
                         <p className={`text-sm md:text-base leading-relaxed text-center ${index === endToEndApproach.length - 1 ? 'text-foreground/90' : 'text-primary-foreground/90'}`}>{item.desc}</p>
-                      </article>
+                      </motion.article>
                     );
                   })}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-background">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground">
                   The Pravaah AI &amp; ML Transformation Journey
                 </h2>
@@ -1826,56 +2121,73 @@ const ServiceDetail = () => {
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {aiMlJourney.map((item) => (
-                    <article
-                      key={item.id}
-                      className="rounded-3xl border border-border bg-card p-5 md:p-7 min-h-[340px]"
-                    >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
-                        {item.id}
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
+                <InfiniteMovingCards
+                  items={aiMlJourney}
+                  direction="right"
+                  speed="slow"
+                  className="py-2"
+                />
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-primary">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   Why Choose Us
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4">
+                <motion.div
+                  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={replayViewport}
+                >
                   {whyChooseUsItems.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
+                        variants={revealUp}
                         className="rounded-3xl bg-background border border-border text-foreground min-h-[145px] px-4 py-6 flex flex-col items-center justify-center text-center"
                       >
                         <Icon size={36} className="mb-4 text-primary" />
                         <h3 className="text-xl md:text-2xl font-medium leading-snug">{item.title}</h3>
-                      </article>
+                      </motion.article>
                     );
                   })}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-background">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
                   Our AI &amp; ML Tech Stack
                 </h2>
 
                 <div className="space-y-3 md:space-y-4">
                   {aiMlTechStack.map((row) => (
-                    <article
+                    <motion.article
                       key={row.category}
+                      variants={revealUp}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={replayViewport}
                       className="rounded-3xl overflow-hidden bg-card border border-border grid grid-cols-1 md:grid-cols-[260px_1fr]"
                     >
                       <div className="bg-primary text-primary-foreground px-5 py-6 md:px-6 md:py-8 flex items-center justify-center text-center">
@@ -1895,63 +2207,84 @@ const ServiceDetail = () => {
                           </span>
                         ))}
                       </div>
-                    </article>
+                    </motion.article>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-card">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-foreground">Case Study</h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={replayViewport}
+                >
                   {caseStudies.map((item, index) => {
                     const Icon = item.icon;
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
+                        variants={revealUp}
                         className={`rounded-3xl border border-border p-6 md:p-7 min-h-[430px] ${index === 2 ? "bg-primary text-primary-foreground" : "bg-background text-foreground"
                           }`}
                       >
                         <Icon size={44} className="mx-auto mb-6" />
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-center leading-tight mb-5">{item.title}</h3>
                         <p className={`text-lg md:text-xl leading-relaxed text-center ${index === 2 ? "text-primary-foreground/90" : "text-foreground/90"}`}>{item.desc}</p>
-                      </article>
+                      </motion.article>
                     );
                   })}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </section>
 
             <section className="py-16 md:py-20 bg-primary">
-              <div className={pageWidthClass}>
+              <motion.div
+                className={pageWidthClass}
+                variants={revealUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={replayViewport}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              >
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
                   Testimonials
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={replayViewport}
+                >
                   {agenticTestimonials.map((item) => (
-                    <article
-                      key={item.name}
-                      className="rounded-[20px] bg-white/10 border border-primary-foreground/20 p-6 md:p-7 min-h-[360px] flex flex-col"
-                    >
-                      <p className="text-center text-3xl leading-none mb-6 text-primary-foreground">&quot;</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-primary-foreground/90 flex-1">
-                        &quot;{item.quote}&quot;
-                      </p>
-                      <div className="pt-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1 text-primary-foreground">{item.name}</h3>
-                        <p className="text-xl text-primary-foreground/80">{item.role}</p>
-                      </div>
-                    </article>
+                    <motion.div key={item.name} variants={revealUp}>
+                      <SocialTestimonialCard
+                        quote={item.quote}
+                        name={item.name}
+                        role={item.role}
+                      />
+                    </motion.div>
                   ))}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </section>
 
           </>
@@ -2354,19 +2687,12 @@ const ServiceDetail = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                   {ecommerceTestimonials.map((item) => (
-                    <article
+                    <SocialTestimonialCard
                       key={item.name}
-                      className="rounded-[20px] bg-card border border-border p-6 md:p-7 min-h-[390px] flex flex-col"
-                    >
-                      <p className="text-center text-3xl leading-none mb-6 text-primary">&quot;</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/80 flex-1">
-                        &quot;{item.quote}&quot;
-                      </p>
-                      <div className="pt-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-1 text-foreground">{item.name}</h3>
-                        <p className="text-xl md:text-2xl text-foreground/75">{item.role}</p>
-                      </div>
-                    </article>
+                      quote={item.quote}
+                      name={item.name}
+                      role={item.role}
+                    />
                   ))}
                 </div>
               </div>
@@ -2842,17 +3168,12 @@ const ServiceDetail = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {marketingTestimonials.map((item) => (
-                    <article
+                    <SocialTestimonialCard
                       key={item.name}
-                      className="rounded-[20px] bg-white/10 border border-primary-foreground/20 p-7 md:p-8 min-h-[390px] flex flex-col text-center"
-                    >
-                      <p className="text-6xl leading-none mb-6 text-primary-foreground">&quot;</p>
-                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 flex-1">&quot;{item.quote}&quot;</p>
-                      <div className="pt-7">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary-foreground">{item.name}</h3>
-                        <p className="text-xl text-primary-foreground/80">{item.role}</p>
-                      </div>
-                    </article>
+                      quote={item.quote}
+                      name={item.name}
+                      role={item.role}
+                    />
                   ))}
                 </div>
               </div>
@@ -2920,6 +3241,3 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
-
-
-

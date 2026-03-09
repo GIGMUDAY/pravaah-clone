@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -24,15 +25,34 @@ const btnVariants = {
 };
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0.35]);
+  const contentBlur = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [0, 80]);
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background image */}
-      <div className="absolute inset-0">
+      <motion.div className="absolute inset-0" style={{ scale: bgScale, y: bgY }}>
         <img src={heroBg} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-background/40" />
-      </div>
+      </motion.div>
 
-      <div className="container relative z-10 flex flex-col items-center text-center pt-24 pb-16">
+      <motion.div
+        className="container relative z-10 flex flex-col items-center text-center pt-24 pb-16"
+        style={{ y: contentY, opacity: contentOpacity, filter: contentBlur }}
+      >
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -62,7 +82,7 @@ const HeroSection = () => {
             </Button>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Floating Contact Us button */}
       <a

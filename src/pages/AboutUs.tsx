@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   BadgeCheck,
   BrainCircuit,
@@ -15,6 +15,33 @@ import Footer from "@/components/Footer";
 import teamImg from "@/assets/team-collab.jpg";
 
 const AboutUs = () => {
+  const shouldReduceMotion = useReducedMotion();
+
+  const sectionViewport = { once: true, margin: "-80px" };
+  const sectionReveal = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 40, filter: shouldReduceMotion ? "none" : "blur(8px)" },
+    show: { opacity: 1, y: 0, filter: "blur(0px)" },
+  };
+  const splitLeft = {
+    hidden: { opacity: 0, x: shouldReduceMotion ? 0 : -36, filter: shouldReduceMotion ? "none" : "blur(6px)" },
+    show: { opacity: 1, x: 0, filter: "blur(0px)" },
+  };
+  const splitRight = {
+    hidden: { opacity: 0, x: shouldReduceMotion ? 0 : 36, filter: shouldReduceMotion ? "none" : "blur(6px)" },
+    show: { opacity: 1, x: 0, filter: "blur(0px)" },
+  };
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.09, delayChildren: 0.08 },
+    },
+  };
+  const cardReveal = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 26, scale: shouldReduceMotion ? 1 : 0.98, filter: shouldReduceMotion ? "none" : "blur(6px)" },
+    show: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", transition: { duration: 0.55, ease: "easeOut" } },
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -58,7 +85,14 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+        <motion.section
+          className="py-16 md:py-20 bg-primary text-primary-foreground"
+          variants={sectionReveal}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
           <div className="container text-center">
             <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-white">
               Transform Today Lead Tomorrow
@@ -71,12 +105,17 @@ const AboutUs = () => {
               open tomorrow&apos;s opportunities.
             </p>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-24 bg-background">
+        <motion.section
+          className="py-16 md:py-24 bg-background"
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+        >
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.05fr] gap-8 xl:gap-12 items-center">
-              <div className="max-w-3xl">
+              <motion.div className="max-w-3xl" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">Our Mission</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   At Pravaah Consulting, we&apos;re on a mission to bring your digital dreams to life fast,
@@ -85,20 +124,31 @@ const AboutUs = () => {
                   let&apos;s bring your vision to life and create lasting value that propels your organization
                   forward.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="rounded-lg overflow-hidden border border-border">
+              <motion.div
+                className="rounded-lg overflow-hidden border border-border"
+                variants={splitRight}
+                transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}
+              >
                 <img
                   src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Team discussing strategy in a mission workshop"
                   className="w-full h-[300px] md:h-[420px] object-cover"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+        <motion.section
+          className="py-16 md:py-20 bg-primary text-primary-foreground"
+          variants={sectionReveal}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5 text-white">What We Do?</h2>
@@ -107,7 +157,13 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 mb-14">
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 mb-14"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={sectionViewport}
+            >
               {[
                 {
                   id: "01",
@@ -140,8 +196,9 @@ const AboutUs = () => {
                   desc: "Amplifying your brand with data-driven strategies that maximize ROI.",
                 },
               ].map((item) => (
-                <article
+                <motion.article
                   key={item.id}
+                  variants={cardReveal}
                   className="rounded-md border border-primary-foreground/20 bg-white/10 p-5 md:p-6 min-h-[180px]"
                 >
                   <span className="inline-flex items-center justify-center h-10 min-w-10 px-2 rounded bg-background text-foreground text-lg font-medium mb-5">
@@ -149,9 +206,9 @@ const AboutUs = () => {
                   </span>
                   <h3 className="text-3xl md:text-5xl font-heading font-bold mb-3 text-white">{item.title}</h3>
                   <p className="text-lg md:text-2xl leading-relaxed text-primary-foreground/95">{item.desc}</p>
-                </article>
+                </motion.article>
               ))}
-            </div>
+            </motion.div>
 
             <p className="text-center text-lg md:text-3xl leading-relaxed text-primary-foreground/95 max-w-6xl mx-auto">
               We see a world where technology sparks growth and transforms businesses, big or small. Our
@@ -160,20 +217,25 @@ const AboutUs = () => {
               digital experiences that shape the future and make your business shine.
             </p>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-24 bg-background">
+        <motion.section
+          className="py-16 md:py-24 bg-background"
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+        >
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
-              <div className="rounded-md overflow-hidden border border-border">
+              <motion.div className="rounded-md overflow-hidden border border-border" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <img
                   src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Books representing knowledge and philosophy"
                   className="w-full h-[300px] md:h-[430px] object-cover"
                 />
-              </div>
+              </motion.div>
 
-              <div className="max-w-3xl">
+              <motion.div className="max-w-3xl" variants={splitRight} transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}>
                 <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">Our Philosophy</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   We believe that speed is key to digital transformation. By partnering with the world&apos;s
@@ -182,18 +244,31 @@ const AboutUs = () => {
                   a partnership. We listen, collaborate, and co-create with our clients, ensuring every
                   solution is as unique as the business it serves.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+        <motion.section
+          className="py-16 md:py-20 bg-primary text-primary-foreground"
+          variants={sectionReveal}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
           <div className="container">
             <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-10 md:mb-12 text-white">
               Our Values
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4">
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={sectionViewport}
+            >
               {[
                 {
                   icon: BrainCircuit,
@@ -223,24 +298,30 @@ const AboutUs = () => {
               ].map((item) => {
                 const Icon = item.icon;
                 return (
-                  <article
+                  <motion.article
                     key={item.title}
+                    variants={cardReveal}
                     className="rounded-md border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[280px]"
                   >
                     <Icon size={42} className="text-white mb-8" />
                     <h3 className="text-4xl font-heading font-bold mb-3 text-white">{item.title}</h3>
                     <p className="text-xl leading-relaxed text-primary-foreground/95">{item.desc}</p>
-                  </article>
+                  </motion.article>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-24 bg-background">
+        <motion.section
+          className="py-16 md:py-24 bg-background"
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+        >
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
-              <div className="max-w-3xl">
+              <motion.div className="max-w-3xl" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">The Pravaah Journey</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   Our inception as a trusted partner for global enterprises has consistently delivered
@@ -249,20 +330,27 @@ const AboutUs = () => {
                   innovation. Our team&apos;s diverse skills and fresh ideas keep us ahead of the curve and
                   ready to tackle whatever comes next.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="rounded-md overflow-hidden border border-border">
+              <motion.div className="rounded-md overflow-hidden border border-border" variants={splitRight} transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}>
                 <img
                   src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Pravaah team journey and office collaboration"
                   className="w-full h-[300px] md:h-[420px] object-cover"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+        <motion.section
+          className="py-16 md:py-20 bg-primary text-primary-foreground"
+          variants={sectionReveal}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
           <div className="container">
             <h2 className="text-5xl md:text-7xl font-heading font-bold text-center leading-tight mb-8 text-white">
               Our Powerhouse Team: 50+ Experts, One Vision
@@ -274,15 +362,19 @@ const AboutUs = () => {
             </div>
 
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
-              <div className="rounded-md overflow-hidden border border-primary-foreground/20">
+              <motion.div className="rounded-md overflow-hidden border border-primary-foreground/20" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <img
                   src="https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Pravaah powerhouse team in a planning session"
                   className="w-full h-[310px] md:h-[430px] object-cover"
                 />
-              </div>
+              </motion.div>
 
-              <p className="text-lg md:text-2xl text-primary-foreground/95 leading-relaxed max-w-4xl">
+              <motion.p
+                className="text-lg md:text-2xl text-primary-foreground/95 leading-relaxed max-w-4xl"
+                variants={splitRight}
+                transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}
+              >
                 Meet the heart of Pravaah Consulting our people! A vibrant mix of strategists, architects,
                 engineers, designers, and marketers, all passionate about turning ideas into impact. From a
                 small group of passionate innovators to a powerhouse team of 50+ experts, our journey at
@@ -290,18 +382,31 @@ const AboutUs = () => {
                 AI, ML, cloud, low-code platforms, and digital strategy. We invest in upskilling, stay ahead
                 of emerging trends, and foster an environment where creativity thrives. This empowers us to
                 deliver innovative, future-ready solutions that drive real business value for our clients.
-              </p>
+              </motion.p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-20 bg-background">
+        <motion.section
+          className="py-16 md:py-20 bg-background"
+          variants={sectionReveal}
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
           <div className="container">
             <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-12 md:mb-14 text-foreground">
               Why Pravaah Consulting?
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-7 md:gap-8">
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-7 md:gap-8"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={sectionViewport}
+            >
               {[
                 {
                   icon: Lightbulb,
@@ -331,21 +436,26 @@ const AboutUs = () => {
               ].map((item) => {
                 const Icon = item.icon;
                 return (
-                  <article key={item.title} className="text-center">
+                  <motion.article key={item.title} className="text-center" variants={cardReveal}>
                     <Icon size={44} className="mx-auto mb-4 text-primary" />
                     <h3 className="text-3xl font-heading font-bold leading-snug mb-2 text-foreground">{item.title}</h3>
                     <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
-                  </article>
+                  </motion.article>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 md:py-20 bg-background">
+        <motion.section
+          className="py-16 md:py-20 bg-background"
+          initial="hidden"
+          whileInView="show"
+          viewport={sectionViewport}
+        >
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.05fr] gap-8 xl:gap-12 items-center">
-              <div className="max-w-3xl">
+              <motion.div className="max-w-3xl" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5 text-foreground">Join Us on the Journey</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed mb-7">
                   Ready to reimagine your business? Partner with Pravaah Consulting and experience the
@@ -359,18 +469,18 @@ const AboutUs = () => {
                   Contact Us
                   <ArrowRight size={16} />
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="rounded-md overflow-hidden border border-border">
+              <motion.div className="rounded-md overflow-hidden border border-border" variants={splitRight} transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}>
                 <img
                   src="https://images.pexels.com/photos/4475524/pexels-photo-4475524.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt="Customer success journey with Pravaah Consulting"
                   className="w-full h-[300px] md:h-[420px] object-cover"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
       </main>
 

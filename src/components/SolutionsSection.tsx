@@ -69,7 +69,7 @@ const SolutionsSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -50, filter: "blur(12px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ amount: 0.2, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:sticky lg:top-[40%] lg:-translate-y-1/2 lg:self-start text-center lg:text-left"
           >
@@ -97,7 +97,7 @@ const SolutionsSection = () => {
                 key={sol.num}
                 initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ amount: 0.2, margin: "-50px" }}
                 transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                 className="border-t border-border/40 pt-8 group"
               >
@@ -122,7 +122,7 @@ const SolutionsSection = () => {
                           key={item}
                           initial={{ opacity: 0, x: 20 }}
                           whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
+                          viewport={{ amount: 0.2 }}
                           transition={{ delay: 0.3 + (idx * 0.05) }}
                           className="flex items-start gap-2 text-sm text-foreground"
                         >

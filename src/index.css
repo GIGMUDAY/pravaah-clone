@@ -4,6 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes logo-loop-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes logo-loop-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes infinite-cards-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.625rem));
+  }
+}
+
+@keyframes infinite-cards-right {
+  from {
+    transform: translateX(calc(-50% - 0.625rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @layer base {
 
   /* ── LIGHT MODE (default) ── */
