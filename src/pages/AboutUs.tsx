@@ -100,7 +100,7 @@ const AboutUs = () => {
             <p className="text-lg md:text-2xl text-primary-foreground/95 max-w-5xl mx-auto leading-relaxed">
               Founded with a vision to accelerate businesses with AI solutions and digital transformation, we
               are a leading consulting partner for forward-thinking businesses worldwide. With over 250
-              successful projects, a core team of 50+ experts, and a family of 100+ happy clients, Pravaah
+              successful projects, a core team of 50+ experts, and a family of 100+ happy clients, plus
               Consulting is committed to delivering solutions that not only solve today&apos;s challenges but also
               open tomorrow&apos;s opportunities.
             </p>
@@ -322,7 +322,7 @@ const AboutUs = () => {
           <div className="container">
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.1fr] gap-8 xl:gap-12 items-center">
               <motion.div className="max-w-3xl" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
-                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">The Pravaah Journey</h2>
+                <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">The plus Journey</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
                   Our inception as a trusted partner for global enterprises has consistently delivered
                   value through innovative technology solutions. Our portfolio spans healthcare, e-commerce,
@@ -335,7 +335,7 @@ const AboutUs = () => {
               <motion.div className="rounded-md overflow-hidden border border-border" variants={splitRight} transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}>
                 <img
                   src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                  alt="Pravaah team journey and office collaboration"
+                  alt="plus team journey and office collaboration"
                   className="w-full h-[300px] md:h-[420px] object-cover"
                 />
               </motion.div>
@@ -365,7 +365,7 @@ const AboutUs = () => {
               <motion.div className="rounded-md overflow-hidden border border-primary-foreground/20" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <img
                   src="https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                  alt="Pravaah powerhouse team in a planning session"
+                  alt="plus powerhouse team in a planning session"
                   className="w-full h-[310px] md:h-[430px] object-cover"
                 />
               </motion.div>

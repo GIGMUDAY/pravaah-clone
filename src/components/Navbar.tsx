@@ -57,15 +57,25 @@ const Navbar = () => {
           </div>
 
           {navLinks.filter((link) => link.label !== "Home").map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="flex items-center gap-1 text-sm text-foreground border border-primary/60 rounded-full px-5 py-2 hover:bg-primary/10 transition-colors"
-              onClick={() => setMobileServicesOpen(false)}
-            >
-              {link.label}
-              {link.hasDropdown && <ChevronDown size={14} />}
-            </a>
+            link.href.startsWith("/#") ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-1 text-sm text-foreground border border-primary/60 rounded-full px-5 py-2 hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileServicesOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="flex items-center gap-1 text-sm text-foreground border border-primary/60 rounded-full px-5 py-2 hover:bg-primary/10 transition-colors"
+                onClick={() => setMobileServicesOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
           <ThemeToggle />
         </div>
@@ -122,18 +132,31 @@ const Navbar = () => {
             )}
 
             {navLinks.filter((link) => link.label !== "Home").map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="flex items-center gap-1 text-foreground border border-primary/60 rounded-full px-5 py-2.5 hover:bg-primary/10 transition-colors"
-                onClick={() => {
-                  setOpen(false);
-                  setMobileServicesOpen(false);
-                }}
-              >
-                {link.label}
-                {link.hasDropdown && <ChevronDown size={14} />}
-              </a>
+              link.href.startsWith("/#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="flex items-center gap-1 text-foreground border border-primary/60 rounded-full px-5 py-2.5 hover:bg-primary/10 transition-colors"
+                  onClick={() => {
+                    setOpen(false);
+                    setMobileServicesOpen(false);
+                  }}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="flex items-center gap-1 text-foreground border border-primary/60 rounded-full px-5 py-2.5 hover:bg-primary/10 transition-colors"
+                  onClick={() => {
+                    setOpen(false);
+                    setMobileServicesOpen(false);
+                  }}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         </div>

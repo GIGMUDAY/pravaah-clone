@@ -112,7 +112,7 @@ const productEngineeringCapabilities = [
 const industries = [
   {
     title: "Healthcare",
-    desc: "Pravaah optimizes healthcare with AI-driven diagnostics and telemedicine platforms for faster patient care and secure data handling. Our solutions reduce wait times and enhance service quality across providers.",
+    desc: "plus optimizes healthcare with AI-driven diagnostics and telemedicine platforms for faster patient care and secure data handling. Our solutions reduce wait times and enhance service quality across providers.",
   },
   {
     title: "Logistics and Transportation",
@@ -152,7 +152,7 @@ const productEngineeringProcess = [
   {
     step: "1",
     title: "Analysis and Planning",
-    desc: "Pravaah starts by capturing business requirements, performing market research, and evaluating competition to confirm product feasibility and value. A clear roadmap is crafted, detailing resources, budgets, timelines, and milestones for agile execution and rapid market entry.",
+    desc: "plus starts by capturing business requirements, performing market research, and evaluating competition to confirm product feasibility and value. A clear roadmap is crafted, detailing resources, budgets, timelines, and milestones for agile execution and rapid market entry.",
   },
   {
     step: "2",
@@ -162,7 +162,7 @@ const productEngineeringProcess = [
   {
     step: "3",
     title: "Design",
-    desc: "Applying design thinking, Pravaah develops high-fidelity prototypes that address customer pain points, elevate UX, and align with business objectives. Solution architecture is designed to optimize component interactions using tools such as React and Node.js.",
+    desc: "Applying design thinking, plus develops high-fidelity prototypes that address customer pain points, elevate UX, and align with business objectives. Solution architecture is designed to optimize component interactions using tools such as React and Node.js.",
   },
   {
     step: "4",
@@ -172,17 +172,17 @@ const productEngineeringProcess = [
   {
     step: "5",
     title: "Testing",
-    desc: "Rigorous functional and non-functional testing, including automation and performance validation, eliminates defects for superior quality, security, and usability. Pravaah's approach guarantees reliable products ready for diverse real-world demands.",
+    desc: "Rigorous functional and non-functional testing, including automation and performance validation, eliminates defects for superior quality, security, and usability. plus's approach guarantees reliable products ready for diverse real-world demands.",
   },
   {
     step: "6",
     title: "Deployment",
-    desc: "Advanced strategies such as CI/CD pipelines and rolling deployments enable seamless, low-risk product launches. This supports Pravaah's focus on rapid adaptability in dynamic sectors such as e-commerce and transportation.",
+    desc: "Advanced strategies such as CI/CD pipelines and rolling deployments enable seamless, low-risk product launches. This supports plus's focus on rapid adaptability in dynamic sectors such as e-commerce and transportation.",
   },
   {
     step: "7",
     title: "Maintenance",
-    desc: "Continuous monitoring, feedback integration, and proactive updates address issues, drive enhancements, and respond to market shifts to ensure optimal uptime. Pravaah ensures sustained performance and customer loyalty through tailored long-term support.",
+    desc: "Continuous monitoring, feedback integration, and proactive updates address issues, drive enhancements, and respond to market shifts to ensure optimal uptime. plus ensures sustained performance and customer loyalty through tailored long-term support.",
   },
 ];
 
@@ -358,25 +358,25 @@ const projectStories = [
 const testimonials = [
   {
     quote:
-      "Pravaah transformed our legacy systems into a scalable product suite, cutting deployment time by 40% with agile engineering. Their expertise in React and cloud-native design exceeded expectations for our healthcare platform.",
+      "plus transformed our legacy systems into a scalable product suite, cutting deployment time by 40% with agile engineering. Their expertise in React and cloud-native design exceeded expectations for our healthcare platform.",
     name: "Shirley M.,",
     role: "Operations Manager",
   },
   {
     quote:
-      "Security-first product engineering from Pravaah secured our fintech app against threats while enabling rapid iterations. We achieved 100% compliance and a 30% performance boost, true partners in innovation.",
+      "Security-first product engineering from plus secured our fintech app against threats while enabling rapid iterations. We achieved 100% compliance and a 30% performance boost, true partners in innovation.",
     name: "Mark T.,",
     role: "CTO",
   },
   {
     quote:
-      "Pravaah's mobile product development launched our ecommerce app under budget and ahead of schedule. Their DevOps integration drove 25% higher user retention, giving us a competitive edge.",
+      "plus's mobile product development launched our ecommerce app under budget and ahead of schedule. Their DevOps integration drove 25% higher user retention, giving us a competitive edge.",
     name: "Jessica L.,",
     role: "CEO",
   },
   {
     quote:
-      "Our modernized web product from Pravaah spiked engagement by 30% through AI personalization and seamless UX. Their end-to-end process ensured market-ready quality every step.",
+      "Our modernized web product from plus spiked engagement by 30% through AI personalization and seamless UX. Their end-to-end process ensured market-ready quality every step.",
     name: "David K.,",
     role: "Marketing Director",
   },
@@ -715,7 +715,7 @@ const ecommerceExpertiseAreas = [
   },
   {
     title: "Magento 2.0",
-    desc: "As an eCommerce agency, Pravaah recommends Magento Commerce to provide a better in-store experience, increasing loyalty and sales of products.",
+    desc: "As an eCommerce agency, plus recommends Magento Commerce to provide a better in-store experience, increasing loyalty and sales of products.",
     icon: Percent,
   },
   {
@@ -929,13 +929,13 @@ const ecommerceTestimonials = [
   },
   {
     quote:
-      "Pravaah delivered a highly customized eCommerce solution tailored to our needs. Their expertise in Magento made integration seamless, and our new site functions flawlessly. We're thrilled with the results!",
+      "plus delivered a highly customized eCommerce solution tailored to our needs. Their expertise in Magento made integration seamless, and our new site functions flawlessly. We're thrilled with the results!",
     name: "David L.",
     role: "CEO",
   },
   {
     quote:
-      "Choosing Pravaah for our Wix store was the best decision! They designed a user-friendly site that perfectly reflects our brand. Plus, their SEO strategies have boosted our visibility significantly!",
+      "Choosing plus for our Wix store was the best decision! They designed a user-friendly site that perfectly reflects our brand. Plus, their SEO strategies have boosted our visibility significantly!",
     name: "Emily K.",
     role: "Founder of Homemade Good Store",
   },
@@ -956,22 +956,22 @@ const marketingServices = [
   {
     id: "02",
     title: "Pay Per Click Advertising",
-    desc: "Launch targeted PPC campaigns via Google Ads, Facebook Ads, and more to drive high-ROI traffic with remarketing, landing pages, and e-commerce focus. Ties into Pravaah's branding and advertising for cohesive ad strategies that boost conversions.",
+    desc: "Launch targeted PPC campaigns via Google Ads, Facebook Ads, and more to drive high-ROI traffic with remarketing, landing pages, and e-commerce focus. Ties into plus's branding and advertising for cohesive ad strategies that boost conversions.",
   },
   {
     id: "03",
     title: "Search Engine Optimization",
-    desc: "Elevate rankings through local SEO, national SEO, e-commerce SEO, technical SEO audit, blogging (content creation), franchise SEO, AEO, and GEO, aligning with Pravaah's visibility-boosting expertise.",
+    desc: "Elevate rankings through local SEO, national SEO, e-commerce SEO, technical SEO audit, blogging (content creation), franchise SEO, AEO, and GEO, aligning with plus's visibility-boosting expertise.",
   },
   {
     id: "04",
     title: "Email & SMS Marketing",
-    desc: "Deliver personalized campaigns with marketing automation, email newsletters, Klaviyo/Mailchimp expertise, and SMS marketing, enhanced by Pravaah's email strategy for audience resonance.",
+    desc: "Deliver personalized campaigns with marketing automation, email newsletters, Klaviyo/Mailchimp expertise, and SMS marketing, enhanced by plus's email strategy for audience resonance.",
   },
   {
     id: "05",
     title: "Social Media Marketing",
-    desc: "Grow engagement on Facebook and Instagram, X, LinkedIn, video and short-form marketing, plus influencer marketing and graphic design for posts. Complements Pravaah's SMM and omnichannel approach for brand loyalty.",
+    desc: "Grow engagement on Facebook and Instagram, X, LinkedIn, video and short-form marketing, plus influencer marketing and graphic design for posts. Complements plus's SMM and omnichannel approach for brand loyalty.",
   },
   {
     id: "06",
@@ -1027,7 +1027,7 @@ const marketingFeatureHighlights = [
   {
     label: "Results-Driven Website Design",
     title: "Get a fantastic website that converts visitors into loyal customers.",
-    desc: "Enhance your brand with a high-performance site designed for your business goals. Pravaah's expert designers craft responsive websites that load fast, shine on every device, and drive measurable results through clear calls-to-action and SEO optimization.",
+    desc: "Enhance your brand with a high-performance site designed for your business goals. plus's expert designers craft responsive websites that load fast, shine on every device, and drive measurable results through clear calls-to-action and SEO optimization.",
     metric: "150+",
     metricText: "Successful websites launched for clients since 2018.",
     image:
@@ -1046,8 +1046,8 @@ const marketingFeatureHighlights = [
   },
   {
     label: "Proven Organic SEO Approach",
-    title: "Drive more organic traffic to your website with Pravaah's expert SEO strategies.",
-    desc: "Get qualified traffic on search terms that matter to your business. Pravaah achieves measurable results by optimizing every SERP factor, from technical audits to AI-driven content, building on our existing SEO services for long-term visibility and growth.",
+    title: "Drive more organic traffic to your website with plus's expert SEO strategies.",
+    desc: "Get qualified traffic on search terms that matter to your business. plus achieves measurable results by optimizing every SERP factor, from technical audits to AI-driven content, building on our existing SEO services for long-term visibility and growth.",
     metric: "200%",
     metricText: "Traffic Growth: Double the traffic within 6 months with a data-driven tracking process.",
     image:
@@ -1067,7 +1067,7 @@ const marketingFeatureHighlights = [
   {
     label: "Engaging Social Media Management",
     title: "Raise brand awareness and expand your influence",
-    desc: "Pravaah tells your company's story with original branded content, custom graphics, strategic commenting, and targeted boosting. Our comprehensive solutions cover all aspects of your business's social media presence, integrating seamlessly with SEO, influencer marketing, and omnichannel strategies to drive traffic, build loyalty, and grow your business.",
+    desc: "plus tells your company's story with original branded content, custom graphics, strategic commenting, and targeted boosting. Our comprehensive solutions cover all aspects of your business's social media presence, integrating seamlessly with SEO, influencer marketing, and omnichannel strategies to drive traffic, build loyalty, and grow your business.",
     image:
       "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1400",
     reverse: true,
@@ -1076,7 +1076,7 @@ const marketingFeatureHighlights = [
   {
     label: "Creative Graphic Design & Video Marketing",
     title: "Captivate audiences and amplify your brand story",
-    desc: "Pravaah crafts stunning custom graphics, motion designs, and high-impact videos, from explainer animations to social reels and brand films. Our integrated approach boosts engagement, supports SEO-optimized content, and drives conversions across platforms, ensuring every visual asset aligns with your growth strategy.",
+    desc: "plus crafts stunning custom graphics, motion designs, and high-impact videos, from explainer animations to social reels and brand films. Our integrated approach boosts engagement, supports SEO-optimized content, and drives conversions across platforms, ensuring every visual asset aligns with your growth strategy.",
     image:
       "https://images.pexels.com/photos/3379943/pexels-photo-3379943.jpeg?auto=compress&cs=tinysrgb&w=1400",
     reverse: false,
@@ -1085,7 +1085,7 @@ const marketingFeatureHighlights = [
   {
     label: "Strategic Branding & Reputation Management",
     title: "Build trust, protect your image, and stand out online",
-    desc: "Pravaah develops cohesive brand identities with targeted advertising and proactive reputation strategies, using data-driven monitoring and AI personalization. We turn positive narratives into loyalty, mitigate risks, and enhance visibility through omnichannel efforts tied to social media management and content creation.",
+    desc: "plus develops cohesive brand identities with targeted advertising and proactive reputation strategies, using data-driven monitoring and AI personalization. We turn positive narratives into loyalty, mitigate risks, and enhance visibility through omnichannel efforts tied to social media management and content creation.",
     image:
       "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1400",
     reverse: true,
@@ -1219,7 +1219,7 @@ const marketingProjectStories = [
       "https://images.pexels.com/photos/6476258/pexels-photo-6476258.jpeg?auto=compress&cs=tinysrgb&w=1400",
     summaryTitle: "Engineering the Future: Our Portfolio of High-Impact Solutions",
     summary:
-      "Pravaah orchestrates SEO, paid media, and social campaigns into one growth engine. This integrated approach improves marketing efficiency and delivers consistent ROI across channels.",
+      "plus orchestrates SEO, paid media, and social campaigns into one growth engine. This integrated approach improves marketing efficiency and delivers consistent ROI across channels.",
   },
 ];
 
@@ -1232,7 +1232,7 @@ const marketingTestimonials = [
   },
   {
     quote:
-      "From social media campaigns to PPC, Pravaah delivered a 200% increase in leads while staying within budget. True partners in our growth!",
+      "From social media campaigns to PPC, plus delivered a 200% increase in leads while staying within budget. True partners in our growth!",
     name: "David Reynolds,",
     role: "CEO",
   },
@@ -1244,7 +1244,7 @@ const marketingTestimonials = [
   },
   {
     quote:
-      "Pravaah rebuilt our online presence with stunning website design and reputation management. Engagement soared, and sales followed. Highly recommend!",
+      "plus rebuilt our online presence with stunning website design and reputation management. Engagement soared, and sales followed. Highly recommend!",
     name: "Mark Thompson,",
     role: "Owner",
   },
@@ -1259,13 +1259,13 @@ const agenticTestimonials = [
   },
   {
     quote:
-      "Our sales are way up thanks to Pravaah's AI recommendation engine. It's like they knew our customers better than we did! Super collaborative team.",
+      "Our sales are way up thanks to plus's AI recommendation engine. It's like they knew our customers better than we did! Super collaborative team.",
     name: "George S.",
     role: "Sr. Manager",
   },
   {
     quote:
-      "Predicting the future used to be a guessing game. Now, with Pravaah's AI, our forecasts are spot-on. Seriously impressive work.",
+      "Predicting the future used to be a guessing game. Now, with plus's AI, our forecasts are spot-on. Seriously impressive work.",
     name: "David P.",
     role: "President",
   },
@@ -2177,7 +2177,7 @@ const ServiceDetail = () => {
                     businesses operate and compete. plus Consulting empowers you to harness the full potential of
                     these transformative technologies. We help you navigate the complexities of AI/ML adoption, from
                     identifying strategic opportunities to implementing robust solutions that deliver tangible results.
-                    With AI&apos;s global market projected to reach unprecedented heights, partnering with Pravaah
+                    With AI&apos;s global market projected to reach unprecedented heights, partnering with plus
                     ensures you&apos;re at the forefront of this wave of innovation.
                   </motion.p>
 
@@ -2489,7 +2489,7 @@ const ServiceDetail = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.75, ease: "easeOut" }}
                 >
-                  The Pravaah AI &amp; ML Transformation Journey
+                  The plus AI &amp; ML Transformation Journey
                 </motion.h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />

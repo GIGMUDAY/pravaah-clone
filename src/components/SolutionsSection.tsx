@@ -82,7 +82,7 @@ const SolutionsSection = () => {
             <p className="text-muted-foreground mb-4 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Most companies experiment with AI. We deploy it where it matters!
               Inside core workflows, revenue engines, and operational systems. At
-              Pravaah, we build industry-ready intelligence systems designed to
+              plus, we build industry-ready intelligence systems designed to
               deliver measurable impact.
             </p>
             <p className="text-muted-foreground font-medium max-w-2xl mx-auto lg:mx-0">

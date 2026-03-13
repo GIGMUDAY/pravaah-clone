@@ -14,7 +14,7 @@ const contactInfoVariants = {
 
 const infoItemVariants = {
   hidden: { opacity: 0, x: -28, filter: "blur(5px)" },
-  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.55, ease: "easeOut" } },
+  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.55, ease: "linear" } },
 };
 
 const ContactSection = () => {
@@ -50,7 +50,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <p className="text-foreground font-medium">info@pravaahconsulting.com</p>
+                <p className="text-foreground font-medium">info@plusconsulting.com</p>
               </div>
             </motion.div>
             <motion.div variants={infoItemVariants} className="flex items-center gap-4 glass rounded-xl p-5">

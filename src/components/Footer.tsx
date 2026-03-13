@@ -32,8 +32,8 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-foreground mb-3">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="/services/agentic-ai-engineering" className="hover:text-primary transition-colors">AI Solutions</a></li>
-              <li><a href="/about-us" className="hover:text-primary transition-colors">Company</a></li>
+              <li><Link to="/services/agentic-ai-engineering" className="hover:text-primary transition-colors">AI Solutions</Link></li>
+              <li><Link to="/about-us" className="hover:text-primary transition-colors">Company</Link></li>
               <li><a href="/#talk-to-us" className="hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
