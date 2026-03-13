@@ -21,7 +21,7 @@ const WhyChooseSection = () => {
           className="max-w-3xl mx-auto text-center mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
-            Why <span className="text-gradient">Pravaah Consulting?</span>
+            Why <span className="text-gradient">plus Consulting?</span>
           </h2>
           <p className="text-muted-foreground">
             Smart AI Solutions | Winning Strategies | Record-Breaking Growth

@@ -25,11 +25,11 @@ const AboutSection = () => {
               <span className="text-gradient">Lead Tomorrow</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Founded with a vision to accelerate businesses with AI solutions and digital transformation, we are a leading consulting partner for forward-thinking businesses worldwide. With over 250 successful projects, a core team of 50+ experts, and a family of 100+ happy clients, Pravaah Consulting is committed to delivering solutions that not only solve today's challenges but also open tomorrow's opportunities.
+              Founded with a vision to accelerate businesses with AI solutions and digital transformation, we are a leading consulting partner for forward-thinking businesses worldwide. With over 250 successful projects, a core team of 50+ experts, and a family of 100+ happy clients, plus Consulting is committed to delivering solutions that not only solve today's challenges but also open tomorrow's opportunities.
             </p>
             <h3 className="text-xl font-heading font-semibold mb-3">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
-              At Pravaah Consulting, we're on a mission to bring your digital dreams to life—fast, smart, and seamless. Using advanced AI and innovative tech, we create opportunities for your business to grow and lead.
+              At plus Consulting, we're on a mission to bring your digital dreams to life—fast, smart, and seamless. Using advanced AI and innovative tech, we create opportunities for your business to grow and lead.
             </p>
           </motion.div>
           <motion.div

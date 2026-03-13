@@ -57,7 +57,7 @@ const AboutUs = () => {
                 className="max-w-2xl"
               >
                 <h1 className="text-5xl md:text-7xl font-heading font-bold leading-[1.06] mb-5">
-                  Introducing Pravaah Consulting
+                  Introducing plus Consulting
                 </h1>
                 <p className="text-2xl md:text-4xl text-foreground/95 leading-relaxed mb-8">
                   Smart AI Solutions | Winning Strategies | Record-Breaking Growth
@@ -77,7 +77,7 @@ const AboutUs = () => {
               >
                 <img
                   src={teamImg}
-                  alt="Pravaah Consulting team collaborating"
+                  alt="plus Consulting team collaborating"
                   className="w-full h-[360px] md:h-[520px] object-cover"
                 />
               </motion.div>
@@ -118,7 +118,7 @@ const AboutUs = () => {
               <motion.div className="max-w-3xl" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">Our Mission</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed">
-                  At Pravaah Consulting, we&apos;re on a mission to bring your digital dreams to life fast,
+                  At plus Consulting, we&apos;re on a mission to bring your digital dreams to life fast,
                   smart, and seamless. Using advanced AI and innovative tech, we create opportunities for
                   your business to grow and lead. Ready to transform, innovate, and accelerate? Together,
                   let&apos;s bring your vision to life and create lasting value that propels your organization
@@ -375,10 +375,10 @@ const AboutUs = () => {
                 variants={splitRight}
                 transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}
               >
-                Meet the heart of Pravaah Consulting our people! A vibrant mix of strategists, architects,
+                Meet the heart of plus Consulting our people! A vibrant mix of strategists, architects,
                 engineers, designers, and marketers, all passionate about turning ideas into impact. From a
                 small group of passionate innovators to a powerhouse team of 50+ experts, our journey at
-                Pravaah Consulting has been nothing short of exciting. Together, we bring deep expertise in
+                plus Consulting has been nothing short of exciting. Together, we bring deep expertise in
                 AI, ML, cloud, low-code platforms, and digital strategy. We invest in upskilling, stay ahead
                 of emerging trends, and foster an environment where creativity thrives. This empowers us to
                 deliver innovative, future-ready solutions that drive real business value for our clients.
@@ -397,7 +397,7 @@ const AboutUs = () => {
         >
           <div className="container">
             <h2 className="text-5xl md:text-7xl font-heading font-bold text-center mb-12 md:mb-14 text-foreground">
-              Why Pravaah Consulting?
+              Why plus Consulting?
             </h2>
 
             <motion.div
@@ -458,7 +458,7 @@ const AboutUs = () => {
               <motion.div className="max-w-3xl" variants={splitLeft} transition={{ duration: 0.65, ease: "easeOut" }}>
                 <h2 className="text-5xl md:text-7xl font-heading font-bold mb-5 text-foreground">Join Us on the Journey</h2>
                 <p className="text-lg md:text-2xl text-foreground/95 leading-relaxed mb-7">
-                  Ready to reimagine your business? Partner with Pravaah Consulting and experience the
+                  Ready to reimagine your business? Partner with plus Consulting and experience the
                   power of innovation, intelligence, and impact. Your Vision. Our Expertise. Limitless
                   Possibilities.
                 </p>
@@ -474,7 +474,7 @@ const AboutUs = () => {
               <motion.div className="rounded-md overflow-hidden border border-border" variants={splitRight} transition={{ duration: 0.65, ease: "easeOut", delay: 0.05 }}>
                 <img
                   src="https://images.pexels.com/photos/4475524/pexels-photo-4475524.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                  alt="Customer success journey with Pravaah Consulting"
+                  alt="Customer success journey with plus Consulting"
                   className="w-full h-[300px] md:h-[420px] object-cover"
                 />
               </motion.div>

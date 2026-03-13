@@ -63,7 +63,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold leading-tight mb-4 text-foreground"
           >
-            Pravaah Consulting
+            plus Consulting
           </motion.h1>
 
           <motion.p

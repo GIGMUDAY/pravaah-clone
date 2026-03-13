@@ -78,7 +78,7 @@ const ProjectsSuccessSection = () => {
               Engineering the Future: Our Portfolio of High-Impact Solutions
             </h3>
             <p className="text-primary-foreground/90 text-lg leading-relaxed">
-              Explore how Pravaah Consulting empowers global enterprises to ignite growth through
+              Explore how plus Consulting empowers global enterprises to ignite growth through
               transformative product engineering services. From Agentic AI and custom software
               development to high-level digital strategy, our work showcases the measurable business
               value we deliver. Join over 100 satisfied clients who have scaled with our future-ready,

@@ -28,6 +28,7 @@ import {
   RefreshCw,
   Rocket,
   Search,
+  MessageSquare,
   Share2,
   ShieldCheck,
   Settings,
@@ -336,7 +337,7 @@ const projectStories = [
     image: serviceProductImg,
     summaryTitle: "Engineering the Future: Our Portfolio of High-Impact Solutions",
     summary:
-      "Explore how Pravaah Consulting empowers global enterprises to ignite growth through transformative product engineering services. From Agentic AI and custom software development to high-level digital strategy, our work showcases the measurable business value we deliver. Join over 100 satisfied clients who have scaled with our future-ready, accelerated solutions.",
+      "Explore how plus Consulting empowers global enterprises to ignite growth through transformative product engineering services. From Agentic AI and custom software development to high-level digital strategy, our work showcases the measurable business value we deliver. Join over 100 satisfied clients who have scaled with our future-ready, accelerated solutions.",
   },
   {
     title: "Growth Commerce Suite",
@@ -555,11 +556,31 @@ const aiMlJourney = [
 ];
 
 const whyChooseUsItems = [
-  { title: "Innovative Solutions", icon: Lightbulb },
-  { title: "Industry-Centric Competence", icon: Globe },
-  { title: "Collaboration with Clients", icon: Users },
-  { title: "Data-Driven Decision-Making", icon: FileText },
-  { title: "Responsible and Ethical AI", icon: BadgeCheck },
+  { 
+    title: "Innovative Solutions", 
+    icon: Lightbulb,
+    desc: "We stay at the bleeding edge of AI research, bringing the latest breakthroughs in Agentic workflows and RAG systems directly to your business challenges."
+  },
+  { 
+    title: "Industry-Centric Competence", 
+    icon: Globe,
+    desc: "Our models aren't generic; they are fine-tuned with deep domain knowledge across healthcare, finance, and logistics for maximum operational impact."
+  },
+  { 
+    title: "Collaboration with Clients", 
+    icon: Users,
+    desc: "We believe in co-creation. Our engineers work as an extension of your team to ensure every AI solution aligns perfectly with your internal culture and goals."
+  },
+  { 
+    title: "Data-Driven Decision-Making", 
+    icon: FileText,
+    desc: "Every recommendation we make is backed by rigorous data analysis and empirical testing, turning your raw data into a strategic competitive advantage."
+  },
+  { 
+    title: "Responsible and Ethical AI", 
+    icon: BadgeCheck,
+    desc: "Trust is paramount. We build ethical guardrails, bias monitoring, and full explainability into every model to ensure fair and transparent outcomes."
+  },
 ];
 
 const aiMlTechStack = [
@@ -848,7 +869,7 @@ const ecommerceShowcaseProjects = [
     image:
       "https://images.pexels.com/photos/5632398/pexels-photo-5632398.jpeg?auto=compress&cs=tinysrgb&w=1400",
     summary:
-      "Success in digital commerce isn't an accident, it's engineered. Explore our portfolio of recent projects where we've helped brands overcome technical hurdles and aesthetic plateaus. From reducing bounce rates to increasing checkout conversions by 40%, these case studies showcase how Pravaah Consulting turns complex business challenges into seamless, high-growth online stores.",
+      "Success in digital commerce isn't an accident, it's engineered. Explore our portfolio of recent projects where we've helped brands overcome technical hurdles and aesthetic plateaus. From reducing bounce rates to increasing checkout conversions by 40%, these case studies showcase how plus Consulting turns complex business challenges into seamless, high-growth online stores.",
   },
   {
     title: "Elite Lifestyle Store",
@@ -902,7 +923,7 @@ const ecommerceHowWeWork = [
 const ecommerceTestimonials = [
   {
     quote:
-      "Since partnering with Pravaah Consulting, our online sales have skyrocketed! They created a stunning website that looks great and converts visitors into loyal customers. Highly recommend!",
+      "Since partnering with plus Consulting, our online sales have skyrocketed! They created a stunning website that looks great and converts visitors into loyal customers. Highly recommend!",
     name: "Sarah M.",
     role: "Owner of Fashion Boutique",
   },
@@ -920,7 +941,7 @@ const ecommerceTestimonials = [
   },
   {
     quote:
-      "Pravaah Consulting is more than just a web design agency; they're a true partner. Their ongoing support and proactive guidance keep our online store running smoothly. We couldn't ask for better service!",
+      "plus Consulting is more than just a web design agency; they're a true partner. Their ongoing support and proactive guidance keep our online store running smoothly. We couldn't ask for better service!",
     name: "Michael B.",
     role: "Marketing Manager of Home Decor",
   },
@@ -1017,7 +1038,7 @@ const marketingFeatureHighlights = [
   {
     label: "Certified Pay-Per-Click (PPC) Advertising",
     title: "Improve your ROI with targeted PPC strategies",
-    desc: "Pravaah Consulting ranks among the elite digital marketing agencies, blending proven performance with exceptional client service. Our PPC specialists deliver track records of business growth, leveraging data-driven campaigns to capture high-intent leads and outperform competitors.",
+    desc: "plus Consulting ranks among the elite digital marketing agencies, blending proven performance with exceptional client service. Our PPC specialists deliver track records of business growth, leveraging data-driven campaigns to capture high-intent leads and outperform competitors.",
     image:
       "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=1400",
     reverse: true,
@@ -1155,18 +1176,24 @@ const marketingWhyChooseUs = [
 const caseStudies = [
   {
     title: "An upcoming Perfume Brand in NYC",
+    category: "GenAI & E-commerce",
     desc: "Revolutionized their e-commerce strategy by implementing an AI image generator app. Leveraging this technology, they transformed product visuals, generating hyper-realistic, personalized scent representations. This innovative approach enhanced the online shopping experience, allowing customers to virtually experience fragrances before purchase. The AI-driven imagery not only increased engagement but also significantly boosted conversion rates.",
     icon: FlaskConical,
+    image: "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1400",
   },
   {
     title: "Boston based Healthcare support company",
-    desc: "Pravaah Consulting introduced a groundbreaking solution leveraging AI-driven chatbots for building a supportive mental health community. This innovative system incorporates a chatbot equipped with PDF-reading capabilities, fostering meaningful conversations and community engagement. The AI chatbot analyzes and extracts relevant information, creating conversation starters for community members.",
+    category: "Conversational AI",
+    desc: "plus Consulting introduced a groundbreaking solution leveraging AI-driven chatbots for building a supportive mental health community. This innovative system incorporates a chatbot equipped with PDF-reading capabilities, fostering meaningful conversations and community engagement. The AI chatbot analyzes and extracts relevant information, creating conversation starters for community members.",
     icon: HandHeart,
+    image: "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1400",
   },
   {
     title: "A Leading Hair Care Brand For The Afro-American Population",
-    desc: "Partnered with Pravaah Consulting to enhance customer experience through a personalized recommendation engine. AI helped customers discover the most suitable products for unique hair care needs by considering hair type, purchase history, and preferences, and delivering personalized insights that improved retention and repeat purchases.",
+    category: "ML Recommendation Engine",
+    desc: "Partnered with plus Consulting to enhance customer experience through a personalized recommendation engine. AI helped customers discover the most suitable products for unique hair care needs by considering hair type, purchase history, and preferences, and delivering personalized insights that improved retention and repeat purchases.",
     icon: BadgeCheck,
+    image: "https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=1400",
   },
 ];
 
@@ -1176,7 +1203,7 @@ const marketingProjectStories = [
     image: serviceMarketingImg,
     summaryTitle: "Engineering the Future: Our Portfolio of High-Impact Solutions",
     summary:
-      "Explore how Pravaah Consulting empowers global enterprises to ignite growth through transformative product engineering services. From Agentic AI and custom software development to high-level digital strategy, our work showcases the measurable business value we deliver. Join over 100 satisfied clients who have scaled with our future-ready, accelerated solutions.",
+      "Explore how plus Consulting empowers global enterprises to ignite growth through transformative product engineering services. From Agentic AI and custom software development to high-level digital strategy, our work showcases the measurable business value we deliver. Join over 100 satisfied clients who have scaled with our future-ready, accelerated solutions.",
   },
   {
     title: "Northstar Wellness",
@@ -1199,7 +1226,7 @@ const marketingProjectStories = [
 const marketingTestimonials = [
   {
     quote:
-      "Pravaah Consulting transformed our SEO strategy, boosting organic traffic by 150% in just six months. Their data-driven approach and responsive team made all the difference.",
+      "plus Consulting transformed our SEO strategy, boosting organic traffic by 150% in just six months. Their data-driven approach and responsive team made all the difference.",
     name: "Olivia Mitchell,",
     role: "Marketing Director",
   },
@@ -1226,7 +1253,7 @@ const marketingTestimonials = [
 const agenticTestimonials = [
   {
     quote:
-      "Pravaah Consulting? They got our data! Their NLP skills helped us unlock insights we never knew were there. Game-changer!",
+      "plus Consulting? They got our data! Their NLP skills helped us unlock insights we never knew were there. Game-changer!",
     name: "Shirley M.",
     role: "VP",
   },
@@ -1244,7 +1271,7 @@ const agenticTestimonials = [
   },
   {
     quote:
-      "Pravaah Consulting's anomaly detection is like having a superhero for our finances. They catch fraud before it even happens! Highly recommend.",
+      "plus Consulting's anomaly detection is like having a superhero for our finances. They catch fraud before it even happens! Highly recommend.",
     name: "Amanda L.",
     role: "CFO",
   },
@@ -1272,11 +1299,27 @@ const ServiceDetail = () => {
   const [activeEcommerceShowcaseIndex, setActiveEcommerceShowcaseIndex] = useState(0);
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [activeMarketingProjectIndex, setActiveMarketingProjectIndex] = useState(0);
+  const [activeAiCaseStudyIndex, setActiveAiCaseStudyIndex] = useState(0);
+  const [activeAiServiceId, setActiveAiServiceId] = useState("01");
   const [activeCapabilityIndex, setActiveCapabilityIndex] = useState(0);
   const [isCapabilityCarouselPaused, setIsCapabilityCarouselPaused] = useState(false);
+  const [isAiCaseStudyPaused, setIsAiCaseStudyPaused] = useState(false);
   const capabilityCarouselRef = useRef<HTMLDivElement>(null);
   const capabilityScrollAnimationRef = useRef<number | null>(null);
   const capabilityAutoScrollRef = useRef<number | null>(null);
+
+  // Autoplay for AI Case Studies
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (!isAiCaseStudyPaused) {
+      interval = setInterval(() => {
+        // caseStudies is accessed here or we can use the hardcoded length 3 if it's imported globally
+        // Wait, caseStudies is defined globally in the file based on the other usage
+        setActiveAiCaseStudyIndex((prev) => (prev === 2 ? 0 : prev + 1));
+      }, 5000);
+    }
+    return () => clearInterval(interval);
+  }, [isAiCaseStudyPaused]);
 
   if (!service) {
     return <Navigate to="/not-found" replace />;
@@ -1447,85 +1490,138 @@ const ServiceDetail = () => {
       <main className="pb-20">
         {isProductEngineering ? (
           <>
-            <section className="relative min-h-[86vh] md:min-h-[92vh] flex items-end">
-              <img
+            {/* ── HERO ── */}
+            <section className="relative min-h-[86vh] md:min-h-[92vh] flex items-end overflow-hidden">
+              <motion.img
                 src={teamImg}
                 alt="Product Engineering Services"
                 className="absolute inset-0 w-full h-full object-cover"
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 2, ease: "easeOut" }}
               />
               <div className="absolute inset-0 bg-black/60" />
               <div className={`${pageWidthClass} relative z-10 pb-16 md:pb-20`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="max-w-4xl"
-                >
-                  <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+                <div className="max-w-4xl">
+                  <motion.h1
+                    className="text-3xl md:text-5xl font-heading font-bold text-white mb-4"
+                    initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.9, ease: "easeOut", delay: 0.25 }}
+                  >
                     Product Engineering Services
-                  </h1>
-                  <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-3xl mb-8">
+                  </motion.h1>
+                  <motion.p
+                    className="text-white/90 text-lg md:text-xl leading-relaxed max-w-3xl mb-8"
+                    initial={{ opacity: 0, y: 36, filter: "blur(8px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.85, ease: "easeOut", delay: 0.45 }}
+                  >
                     Maximize the potential of your product from beginning to end with our top engineering expertise.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
+                  </motion.p>
+                  <motion.div
+                    className="flex flex-wrap gap-4"
+                    initial={{ opacity: 0, y: 24, scale: 0.94 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.65 }}
+                  >
                     <a
                       href="#service-overview"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 hover:scale-105 transition-all"
                     >
                       Learn More
                     </a>
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-black text-lg font-semibold hover:bg-white/90 transition-all"
+                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-black text-lg font-semibold hover:bg-white/90 hover:scale-105 transition-all"
                     >
                       Contact Us
                     </a>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               </div>
             </section>
 
-            <section className={`${pageWidthClass} py-20 md:py-24`}>
-              <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
+            {/* ── OVERVIEW ── */}
+            <section id="service-overview" className={`${pageWidthClass} py-20 md:py-24`}>
+              <motion.h2
+                className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8"
+                initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.75, ease: "easeOut" }}
+              >
                 Innovate Competitive Solutions With End-to-End product engineering
-              </h2>
-              <div className="relative mb-10">
+              </motion.h2>
+              <motion.div
+                className="relative mb-10"
+                initial={{ scaleX: 0, originX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              >
                 <div className="h-px bg-border/70" />
                 <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-              </div>
+              </motion.div>
 
               <div className="grid lg:grid-cols-[1fr_1.25fr] gap-8 lg:gap-12 items-center">
-                <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
-                  Pravaah Consulting accelerates digital innovation and maximizes business impact through full-cycle product engineering (from concept to launch). The team transforms bold ideas into scalable, secure, market-ready products using agile methodologies, AI-accelerated engineering, rapid prototyping, and advanced tools like React JS, Python, and Node JS. This user-centric approach navigates technology complexities and reduces time-to-market and cost, ensuring future-readiness with cloud-native architectures across industries such as healthcare, finance, and ecommerce.
-                </p>
+                <motion.p
+                  className="text-lg md:text-xl leading-relaxed text-foreground/95"
+                  initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                  whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
+                  plus Consulting accelerates digital innovation and maximizes business impact through full-cycle product engineering (from concept to launch). The team transforms bold ideas into scalable, secure, market-ready products using agile methodologies, AI-accelerated engineering, rapid prototyping, and advanced tools like React JS, Python, and Node JS. This user-centric approach navigates technology complexities and reduces time-to-market and cost, ensuring future-readiness with cloud-native architectures across industries such as healthcare, finance, and ecommerce.
+                </motion.p>
 
-                <div className="relative rounded-[28px] overflow-hidden border border-border/70">
+                <motion.div
+                  className="relative rounded-[28px] overflow-hidden border border-border/70"
+                  initial={{ opacity: 0, x: 40, scale: 0.96 }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                >
                   <img
                     src={service.image}
                     alt="Product engineering collaboration"
-                    className="w-full h-[360px] md:h-[420px] object-cover"
+                    className="w-full h-[360px] md:h-[420px] object-cover hover:scale-105 transition-transform duration-700"
                   />
                   <a
                     href="#contact"
-                    className="absolute right-4 bottom-4 inline-flex items-center gap-3 h-12 px-6 rounded-full bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                    className="absolute right-4 bottom-4 inline-flex items-center gap-3 h-12 px-6 rounded-full bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 hover:scale-105 transition-all"
                   >
                     <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-primary">
                       <MessageCircle size={18} />
                     </span>
                     Contact Us
                   </a>
-                </div>
+                </motion.div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
+            {/* ── CAPABILITIES ── */}
+            <section className="py-16 md:py-20 bg-primary overflow-hidden">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Product Engineering Services for Next-Gen Digital Solutions
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-primary-foreground/30" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
-                </div>
+                </motion.div>
 
                 <div className="flex items-center justify-end gap-3 mb-6">
                   <button
@@ -1619,26 +1715,51 @@ const ServiceDetail = () => {
               </div>
             </section>
 
+            {/* ── INDUSTRIES ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-6 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-6 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Product Engineering Across Industries
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-primary-foreground/30" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.25fr] gap-6 lg:gap-8 lg:items-stretch">
-                  <div className="rounded-3xl overflow-hidden border border-primary/80 h-[340px] lg:h-full">
+                  <motion.div
+                    className="rounded-3xl overflow-hidden border border-primary/80 h-[340px] lg:h-full"
+                    initial={{ opacity: 0, x: -40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
                     <img
                       src={service.image}
                       alt="Product engineering industries"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
-                  </div>
+                  </motion.div>
 
-                  <div className="space-y-2">
+                  <motion.div
+                    className="space-y-2"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+                  >
                     {industries.map((industry) => {
                       const isOpen = openIndustry === industry.title;
                       return (
@@ -1661,33 +1782,52 @@ const ServiceDetail = () => {
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                            <motion.div
+                              className="bg-background border-t border-border px-6 pb-5 pt-3"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              transition={{ duration: 0.3, ease: "easeOut" }}
+                            >
                               <p className="text-foreground/90 text-lg leading-relaxed">
                                 {industry.desc}
                               </p>
-                            </div>
+                            </motion.div>
                           ) : null}
                         </article>
                       );
                     })}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
 
+            {/* ── PROCESS ── */}
             <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our Product Engineering Process
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {productEngineeringProcess.map((process) => (
                     <motion.article
                       key={process.step}
+                      variants={revealUp}
                       onMouseMove={handleProcessSpotlightMove}
                       onMouseLeave={handleProcessSpotlightLeave}
-                      whileHover={{ y: -5, scale: 1.01 }}
+                      whileHover={{ y: -8, scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 180, damping: 22 }}
                       style={
                         {
@@ -1716,42 +1856,64 @@ const ServiceDetail = () => {
                       </p>
                     </motion.article>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── WHY PARTNER ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={`${pageWidthClass} relative overflow-hidden`}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-14 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-14 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Why Partner With Us?
-                </h2>
+                </motion.h2>
 
                 <div className="hidden lg:block absolute inset-0 pointer-events-none">
-                  {partnerImages.map((item) => (
-                    <div
+                  {partnerImages.map((item, i) => (
+                    <motion.div
                       key={item.alt}
                       className={`absolute rounded-md overflow-hidden border border-primary/60 bg-black/20 ${item.desktopClass}`}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true, amount: 0.05 }}
+                      transition={{ duration: 0.6, delay: i * 0.04, ease: "easeOut" }}
                     >
-                      <img src={item.src} alt={item.alt} className="w-full h-full object-cover" />
-                    </div>
+                      <img src={item.src} alt={item.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    </motion.div>
                   ))}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8 lg:hidden">
-                  {partnerImages.map((item) => (
-                    <div
+                  {partnerImages.map((item, i) => (
+                    <motion.div
                       key={`${item.alt}-mobile`}
                       className={`rounded-md overflow-hidden border border-primary/60 bg-black/20 ${item.mobileClass}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.05 }}
+                      transition={{ duration: 0.5, delay: i * 0.03, ease: "easeOut" }}
                     >
                       <img src={item.src} alt={item.alt} className="w-full h-[120px] object-cover" />
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
 
                 <div className="relative z-10 lg:pl-[48%] xl:pl-[50%]">
                   <div className="space-y-7 md:space-y-9">
-                    {whyPartnerItems.map((item) => (
-                      <article key={item.title} className="grid grid-cols-[30px_1fr] gap-3">
+                    {whyPartnerItems.map((item, i) => (
+                      <motion.article
+                        key={item.title}
+                        className="grid grid-cols-[30px_1fr] gap-3"
+                        initial={{ opacity: 0, x: 40, filter: "blur(6px)" }}
+                        whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.65, delay: i * 0.07, ease: "easeOut" }}
+                      >
                         <div className="pt-1">
                           <div className="grid grid-cols-2 gap-1 w-5">
                             {Array.from({ length: 6 }).map((_, index) => (
@@ -1763,18 +1925,25 @@ const ServiceDetail = () => {
                           <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary-foreground">{item.title}</h3>
                           <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                         </div>
-                      </article>
+                      </motion.article>
                     ))}
                   </div>
                 </div>
               </div>
             </section>
 
+            {/* ── DIGITAL TOOLBOX ── */}
             <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our Digital Toolbox and Technological Resources
-                </h2>
+                </motion.h2>
 
                 <div className="h-[220px] md:h-[240px] flex items-center">
                   <LogoLoop
@@ -1797,21 +1966,40 @@ const ServiceDetail = () => {
               </div>
             </section>
 
+            {/* ── PROJECTS ── */}
             <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our Projects &amp; Success Stories
-                </h2>
+                </motion.h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 md:gap-10 items-center">
-                  <div className="max-w-3xl">
+                  <motion.div
+                    className="max-w-3xl"
+                    initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.75, ease: "easeOut" }}
+                  >
                     <h3 className="text-2xl md:text-3xl font-heading font-semibold leading-snug mb-6">
                       {activeProject.summaryTitle}
                     </h3>
                     <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{activeProject.summary}</p>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative">
+                  <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, x: 40, scale: 0.97 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  >
                     <button
                       type="button"
                       onClick={() =>
@@ -1819,22 +2007,32 @@ const ServiceDetail = () => {
                           prev === 0 ? projectStories.length - 1 : prev - 1,
                         )
                       }
-                      className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
+                      className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center hover:scale-110 transition-transform"
                       aria-label="Previous project"
                     >
                       <ArrowLeft size={14} />
                     </button>
 
                     <div className="rounded-[28px] overflow-hidden border border-border bg-card p-4 md:p-6">
-                      <img
+                      <motion.img
+                        key={activeProject.title}
                         src={activeProject.image}
                         alt={activeProject.title}
                         className="w-full h-[260px] md:h-[340px] object-cover rounded-2xl"
+                        initial={{ opacity: 0, scale: 1.04 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                       />
                     </div>
-                    <h4 className="text-center text-4xl md:text-5xl font-heading font-bold mt-5">
+                    <motion.h4
+                      key={`title-${activeProject.title}`}
+                      className="text-center text-4xl md:text-5xl font-heading font-bold mt-5"
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                    >
                       {activeProject.title}
-                    </h4>
+                    </motion.h4>
 
                     <button
                       type="button"
@@ -1843,32 +2041,46 @@ const ServiceDetail = () => {
                           prev === projectStories.length - 1 ? 0 : prev + 1,
                         )
                       }
-                      className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
+                      className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center hover:scale-110 transition-transform"
                       aria-label="Next project"
                     >
                       <ArrowRight size={14} />
                     </button>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
 
+            {/* ── TESTIMONIALS ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Testimonials
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {testimonials.map((item) => (
-                    <SocialTestimonialCard
-                      key={item.name}
-                      quote={item.quote}
-                      name={item.name}
-                      role={item.role}
-                    />
+                    <motion.div key={item.name} variants={revealUp}>
+                      <SocialTestimonialCard
+                        quote={item.quote}
+                        name={item.name}
+                        role={item.role}
+                      />
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
 
@@ -1877,151 +2089,294 @@ const ServiceDetail = () => {
 
         {isAgenticAiEngineering ? (
           <>
-            <section className="relative min-h-[86vh] md:min-h-[92vh] flex items-end">
-              <img
+            {/* ── HERO ── */}
+            <section className="relative min-h-[86vh] md:min-h-[92vh] flex items-end overflow-hidden">
+              <motion.img
                 src={service.image}
                 alt="Artificial Intelligence and Machine Learning Services"
                 className="absolute inset-0 w-full h-full object-cover"
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 2, ease: "easeOut" }}
               />
               <div className="absolute inset-0 bg-black/60" />
               <div className={`${pageWidthClass} relative z-10 pb-16 md:pb-20`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="max-w-4xl"
-                >
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-5 leading-[1.08] tracking-tight">
+                <div className="max-w-4xl">
+                  <motion.h1
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-5 leading-[1.08] tracking-tight"
+                    initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.9, ease: "easeOut", delay: 0.25 }}
+                  >
                     Artificial Intelligence &amp; Machine Learning Services: Drive Innovation with AI
-                  </h1>
-                  <p className="text-white/90 text-lg sm:text-xl md:text-2xl leading-[1.3] max-w-3xl mb-8">
+                  </motion.h1>
+                  <motion.p
+                    className="text-white/90 text-lg sm:text-xl md:text-2xl leading-[1.3] max-w-3xl mb-8"
+                    initial={{ opacity: 0, y: 36, filter: "blur(8px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.85, ease: "easeOut", delay: 0.45 }}
+                  >
                     Open the strength of AI to enhance human capabilities, optimize operations, and drive
-                    business growth with Pravaah Consulting&apos;s AI/ML services.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
+                    business growth with plus Consulting&apos;s AI/ML services.
+                  </motion.p>
+                  <motion.div
+                    className="flex flex-wrap gap-4"
+                    initial={{ opacity: 0, y: 24, scale: 0.94 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.65 }}
+                  >
                     <a
                       href="#service-overview"
-                      className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                      className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 hover:scale-105 transition-all"
                     >
                       Learn More
                     </a>
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-white !text-black text-lg font-semibold hover:bg-white/90 transition-all"
+                      className="inline-flex items-center justify-center h-12 px-7 rounded-md bg-white !text-black text-lg font-semibold hover:bg-white/90 hover:scale-105 transition-all"
                     >
                       Contact Us
                     </a>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               </div>
             </section>
 
-            <section
-              id="service-overview"
-              className="py-16 md:py-20 bg-primary"
-            >
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
+            {/* ── OVERVIEW ── */}
+            <section id="service-overview" className="py-16 md:py-20 bg-background overflow-hidden">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Unleash the Power of AI &amp; ML for Transformative Growth
-                </h2>
-                <div className="relative mb-12">
-                  <div className="h-px bg-primary-foreground/30" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
-                </div>
+                </motion.h2>
+                <motion.div
+                  className="relative mb-12"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
+                  <div className="h-px bg-border/70" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-12 items-center">
-                  <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/95">
+                  <motion.p
+                    className="text-lg md:text-xl leading-relaxed text-foreground/90"
+                    initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.75, ease: "easeOut" }}
+                  >
                     Artificial Intelligence and Machine Learning are revolutionizing industries, reshaping how
-                    businesses operate and compete. Pravaah Consulting empowers you to harness the full potential of
+                    businesses operate and compete. plus Consulting empowers you to harness the full potential of
                     these transformative technologies. We help you navigate the complexities of AI/ML adoption, from
                     identifying strategic opportunities to implementing robust solutions that deliver tangible results.
                     With AI&apos;s global market projected to reach unprecedented heights, partnering with Pravaah
                     ensures you&apos;re at the forefront of this wave of innovation.
-                  </p>
+                  </motion.p>
 
-                  <div className="rounded-3xl overflow-hidden border border-primary-foreground/30">
+                  <motion.div
+                    className="relative rounded-3xl overflow-hidden border border-border/70"
+                    initial={{ opacity: 0, x: 40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  >
                     <img
                       src={agenticSectionImage}
                       alt="AI and ML innovation"
-                      className="w-full h-[320px] md:h-[420px] object-cover"
+                      className="w-full h-[320px] md:h-[420px] object-cover hover:scale-105 transition-transform duration-700"
                     />
+                  </motion.div>
+                </div>
+              </div>
+            </section>
+
+            {/* ── OUR AI & ML SERVICES ── */}
+            <section className="py-16 md:py-24 bg-background">
+              <div className={pageWidthClass}>
+                {/* Header */}
+                <motion.div
+                  className="mb-12 md:mb-16"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
+                  <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-3">What we offer</p>
+                  <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-0">
+                    Our AI &amp; ML Services
+                  </h2>
+                </motion.div>
+
+                {/* Split Panel */}
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start relative pb-16">
+
+                  {/* LEFT — scrolling service list */}
+                  <div className="w-full lg:w-[45%] flex flex-col gap-4 pb-[30vh]">
+                    {aiMlServices.map((item) => {
+                      const isActive = activeAiServiceId === item.id;
+                      return (
+                        <motion.button
+                          key={item.id}
+                          id={`ai-service-item-${item.id}`}
+                          onViewportEnter={() => {
+                            // Automatically select this item to update the right panel when scrolling
+                            setActiveAiServiceId(item.id);
+                          }}
+                          viewport={{ amount: 0.6, margin: "-30% 0px -30% 0px" }}
+                          type="button"
+                          onClick={() => {
+                            setActiveAiServiceId(item.id);
+                            document.getElementById(`ai-service-item-${item.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                          }}
+                          className={`group w-full text-left rounded-2xl px-5 py-5 lg:py-6 flex items-start gap-5 transition-all duration-300 border ${
+                            isActive
+                              ? "bg-primary text-primary-foreground border-primary shadow-lg scale-100"
+                              : "bg-card border-border hover:border-primary/40 hover:bg-primary/5 scale-[0.98] opacity-80"
+                          }`}
+                        >
+                          {/* Number pill */}
+                          <div
+                            className={`shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-sm lg:text-base font-bold font-heading transition-all duration-300 ${
+                              isActive
+                                ? "bg-primary-foreground/20 text-primary-foreground"
+                                : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                            }`}
+                          >
+                            {item.id}
+                          </div>
+                          
+                          <div className="flex flex-col gap-2 flex-1 pt-1">
+                            <span
+                              className={`text-lg lg:text-xl font-bold leading-snug transition-colors duration-300 ${
+                                isActive ? "text-primary-foreground" : "text-foreground"
+                              }`}
+                            >
+                              {item.title}
+                            </span>
+                          </div>
+
+                          {/* Active indicator arrow */}
+                          <span
+                            className={`hidden md:block shrink-0 transition-all duration-300 pt-1 text-2xl ${
+                              isActive ? "opacity-100 translate-x-0 text-primary-foreground" : "opacity-0 -translate-x-2"
+                            }`}
+                          >
+                            →
+                          </span>
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+
+                  {/* RIGHT — static/sticky detail panel */}
+                  <div className="w-full lg:w-[55%] lg:sticky lg:top-32 shrink-0 h-auto hidden lg:block">
+                    {aiMlServices.map((item) => {
+                      const isActive = activeAiServiceId === item.id;
+                      if (!isActive) return null;
+                      return (
+                        <motion.div
+                          key={item.id}
+                          initial={{ opacity: 0, scale: 0.98, x: 20 }}
+                          animate={{ opacity: 1, scale: 1, x: 0 }}
+                          exit={{ opacity: 0, scale: 0.98, x: -20 }}
+                          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                          className="relative rounded-[2rem] bg-primary overflow-hidden p-8 md:p-12 min-h-[500px] flex flex-col justify-center shadow-2xl transition-all duration-500 border border-primary-foreground/20"
+                        >
+                          {/* Subtle grid texture */}
+                          <div
+                            className="absolute inset-0 pointer-events-none opacity-[0.06]"
+                            style={{
+                              backgroundImage:
+                                "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)",
+                              backgroundSize: "40px 40px",
+                            }}
+                          />
+                          {/* Ambient glow */}
+                          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.06] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none animate-pulse duration-1000" />
+                          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/[0.04] rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none delay-500 animate-pulse duration-1000" />
+
+                          <div className="relative z-10 flex flex-col items-start gap-6">
+                            {/* Large number watermark */}
+                            <div className="absolute top-1/2 -translate-y-1/2 right-0 text-[180px] lg:text-[240px] font-bold font-heading leading-none text-white/[0.05] select-none pointer-events-none">
+                              {item.id}
+                            </div>
+
+                            {/* Service ID indicator */}
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/80 text-xs font-bold tracking-widest uppercase shadow-sm">
+                              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60 animate-pulse" />
+                              SERVICE {item.id} OF {aiMlServices.length.toString().padStart(2, "0")}
+                            </div>
+
+                            <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary-foreground leading-tight max-w-xl">
+                              {item.title}
+                            </h3>
+
+                            <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/80 leading-relaxed max-w-2xl font-medium mt-2">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground">Our AI &amp; ML Services</h2>
-                <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
 
-                <motion.div
-                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
-                  variants={staggerCards}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={replayViewport}
-                >
-                  {aiMlServices.map((item) => (
-                    <motion.article
-                      key={item.id}
-                      variants={revealUp}
-                      className="rounded-3xl border border-border bg-card p-5 md:p-7 min-h-[330px]"
-                    >
-                      <div className="inline-flex h-12 min-w-12 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-6">
-                        {item.id}
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/95">{item.desc}</p>
-                    </motion.article>
-                  ))}
-                </motion.div>
-              </motion.div>
-            </section>
-
+            {/* ── AI & ML SOLUTIONS ACROSS INDUSTRIES ── */}
             <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-primary-foreground">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   AI &amp; ML Solutions Across Key Industries
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-primary-foreground/30" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.28fr] gap-6 lg:gap-8 lg:items-stretch">
-                  <div className="rounded-3xl overflow-hidden border border-primary-foreground/20 h-[340px] lg:h-full">
+                  <motion.div
+                    className="rounded-3xl overflow-hidden border border-primary-foreground/20 h-[340px] lg:h-full"
+                    initial={{ opacity: 0, x: -40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
                     <img
                       src={aiIndustriesImage}
                       alt="AI and ML solutions across industries"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
-                  </div>
+                  </motion.div>
 
-                  <div className="space-y-3">
+                  <motion.div
+                    className="space-y-3"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+                  >
                     {aiIndustrySolutions.map((industry) => {
                       const isOpen = openAiIndustry === industry.title;
                       return (
@@ -2042,35 +2397,40 @@ const ServiceDetail = () => {
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                            <motion.div
+                              className="bg-background border-t border-border px-6 pb-5 pt-3"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              transition={{ duration: 0.3, ease: "easeOut" }}
+                            >
                               <p className="text-foreground/90 text-xl leading-relaxed mb-3">{industry.intro}</p>
                               <ul className="space-y-1.5 text-foreground/90 text-xl leading-relaxed list-disc pl-6">
                                 {industry.points.map((point) => (
                                   <li key={point}>{point}</li>
                                 ))}
                               </ul>
-                            </div>
+                            </motion.div>
                           ) : null}
                         </article>
                       );
                     })}
-                  </div>
+                  </motion.div>
                 </div>
-              </motion.div>
+              </div>
             </section>
 
+            {/* ── OUR END TO END APPROACH ── */}
             <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-primary-foreground">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our End-to-End Approach
-                </h2>
+                </motion.h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-primary-foreground/30" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
@@ -2081,7 +2441,7 @@ const ServiceDetail = () => {
                   variants={staggerCards}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={replayViewport}
+                  viewport={{ once: true, amount: 0.15 }}
                 >
                   {endToEndApproach.map((item, index) => {
                     const Icon = approachIcons[index];
@@ -2089,33 +2449,48 @@ const ServiceDetail = () => {
                       <motion.article
                         key={item.title}
                         variants={revealUp}
-                        className={`rounded-3xl border border-primary-foreground/30 p-5 md:p-6 min-h-[430px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.1)] hover:scale-[1.01] ${index === endToEndApproach.length - 1
-                          ? "bg-background text-foreground hover:bg-background/90"
-                          : "bg-white/10 text-primary-foreground hover:bg-white/20"
-                          }`}
+                        onMouseMove={handleProcessSpotlightMove}
+                        onMouseLeave={handleProcessSpotlightLeave}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                        style={
+                          {
+                            "--spotlight-x": "50%",
+                            "--spotlight-y": "50%",
+                            "--spotlight-opacity": "0",
+                          } as React.CSSProperties
+                        }
+                        className="group relative rounded-3xl border border-primary-foreground/30 p-5 md:p-6 min-h-[430px] overflow-hidden bg-white/10 text-primary-foreground"
                       >
-                        <Icon size={34} className="mx-auto mb-5" />
-                        <h3 className="text-xl md:text-2xl font-heading font-bold text-center leading-tight mb-3">{item.title}</h3>
-                        <p className={`text-sm md:text-base leading-relaxed text-center ${index === endToEndApproach.length - 1 ? 'text-foreground/90' : 'text-primary-foreground/90'}`}>{item.desc}</p>
+                       <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background: "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                          }}
+                        />
+                        <Icon size={34} className="relative z-10 mx-auto mb-5" />
+                        <h3 className="relative z-10 text-xl md:text-2xl font-heading font-bold text-center leading-tight mb-3">{item.title}</h3>
+                        <p className="relative z-10 text-sm md:text-base leading-relaxed text-center text-primary-foreground/90">{item.desc}</p>
                       </motion.article>
                     );
                   })}
                 </motion.div>
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground">
+            {/* ── PRAVAAH JOURNEY ── */}
+            <section className="py-16 md:py-20 bg-background overflow-hidden">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold mb-8 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   The Pravaah AI &amp; ML Transformation Journey
-                </h2>
+                </motion.h2>
                 <div className="relative mb-10">
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
@@ -2127,68 +2502,107 @@ const ServiceDetail = () => {
                   speed="slow"
                   className="py-2"
                 />
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
-                  Why Choose Us
-                </h2>
+            {/* ── WHY CHOOSE US ── */}
+            <section className="py-20 md:py-28 bg-primary relative overflow-hidden">
+              {/* Animated background highlights */}
+              <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] animate-pulse pointer-events-none" />
+              <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
 
-                <motion.div
-                  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4"
-                  variants={staggerCards}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={replayViewport}
+              <div className={pageWidthClass}>
+                <motion.div 
+                  className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                 >
-                  {whyChooseUsItems.map((item) => {
+                  <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-primary-foreground">
+                    Why Choose Us
+                  </h2>
+                  <div className="w-24 h-1.5 bg-primary-foreground/30 mx-auto rounded-full mb-8" />
+                  <p className="text-xl md:text-2xl text-primary-foreground/80 leading-relaxed">
+                    We combine technical mastery with strategic vision to deliver AI solutions that don&apos;t just work—they transform.
+                  </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
+                  {whyChooseUsItems.map((item, index) => {
                     const Icon = item.icon;
+                    const spans = [
+                      "lg:col-span-4 md:col-span-3",
+                      "lg:col-span-8 md:col-span-3",
+                      "lg:col-span-7 md:col-span-3",
+                      "lg:col-span-5 md:col-span-3",
+                      "lg:col-span-12 md:col-span-6",
+                    ];
                     return (
                       <motion.article
                         key={item.title}
-                        variants={revealUp}
-                        className="rounded-3xl bg-background border border-border text-foreground min-h-[145px] px-4 py-6 flex flex-col items-center justify-center text-center"
+                        initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ 
+                          duration: 0.6, 
+                          delay: index * 0.1,
+                          ease: [0.22, 1, 0.36, 1]
+                        }}
+                        whileHover={{ y: -10 }}
+                        className={`${spans[index]} group relative rounded-[32px] p-8 md:p-10 bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden flex flex-col justify-between transition-all duration-500 hover:bg-white/10 hover:border-white/20`}
                       >
-                        <Icon size={36} className="mb-4 text-primary" />
-                        <h3 className="text-xl md:text-2xl font-medium leading-snug">{item.title}</h3>
+                        {/* Interactive Glow */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
+                          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
+                        </div>
+
+                        <div className="relative z-10">
+                          <div className="inline-flex p-4 rounded-2xl bg-white/10 text-white mb-8 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-500">
+                            <Icon size={38} />
+                          </div>
+                          <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
+                            {item.title}
+                          </h3>
+                          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl">
+                            {item.desc}
+                          </p>
+                        </div>
+
+                        {/* Animated background text/decor */}
+                        <div className="absolute -bottom-6 -right-6 text-9xl font-bold text-white/5 select-none pointer-events-none group-hover:text-white/10 transition-colors duration-500">
+                          0{index + 1}
+                        </div>
                       </motion.article>
                     );
                   })}
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
+            {/* ── TECH STACK ── */}
+            <section className="py-16 md:py-20 bg-background overflow-hidden">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our AI &amp; ML Tech Stack
-                </h2>
+                </motion.h2>
 
                 <div className="space-y-3 md:space-y-4">
-                  {aiMlTechStack.map((row) => (
+                  {aiMlTechStack.map((row, i) => (
                     <motion.article
                       key={row.category}
-                      variants={revealUp}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={replayViewport}
                       className="rounded-3xl overflow-hidden bg-card border border-border grid grid-cols-1 md:grid-cols-[260px_1fr]"
+                      initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.7, delay: i * 0.1, ease: "easeOut" }}
+                      whileHover={{ scale: 1.015 }}
                     >
                       <div className="bg-primary text-primary-foreground px-5 py-6 md:px-6 md:py-8 flex items-center justify-center text-center">
                         <h3 className="text-xl md:text-2xl font-medium leading-snug">{row.category}</h3>
@@ -2200,7 +2614,7 @@ const ServiceDetail = () => {
                             key={`${row.category}-${tool}`}
                             className={`inline-flex items-center rounded-md border px-3 py-1.5 text-xl md:text-2xl ${index === 0
                               ? "bg-primary border-primary text-primary-foreground"
-                              : "bg-transparent border-border text-foreground"
+                              : "bg-transparent border-border text-foreground hover:bg-border/40 transition-colors"
                               }`}
                           >
                             {tool}
@@ -2210,72 +2624,162 @@ const ServiceDetail = () => {
                     </motion.article>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-card">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-8 text-foreground">Case Study</h2>
-                <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+            {/* ── CASE STUDY ── */}
+            <section 
+              className="py-16 md:py-24 bg-card relative overflow-hidden"
+              onMouseEnter={() => setIsAiCaseStudyPaused(true)}
+              onMouseLeave={() => setIsAiCaseStudyPaused(false)}
+            >
+               {/* Decorative background elements */}
+               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+               <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
-                <motion.div
-                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
-                  variants={staggerCards}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={replayViewport}
+              <div className={pageWidthClass}>
+                <motion.div 
+                  className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                 >
-                  {caseStudies.map((item, index) => {
-                    const Icon = item.icon;
-                    return (
-                      <motion.article
-                        key={item.title}
-                        variants={revealUp}
-                        className={`rounded-3xl border border-border p-6 md:p-7 min-h-[430px] ${index === 2 ? "bg-primary text-primary-foreground" : "bg-background text-foreground"
-                          }`}
-                      >
-                        <Icon size={44} className="mx-auto mb-6" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-center leading-tight mb-5">{item.title}</h3>
-                        <p className={`text-lg md:text-xl leading-relaxed text-center ${index === 2 ? "text-primary-foreground/90" : "text-foreground/90"}`}>{item.desc}</p>
-                      </motion.article>
-                    );
-                  })}
+                  <div className="max-w-2xl">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">Case Study</h2>
+                    <div className="w-24 h-1.5 bg-primary rounded-full mb-6" />
+                    <p className="text-xl text-foreground/70">
+                      Explore how we've helped industry leaders leverage the power of Agentic AI to solve complex challenges and drive innovation.
+                    </p>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <button
+                      type="button"
+                      onClick={() => setActiveAiCaseStudyIndex(prev => (prev === 0 ? caseStudies.length - 1 : prev - 1))}
+                      className="w-14 h-14 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 shadow-sm"
+                      aria-label="Previous Case Study"
+                    >
+                      <ArrowLeft size={24} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveAiCaseStudyIndex(prev => (prev === caseStudies.length - 1 ? 0 : prev + 1))}
+                      className="w-14 h-14 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 shadow-sm"
+                      aria-label="Next Case Study"
+                    >
+                      <ArrowRight size={24} />
+                    </button>
+                  </div>
                 </motion.div>
-              </motion.div>
+
+                <div className="relative">
+                  <motion.div
+                    key={activeAiCaseStudyIndex}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.05 }}
+                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    className="grid lg:grid-cols-[1.2fr_1fr] gap-0 rounded-[40px] overflow-hidden bg-background border border-border shadow-2xl"
+                  >
+                    {/* Image Side */}
+                    <div className="relative h-[400px] lg:h-[650px] overflow-hidden">
+                      <motion.img
+                        src={caseStudies[activeAiCaseStudyIndex].image}
+                        alt={caseStudies[activeAiCaseStudyIndex].title}
+                        className="w-full h-full object-cover"
+                        initial={{ scale: 1.2 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/20" />
+                      
+                      {/* Floating Category Tag */}
+                      <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="absolute top-8 left-8 bg-primary/90 backdrop-blur-md text-primary-foreground px-6 py-2 rounded-full text-sm font-bold tracking-wider uppercase shadow-lg"
+                      >
+                        {caseStudies[activeAiCaseStudyIndex].category}
+                      </motion.div>
+                    </div>
+
+                    {/* Content Side */}
+                    <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center relative bg-background">
+                      <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="flex-1 flex flex-col"
+                      >
+                        <div className="mb-8 inline-flex p-4 rounded-2xl bg-primary/5 text-primary w-fit">
+                          {(() => {
+                            const Icon = caseStudies[activeAiCaseStudyIndex].icon;
+                            return <Icon size={40} />;
+                          })()}
+                        </div>
+                        
+                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 leading-tight">
+                          {caseStudies[activeAiCaseStudyIndex].title}
+                        </h3>
+                        
+                        <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-10">
+                          {caseStudies[activeAiCaseStudyIndex].desc}
+                        </p>
+                        
+                        <div className="flex items-center gap-6 mt-auto">
+                          <Link 
+                            to="/contact" 
+                            className="inline-flex items-center gap-2 text-primary font-bold text-lg group"
+                          >
+                            Read Full Success Story
+                            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                          </Link>
+                        </div>
+                      </motion.div>
+                      
+                      {/* Navigation Dots (Mobile/Tablet) */}
+                      <div className="flex gap-2 mt-12 lg:absolute lg:bottom-12 lg:right-12">
+                        {caseStudies.map((_, i) => (
+                          <button
+                            key={i}
+                            type="button"
+                            onClick={() => setActiveAiCaseStudyIndex(i)}
+                            className={`h-2 rounded-full transition-all duration-300 ${
+                              activeAiCaseStudyIndex === i ? "w-10 bg-primary" : "w-2 bg-border hover:bg-primary/40"
+                            }`}
+                            aria-label={`Switch to slide ${i + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
             </section>
 
+            {/* ── TESTIMONIALS ── */}
             <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={replayViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Testimonials
-                </h2>
+                </motion.h2>
 
                 <motion.div
                   className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
                   variants={staggerCards}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={replayViewport}
+                  viewport={{ once: true, amount: 0.15 }}
                 >
                   {agenticTestimonials.map((item) => (
-                    <motion.div key={item.name} variants={revealUp}>
+                    <motion.div key={item.name} variants={revealUp} whileHover={{ y: -8, scale: 1.02 }} transition={{ type: "spring", stiffness: 200, damping: 20 }}>
                       <SocialTestimonialCard
                         quote={item.quote}
                         name={item.name}
@@ -2284,7 +2788,7 @@ const ServiceDetail = () => {
                     </motion.div>
                   ))}
                 </motion.div>
-              </motion.div>
+              </div>
             </section>
 
           </>
@@ -2292,69 +2796,107 @@ const ServiceDetail = () => {
 
         {isEcommerce ? (
           <>
+            {/* ── HERO ── */}
             <section className="relative min-h-[86vh] md:min-h-[92vh] flex items-end overflow-hidden">
-              <img
+              <motion.img
                 src={service.image}
                 alt="Ecommerce Website Design and Development Services"
                 className="absolute inset-0 w-full h-full object-cover"
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 2, ease: "easeOut" }}
               />
               <div className="absolute inset-0 bg-black/55" />
 
               <div className={`${pageWidthClass} relative z-10 pb-16 md:pb-20`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-end"
-                >
+                <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-end">
                   <div className="max-w-5xl">
-                    <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight">
+                    <motion.h1
+                      className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight"
+                      initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      transition={{ duration: 0.9, ease: "easeOut", delay: 0.25 }}
+                    >
                       Ecommerce Website Design &amp; Development Services
-                    </h1>
-                    <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-4xl mb-8">
-                      Drive sales with Pravaah Consulting&apos;s expert eCommerce development, delivering fast,
+                    </motion.h1>
+                    <motion.p
+                      className="text-white/90 text-lg md:text-xl leading-relaxed max-w-4xl mb-8"
+                      initial={{ opacity: 0, y: 36, filter: "blur(8px)" }}
+                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      transition={{ duration: 0.85, ease: "easeOut", delay: 0.45 }}
+                    >
+                      Drive sales with plus Consulting&apos;s expert eCommerce development, delivering fast,
                       mobile-first stores and seamless checkout experiences.
-                    </p>
-                    <div className="flex flex-wrap gap-4">
+                    </motion.p>
+                    <motion.div
+                      className="flex flex-wrap gap-4"
+                      initial={{ opacity: 0, y: 24, scale: 0.94 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.7, ease: "easeOut", delay: 0.65 }}
+                    >
                       <a
                         href="#service-overview"
-                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 hover:scale-105 transition-all"
                       >
                         Learn More
                       </a>
                       <a
                         href="#contact"
-                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-foreground text-lg font-semibold hover:bg-white/90 transition-all"
+                        className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-white text-foreground text-lg font-semibold hover:bg-white/90 hover:scale-105 transition-all"
                       >
                         Contact Us
                       </a>
-                    </div>
+                    </motion.div>
                   </div>
 
-                  <div className="hidden lg:block rounded-[26px] border border-white/25 bg-black/25 backdrop-blur-sm p-3">
+                  <motion.div
+                    className="hidden lg:block rounded-[26px] border border-white/25 bg-black/25 backdrop-blur-sm p-3"
+                    initial={{ opacity: 0, x: 40, scale: 0.95 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+                  >
                     <img
                       src={serviceEcommerceImg}
                       alt="Ecommerce storefront preview"
                       className="w-full h-[290px] xl:h-[340px] object-cover rounded-[20px]"
                     />
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               </div>
             </section>
 
-            <section id="service-overview" className="py-16 md:py-20 bg-background">
+            {/* ── OVERVIEW ── */}
+            <section id="service-overview" className="py-16 md:py-20 bg-background overflow-hidden">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   A Leading Ecommerce Development Company Crafting High-Conversion Stores
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-border-70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-10 items-center">
-                  <div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.75, ease: "easeOut" }}
+                  >
                     <p className="text-lg md:text-xl leading-relaxed text-foreground/95 mb-4">
-                      Looking for an eCommerce store that converts? Pravaah Consulting builds high-performance online
+                      Looking for an eCommerce store that converts? plus Consulting builds high-performance online
                       stores that turn visitors into loyal customers. Our award-winning designers focus on{" "}
                       <span className="underline">UX/UI excellence</span>, while our certified developers implement
                       intuitive, custom functionality on platforms like Shopify, Magento, and WooCommerce.
@@ -2364,187 +2906,406 @@ const ServiceDetail = () => {
                       <li>Lightning Speed: Optimized for Core Web Vitals to reduce bounce rates.</li>
                       <li>Scalable Code: Built to grow as your inventory and traffic expand.</li>
                     </ul>
-                  </div>
+                  </motion.div>
 
-                  <div className="rounded-3xl overflow-hidden border border-border">
+                  <motion.div
+                    className="relative rounded-3xl overflow-hidden border border-border"
+                    initial={{ opacity: 0, x: 40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  >
                     <img
                       src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Ecommerce laptop storefront"
-                      className="w-full h-[320px] md:h-[410px] object-cover"
+                      className="w-full h-[320px] md:h-[410px] object-cover hover:scale-105 transition-transform duration-700"
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
 
+            {/* ── GUIDANCE SERVICES ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Get Expert Guidance for Your Ecommerce Platform
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceGuidanceServices.slice(0, 9).map((item) => {
                     const Icon = item.icon;
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[300px]"
+                        variants={revealUp}
+                        onMouseMove={handleProcessSpotlightMove}
+                        onMouseLeave={handleProcessSpotlightLeave}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                        style={
+                          {
+                            "--spotlight-x": "50%",
+                            "--spotlight-y": "50%",
+                            "--spotlight-opacity": "0",
+                          } as React.CSSProperties
+                        }
+                        className="group relative rounded-3xl border border-primary-foreground/30 bg-white/10 p-6 md:p-7 min-h-[300px] overflow-hidden"
                       >
-                        <Icon size={34} className="mb-5 text-primary-foreground" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
-                      </article>
+                       <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background:
+                              "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                          }}
+                        />
+                        <Icon size={34} className="relative z-10 mb-5 text-primary-foreground" />
+                        <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                        <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
+                      </motion.article>
                     );
                   })}
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[860px] mx-auto mt-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[860px] mx-auto mt-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceGuidanceServices.slice(9).map((item) => {
                     const Icon = item.icon;
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[300px]"
+                        variants={revealUp}
+                        onMouseMove={handleProcessSpotlightMove}
+                        onMouseLeave={handleProcessSpotlightLeave}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                        style={
+                          {
+                            "--spotlight-x": "50%",
+                            "--spotlight-y": "50%",
+                            "--spotlight-opacity": "0",
+                          } as React.CSSProperties
+                        }
+                        className="group relative rounded-3xl border border-primary-foreground/30 bg-white/10 p-6 md:p-7 min-h-[300px] overflow-hidden"
                       >
-                        <Icon size={34} className="mb-5 text-primary-foreground" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
-                      </article>
+                       <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background:
+                              "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                          }}
+                        />
+                        <Icon size={34} className="relative z-10 mb-5 text-primary-foreground" />
+                        <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                        <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
+                      </motion.article>
                     );
                   })}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── EXPERTISE ── */}
             <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Ecommerce Areas of Expertise
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceExpertiseAreas.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
-                        className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[380px] flex flex-col items-center text-center"
+                        variants={revealUp}
+                        onMouseMove={handleProcessSpotlightMove}
+                        onMouseLeave={handleProcessSpotlightLeave}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                        style={
+                          {
+                            "--spotlight-x": "50%",
+                            "--spotlight-y": "50%",
+                            "--spotlight-opacity": "0",
+                          } as React.CSSProperties
+                        }
+                        className="group relative rounded-3xl bg-card border border-primary/40 text-foreground p-6 md:p-8 min-h-[380px] flex flex-col items-center text-center overflow-hidden"
                       >
-                        <Icon size={44} className="mb-5 text-primary" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4 leading-tight">{item.title}</h3>
-                        <p className="text-2xl text-foreground/75 leading-relaxed flex-1">{item.desc}</p>
+                         <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background:
+                              "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(200, 200, 200, 0.25), transparent 70%)",
+                          }}
+                        />
+                        <Icon size={44} className="relative z-10 mb-5 text-primary group-hover:scale-110 transition-transform" />
+                        <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold mb-4 leading-tight">{item.title}</h3>
+                        <p className="relative z-10 text-xl text-foreground/80 leading-relaxed flex-1">{item.desc}</p>
                         <a
                           href="#contact"
-                          className="mt-7 inline-flex items-center justify-center h-12 px-7 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                          className="relative z-10 mt-7 inline-flex items-center justify-center h-12 px-7 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 hover:scale-105 transition-all"
                         >
                           Learn More
                         </a>
-                      </article>
+                      </motion.article>
                     );
                   })}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── BUSINESS MODEL SOLUTIONS ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Ecommerce Solutions for Any Business Model
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-primary-foreground/30" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceBusinessModelSolutions.slice(0, 6).map((item) => (
-                    <article
+                    <motion.article
                       key={item.title}
-                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[280px] text-center"
+                      variants={revealUp}
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as React.CSSProperties
+                      }
+                      className="group relative rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-8 min-h-[280px] text-center overflow-hidden"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
+                      <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background:
+                              "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                          }}
+                        />
+                      <div className="relative z-10 inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
-                    </article>
+                      <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
+                    </motion.article>
                   ))}
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[920px] mx-auto mt-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[920px] mx-auto mt-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceBusinessModelSolutions.slice(6).map((item) => (
-                    <article
+                    <motion.article
                       key={item.title}
-                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[280px] text-center"
+                      variants={revealUp}
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as React.CSSProperties
+                      }
+                      className="group relative rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-8 min-h-[280px] text-center overflow-hidden"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
+                       <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background:
+                              "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                          }}
+                        />
+                      <div className="relative z-10 inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
-                    </article>
+                      <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
+                    </motion.article>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── NEW AGE TECHS ── */}
             <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Create Experiences with New-Age Techs
-                </h2>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground/90 mb-10 max-w-6xl">
-                  Pravaah Consulting integrates <span className="underline">innovative AI tools</span> to transform
+                </motion.h2>
+                <motion.p
+                  className="text-lg md:text-xl leading-relaxed text-foreground/90 mb-10 max-w-6xl"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut", delay: 0.15 }}
+                >
+                  plus Consulting integrates <span className="underline">innovative AI tools</span> to transform
                   your online store into an interactive powerhouse, boosting engagement and conversions across devices.
-                </p>
+                </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceNewAgeTechs.slice(0, 6).map((item) => (
-                    <article
+                    <motion.article
                       key={item.title}
-                      className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[190px]"
+                      variants={revealUp}
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                      className="group rounded-3xl bg-card border border-primary/30 text-foreground p-6 md:p-8 min-h-[190px] shadow-sm hover:shadow-md transition-shadow"
                     >
                       <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h3>
                       <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
-                    </article>
+                    </motion.article>
                   ))}
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[920px] mx-auto mt-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[920px] mx-auto mt-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceNewAgeTechs.slice(6).map((item) => (
-                    <article
+                    <motion.article
                       key={item.title}
-                      className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[190px]"
+                      variants={revealUp}
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                      className="group rounded-3xl bg-card border border-primary/30 text-foreground p-6 md:p-8 min-h-[190px] shadow-sm hover:shadow-md transition-shadow"
                     >
                       <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{item.title}</h3>
                       <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
-                    </article>
+                    </motion.article>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── OPERATIONS ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   We Build Resilient, AI-Powered Ecommerce Operations
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-primary-foreground/30" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-6 lg:gap-8 lg:items-stretch">
-                  <div className="rounded-3xl overflow-hidden border border-primary/80 h-[360px] lg:h-full">
+                  <motion.div
+                    className="rounded-3xl overflow-hidden border border-primary/60 h-[360px] lg:h-full"
+                    initial={{ opacity: 0, x: -40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
                     <img
                       src="https://images.pexels.com/photos/6214347/pexels-photo-6214347.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="AI-powered ecommerce operations"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
-                  </div>
+                  </motion.div>
 
-                  <div className="space-y-3">
+                  <motion.div
+                    className="space-y-3"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+                  >
                     {ecommerceOperationsItems.map((item) => {
                       const isOpen = openEcommerceOperation === item.title;
                       return (
@@ -2552,9 +3313,9 @@ const ServiceDetail = () => {
                           <button
                             type="button"
                             onClick={() => setOpenEcommerceOperation(isOpen ? "" : item.title)}
-                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left"
+                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left hover:bg-accent/10 transition-colors"
                           >
-                            <span className="text-3xl font-medium text-foreground">{item.title}</span>
+                            <span className="text-2xl md:text-3xl font-medium text-foreground">{item.title}</span>
                             {isOpen ? (
                               <ChevronUp size={22} className="text-foreground" />
                             ) : (
@@ -2562,53 +3323,110 @@ const ServiceDetail = () => {
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
+                            <motion.div
+                              className="bg-background border-t border-border px-6 pb-5 pt-3"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              transition={{ duration: 0.3, ease: "easeOut" }}
+                            >
                               <p className="text-foreground/90 text-xl leading-relaxed">{item.desc}</p>
-                            </div>
+                            </motion.div>
                           ) : null}
                         </article>
                       );
                     })}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
 
+            {/* ── TRANSFORMATION ── */}
             <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center leading-tight mb-8 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center leading-tight mb-8 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   How Can Our Ecommerce Services Transform Your Business?
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceTransformationBenefits.map((item) => (
-                    <article
+                    <motion.article
                       key={item.id}
-                      className="rounded-3xl border border-border bg-card p-6 md:p-7 min-h-[260px] text-center"
+                      variants={revealUp}
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      whileHover={{ y: -8, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as React.CSSProperties
+                      }
+                      className="group relative rounded-3xl border border-primary/40 bg-card p-6 md:p-8 min-h-[260px] text-center overflow-hidden"
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                        style={{
+                          opacity: "var(--spotlight-opacity)",
+                          background:
+                            "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(200, 200, 200, 0.25), transparent 70%)",
+                        }}
+                      />
+                      <div className="relative z-10 inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
-                    </article>
+                      <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">{item.title}</h3>
+                      <p className="relative z-10 text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
+                    </motion.article>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── SHOWCASE / CASE STUDY ── */}
             <section className="py-16 md:py-20 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Transforming Visions into High-Performance Stores
-                </h2>
+                </motion.h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 md:gap-10 items-center">
-                  <div className="max-w-3xl">
+                  <motion.div
+                    className="max-w-3xl"
+                    initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.75, ease: "easeOut" }}
+                  >
                     <p className="text-lg md:text-xl leading-relaxed text-foreground/95 mb-6">
                       {activeEcommerceShowcase.summary}
                     </p>
@@ -2619,24 +3437,40 @@ const ServiceDetail = () => {
                           prev === 0 ? ecommerceShowcaseProjects.length - 1 : prev - 1,
                         )
                       }
-                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-primary hover:brightness-95 transition-all"
+                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary border hover:border-transparent hover:scale-110 text-primary-foreground transition-all"
                       aria-label="Previous showcase project"
                     >
                       <ArrowLeft size={20} />
                     </button>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative">
-                    <div className="rounded-[30px] bg-background p-4 md:p-5 border border-border">
-                      <img
+                  <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, x: 40, scale: 0.97 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  >
+                    <div className="rounded-[30px] bg-background p-4 md:p-5 border border-primary/20">
+                      <motion.img
+                        key={activeEcommerceShowcase.title}
                         src={activeEcommerceShowcase.image}
                         alt={activeEcommerceShowcase.title}
                         className="w-full h-[260px] md:h-[340px] object-contain rounded-[22px] bg-background"
+                        initial={{ opacity: 0, scale: 1.04 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                       />
                     </div>
-                    <h3 className="text-center text-2xl md:text-3xl font-heading font-bold mt-5 text-foreground">
+                    <motion.h3
+                      key={`title-${activeEcommerceShowcase.title}`}
+                      className="text-center text-2xl md:text-3xl font-heading font-bold mt-5 text-foreground"
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                    >
                       {activeEcommerceShowcase.title}
-                    </h3>
+                    </motion.h3>
 
                     <button
                       type="button"
@@ -2645,56 +3479,103 @@ const ServiceDetail = () => {
                           prev === ecommerceShowcaseProjects.length - 1 ? 0 : prev + 1,
                         )
                       }
-                      className="absolute right-0 md:-right-7 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-primary hover:brightness-95 transition-all"
+                      className="absolute right-0 md:-right-7 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary border hover:border-transparent hover:scale-110 text-primary-foreground transition-all"
                       aria-label="Next showcase project"
                     >
                       <ArrowRight size={20} />
                     </button>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
 
+            {/* ── HOW WE WORK ── */}
             <section className="py-16 md:py-20 bg-primary">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-primary-foreground text-center"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   How We Work: The Secret to Our Success
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceHowWeWork.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <article
+                      <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[290px] text-center"
+                        variants={revealUp}
+                        onMouseMove={handleProcessSpotlightMove}
+                        onMouseLeave={handleProcessSpotlightLeave}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                        style={
+                          {
+                            "--spotlight-x": "50%",
+                            "--spotlight-y": "50%",
+                            "--spotlight-opacity": "0",
+                          } as React.CSSProperties
+                        }
+                        className="group relative rounded-3xl border border-primary-foreground/30 bg-white/10 p-6 md:p-8 min-h-[290px] text-center overflow-hidden"
                       >
-                        <Icon size={38} className="mx-auto mb-5 text-primary-foreground" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
-                      </article>
+                         <div
+                          className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                          style={{
+                            opacity: "var(--spotlight-opacity)",
+                            background:
+                              "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                          }}
+                        />
+                        <Icon size={44} className="relative z-10 mx-auto mb-5 text-primary-foreground group-hover:scale-110 transition-transform" />
+                        <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                        <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
+                      </motion.article>
                     );
                   })}
-                </div>
+                </motion.div>
               </div>
             </section>
 
+            {/* ── TESTIMONIALS ── */}
             <section className="py-16 md:py-20 bg-background">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
-                  What It&apos;s Like Working With Pravaah Consulting
-                </h2>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
+                  What It&apos;s Like Working With plus Consulting
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {ecommerceTestimonials.map((item) => (
-                    <SocialTestimonialCard
-                      key={item.name}
-                      quote={item.quote}
-                      name={item.name}
-                      role={item.role}
-                    />
+                    <motion.div key={item.name} variants={revealUp} whileHover={{ y: -8, scale: 1.02 }} transition={{ type: "spring", stiffness: 200, damping: 20 }}>
+                      <SocialTestimonialCard
+                        quote={item.quote}
+                        name={item.name}
+                        role={item.role}
+                      />
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
           </>
@@ -2702,179 +3583,285 @@ const ServiceDetail = () => {
 
         {isMarketing ? (
           <>
+            {/* ── HERO ── */}
             <section className="relative min-h-[86vh] md:min-h-[92vh] flex items-end overflow-hidden">
-              <img
+              <motion.img
                 src={service.image}
                 alt="Results-Driven Digital Marketing Services"
                 className="absolute inset-0 w-full h-full object-cover"
+                initial={{ scale: 1.15, filter: "blur(4px)" }}
+                animate={{ scale: 1, filter: "blur(0px)" }}
+                transition={{ duration: 1.8, ease: "easeOut" }}
               />
-              <div className="absolute inset-0 bg-black/60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
               <div className={`${pageWidthClass} relative z-10 pb-16 md:pb-20`}>
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl">
-                  <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight">
+                <div className="max-w-5xl">
+                  <motion.h1
+                    className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-[1.05] tracking-tight"
+                    initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+                  >
                     Results-Driven Digital Marketing Services to Grow Your Business
-                  </h1>
-                  <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-4xl mb-8">
+                  </motion.h1>
+                  <motion.p
+                    className="text-white/95 text-xl md:text-2xl leading-[1.4] max-w-4xl mb-10"
+                    initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.85, ease: "easeOut", delay: 0.4 }}
+                  >
                     Your all-in-one partner: a full-service digital marketing agency that turns clicks into
                     customers.
-                  </p>
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                  </motion.p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
                   >
-                    Contact Us
-                  </a>
-                </motion.div>
+                    <a
+                      href="#service-overview"
+                      className="inline-flex items-center justify-center h-14 px-10 rounded-full bg-primary text-primary-foreground text-lg font-bold hover:shadow-[0_0_20px_rgba(var(--primary),0.5)] hover:bg-primary/95 hover:-translate-y-1 transition-all duration-300 mr-4 mb-4"
+                    >
+                      Discover How
+                    </a>
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center justify-center h-14 px-10 rounded-full bg-white text-black text-lg font-bold hover:bg-white/90 hover:-translate-y-1 transition-all duration-300 mb-4"
+                    >
+                      Contact Us
+                    </a>
+                  </motion.div>
+                </div>
               </div>
             </section>
 
-            <section
-              id="service-overview"
-              className="py-16 md:py-20 bg-background"
-            >
+            {/* ── OVERVIEW ── */}
+            <section id="service-overview" className="py-16 md:py-24 bg-background overflow-hidden">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Your Comprehensive Marketing Solutions to Amplify Your Brand
-                </h2>
-                <div className="relative mb-10">
+                </motion.h2>
+                <motion.div
+                  className="relative mb-12"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
                   <div className="h-px bg-border/70" />
                   <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-10 items-center">
-                  <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
-                    Maximize your brand&apos;s impact with Pravaah Consulting&apos;s innovative marketing strategies.
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-8 lg:gap-14 items-center">
+                  <motion.p
+                    className="text-lg md:text-xl leading-relaxed text-foreground/95"
+                    initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.75, ease: "easeOut" }}
+                  >
+                    Maximize your brand&apos;s impact with plus Consulting&apos;s innovative marketing strategies.
                     From digital marketing to brand development, our team helps you reach new audiences, boost
                     engagement, and drive business growth. By integrating AI-driven personalization and omnichannel
                     marketing, we create seamless customer experiences that resonate with your audience&apos;s values.
                     Our approach focuses on building a strong brand identity that fosters deeper connections and drives
                     loyalty. Explore how our marketing services can boost your brand&apos;s presence today!
-                  </p>
+                  </motion.p>
 
-                  <div className="rounded-3xl overflow-hidden border border-border">
+                  <motion.div
+                    className="relative rounded-3xl overflow-hidden border border-border group"
+                    initial={{ opacity: 0, x: 40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                  >
+                    <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
                     <img
                       src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Marketing team collaboration"
-                      className="w-full h-[320px] md:h-[410px] object-cover"
+                      className="w-full h-[320px] md:h-[450px] object-cover hover:scale-[1.04] transition-transform duration-700 ease-in-out"
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground">
+            {/* ── DIGITAL MARKETING SERVICES ── */}
+            <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+              {/* Subtle background glow */}
+              <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground relative z-10"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Next-Gen Digital Marketing Services for Measurable Success
-                </h2>
-                <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+                </motion.h2>
+                <motion.div
+                  className="relative mb-12 z-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 relative z-10"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {marketingServices.map((item, index) => (
                     <motion.article
                       key={item.id}
-                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-7 min-h-[300px]"
+                      className="group relative rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-8 min-h-[300px] overflow-hidden backdrop-blur-sm"
                       variants={revealUp}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={scrollViewport}
-                      transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      whileHover={{ y: -6, scale: 1.015 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as React.CSSProperties
+                      }
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-background text-foreground text-lg font-medium mb-5">
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                        style={{
+                          opacity: "var(--spotlight-opacity)",
+                          background:
+                            "radial-gradient(250px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                        }}
+                      />
+                      <div className="relative z-10 inline-flex h-12 min-w-12 px-3 rounded-xl items-center justify-center bg-background text-foreground text-xl font-bold mb-6 shadow-md">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
+                      <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                     </motion.article>
                   ))}
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
+            {/* ── DIGITAL MARKETING FEATURES ── */}
+            <section className="py-16 md:py-24 bg-background">
               <div className={pageWidthClass}>
-                <div className="space-y-16 md:space-y-24">
+                <div className="space-y-16 md:space-y-28">
                   {marketingFeatureHighlights.map((item, index) => {
                     const Icon = item.icon;
                     const shouldReverse = index % 2 === 1;
                     return (
-                      <motion.article
+                      <article
                         key={item.label}
-                        className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center"
-                        variants={revealUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={scrollViewport}
-                        transition={{ duration: 0.45, delay: index * 0.03, ease: "easeOut" }}
+                        className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center group"
                       >
-                        <div
-                          className={`rounded-3xl overflow-hidden border border-border ${shouldReverse ? "lg:order-2" : "lg:order-1"
+                        <motion.div
+                          className={`rounded-3xl overflow-hidden border border-border/80 shadow-sm group-hover:shadow-md transition-shadow duration-500 ${shouldReverse ? "lg:order-2" : "lg:order-1"
                             }`}
+                          initial={{ opacity: 0, x: shouldReverse ? 40 : -40, scale: 0.96 }}
+                          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                          viewport={{ once: true, amount: 0.3 }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                          <img src={item.image} alt={item.label} className="w-full h-[300px] md:h-[390px] object-cover" />
-                        </div>
+                          <img src={item.image} alt={item.label} className="w-full h-[320px] md:h-[420px] object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-in-out" />
+                        </motion.div>
 
-                        <div className={`flex flex-col justify-center ${shouldReverse ? "lg:order-1" : "lg:order-2"}`}>
-                          <div className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-5 py-2 text-primary mb-4 self-start">
+                        <motion.div
+                          className={`flex flex-col justify-center ${shouldReverse ? "lg:order-1" : "lg:order-2"}`}
+                          initial={{ opacity: 0, x: shouldReverse ? -40 : 40 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true, amount: 0.3 }}
+                          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                        >
+                          <div className="inline-flex items-center gap-3 rounded-full bg-primary/10 px-5 py-2 text-primary mb-5 self-start shadow-sm border border-primary/10">
                             <Icon size={20} />
-                            <span className="text-xl md:text-2xl font-medium">{item.label}</span>
+                            <span className="text-xl md:text-2xl font-medium tracking-tight">{item.label}</span>
                           </div>
-                          <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-foreground">
+                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight mb-5 text-foreground">
                             {item.title}
                           </h3>
                           <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
                           {item.metric ? (
-                            <p className="mt-5 text-xl md:text-2xl leading-snug text-foreground/90">
-                              <span className="text-6xl md:text-7xl font-heading font-bold mr-2 text-primary">{item.metric}</span>
-                              {item.metricText}
-                            </p>
+                            <div className="mt-8 p-6 rounded-2xl bg-secondary/5 border border-border inline-block self-start">
+                              <p className="text-xl md:text-2xl leading-snug text-foreground/90 flex flex-col md:flex-row md:items-center">
+                                <span className="text-6xl md:text-7xl font-heading font-bold md:mr-4 text-primary tracking-tighter mb-2 md:mb-0 block">
+                                  {item.metric}
+                                </span>
+                                <span className="font-medium text-foreground/80 md:max-w-[200px] block">{item.metricText}</span>
+                              </p>
+                            </div>
                           ) : null}
-                        </div>
-                      </motion.article>
+                        </motion.div>
+                      </article>
                     );
                   })}
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground">
+            {/* ── INDUSTRIES WE SERVE ACCORDION ── */}
+            <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Industries We Serve
-                </h2>
-                <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+                </motion.h2>
+                <motion.div
+                  className="relative mb-12"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.28fr] gap-6 lg:gap-8 lg:items-stretch">
-                  <div className="rounded-3xl overflow-hidden border border-border h-[360px] lg:h-full">
+                  <motion.div
+                    className="rounded-3xl overflow-hidden border border-primary-foreground/30 h-[360px] lg:h-full lg:min-h-[500px]"
+                    initial={{ opacity: 0, x: -40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
                     <img
                       src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Digital marketing industries"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-[1.04] transition-transform duration-700 ease-out"
                     />
-                  </div>
+                  </motion.div>
 
-                  <div className="space-y-3">
+                  <motion.div
+                    className="space-y-3"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+                  >
                     {marketingIndustries.map((industry) => {
                       const isOpen = openMarketingIndustry === industry.title;
                       return (
@@ -2882,241 +3869,336 @@ const ServiceDetail = () => {
                           <button
                             type="button"
                             onClick={() => setOpenMarketingIndustry(isOpen ? "" : industry.title)}
-                            className="w-full bg-background text-foreground px-6 py-4 flex items-center justify-between text-left"
+                            className="w-full bg-background text-foreground px-6 py-5 flex items-center justify-between text-left hover:bg-accent/10 transition-colors"
                           >
-                            <span className="text-3xl font-medium text-foreground">{industry.title}</span>
+                            <span className="text-2xl md:text-3xl font-medium text-foreground tracking-tight">{industry.title}</span>
                             {isOpen ? (
-                              <ChevronUp size={22} className="text-foreground" />
+                              <ChevronUp size={24} className="text-foreground shrink-0" />
                             ) : (
-                              <ChevronDown size={22} className="text-foreground" />
+                              <ChevronDown size={24} className="text-foreground shrink-0" />
                             )}
                           </button>
                           {isOpen ? (
-                            <div className="bg-background border-t border-border px-6 pb-5 pt-3">
-                              <p className="text-foreground/90 text-xl leading-relaxed">{industry.desc}</p>
-                            </div>
+                            <motion.div
+                              className="bg-background border-t border-border px-6 pb-6 pt-4"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.35, ease: "easeOut" }}
+                            >
+                              <p className="text-foreground/90 text-lg md:text-xl leading-relaxed">{industry.desc}</p>
+                            </motion.div>
                           ) : null}
                         </article>
                       );
                     })}
-                  </div>
+                  </motion.div>
                 </div>
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.02fr] gap-8 lg:gap-10 items-center">
-                  <div className="rounded-3xl overflow-hidden border border-border">
+            {/* ── CUSTOM STRATEGY CALLOUT ── */}
+            <section className="py-16 md:py-24 bg-background">
+              <div className={pageWidthClass}>
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.02fr] gap-8 lg:gap-14 items-center">
+                  <motion.div
+                    className="rounded-3xl overflow-hidden border border-border group"
+                    initial={{ opacity: 0, x: -40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
                     <img
                       src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1400"
                       alt="Custom digital marketing strategy"
-                      className="w-full h-[300px] md:h-[390px] object-cover"
+                      className="w-full h-[320px] md:h-[450px] object-cover hover:scale-[1.04] transition-transform duration-700 ease-in-out"
                     />
-                  </div>
+                  </motion.div>
 
-                  <div className="max-w-3xl">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-5 text-foreground">
-                      Don&apos;t see your industry? <span className="font-normal text-foreground/80">No worries!</span> Contact our team to
-                      craft a custom digital marketing strategy specific to your business model.
+                  <motion.div
+                    className="max-w-3xl"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+                  >
+                    <h3 className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-8 text-foreground">
+                      Don&apos;t see your industry?{" "}
+                      <span className="font-medium text-foreground/70 italic block mt-2">No worries!</span>
                     </h3>
+                    <p className="text-xl md:text-2xl leading-relaxed text-foreground/80 mb-10">
+                      Contact our team to craft a custom digital marketing strategy specific to your business
+                      model. We adapt quickly to entirely new verticals.
+                    </p>
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center h-14 px-8 rounded-md bg-primary text-primary-foreground text-lg font-semibold hover:brightness-110 transition-all"
+                      className="inline-flex items-center justify-center h-16 px-10 rounded-full bg-primary text-primary-foreground text-xl font-bold hover:shadow-[0_0_20px_rgba(var(--primary),0.5)] hover:-translate-y-1 transition-all duration-300"
                     >
-                      Contact Us
+                      Build Your Strategy
                     </a>
-                  </div>
+                  </motion.div>
                 </div>
-              </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8">
+            {/* ── TRANSFORMATION ── */}
+            <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold leading-tight max-w-6xl mb-8 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   How Can Our Marketing Services Transform Your Business?
-                </h2>
-                <div className="relative mb-10">
-                  <div className="h-px bg-border/70" />
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-foreground" />
-                </div>
+                </motion.h2>
+                <motion.div
+                  className="relative mb-12 relative z-10"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                >
+                  <div className="h-px bg-primary-foreground/30" />
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary-foreground" />
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {marketingTransformationBenefits.map((item, index) => (
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 relative z-10"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
+                  {marketingTransformationBenefits.map((item) => (
                     <motion.article
                       key={item.id}
-                      className="rounded-3xl border border-border bg-card p-6 md:p-7 min-h-[230px] text-center"
+                      className="group relative rounded-3xl border border-primary-foreground/20 bg-white/10 p-6 md:p-8 min-h-[250px] text-center overflow-hidden"
                       variants={revealUp}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={scrollViewport}
-                      transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      whileHover={{ y: -8, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as React.CSSProperties
+                      }
                     >
-                      <div className="inline-flex h-10 min-w-10 px-3 rounded-md items-center justify-center bg-primary text-primary-foreground text-lg font-medium mb-5">
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300"
+                        style={{
+                          opacity: "var(--spotlight-opacity)",
+                          background:
+                            "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.15), transparent 70%)",
+                        }}
+                      />
+                      <div className="relative z-10 inline-flex h-12 min-w-12 px-3 rounded-full items-center justify-center bg-background text-primary text-xl font-bold mb-6 shadow-md">
                         {item.id}
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3 text-foreground">{item.title}</h3>
-                      <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{item.desc}</p>
+                      <h3 className="relative z-10 text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
+                      <p className="relative z-10 text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                     </motion.article>
                   ))}
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
+            {/* ── EXPERTISE ── */}
+            <section className="py-16 md:py-24 bg-background">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-12 md:mb-16 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our Experts Have Experience In
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
-                  {marketingExpertiseAreas.slice(0, 8).map((item, index) => {
+                <motion.div
+                  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
+                  {marketingExpertiseAreas.slice(0, 8).map((item) => {
                     const Icon = item.icon;
                     return (
                       <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-border bg-card min-h-[170px] p-6 md:p-7 flex flex-col items-center justify-center text-center text-foreground"
+                        className="group rounded-3xl border border-border/80 hover:border-primary/50 bg-card min-h-[190px] p-6 md:p-8 flex flex-col items-center justify-center text-center text-foreground shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
                         variants={revealUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={scrollViewport}
-                        transition={{ duration: 0.35, delay: index * 0.04, ease: "easeOut" }}
+                        whileHover={{ y: -8, scale: 1.03 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
                       >
-                        <Icon size={38} className="mb-4 text-primary" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
+                        <div className="w-16 h-16 rounded-2xl bg-primary/5 group-hover:bg-primary/10 flex items-center justify-center mb-5 transition-colors duration-300">
+                          <Icon size={32} className="text-primary group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
                   })}
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[920px] mx-auto mt-5">
-                  {marketingExpertiseAreas.slice(8).map((item, index) => {
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[920px] mx-auto mt-6"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
+                  {marketingExpertiseAreas.slice(8).map((item) => {
                     const Icon = item.icon;
                     return (
                       <motion.article
                         key={item.title}
-                        className="rounded-3xl border border-border bg-card min-h-[170px] p-6 md:p-7 flex flex-col items-center justify-center text-center text-foreground"
+                        className="group rounded-3xl border border-border/80 hover:border-primary/50 bg-card min-h-[190px] p-6 md:p-8 flex flex-col items-center justify-center text-center text-foreground shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
                         variants={revealUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={scrollViewport}
-                        transition={{ duration: 0.35, delay: index * 0.05, ease: "easeOut" }}
+                        whileHover={{ y: -8, scale: 1.03 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
                       >
-                        <Icon size={38} className="mb-4 text-primary" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
+                        <div className="w-16 h-16 rounded-2xl bg-primary/5 group-hover:bg-primary/10 flex items-center justify-center mb-5 transition-colors duration-300">
+                          <Icon size={32} className="text-primary group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
                   })}
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
+            {/* ── HOW WE WORK ── */}
+            <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-12 md:mb-16 text-primary-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   How We Work: The Secret to Our Success
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
-                  {marketingWorkflowCards.map((item, index) => (
+                <motion.div
+                  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 relative z-10"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
+                  {marketingWorkflowCards.map((item) => (
                     <motion.article
                       key={item.title}
-                      className="rounded-3xl border border-primary-foreground/20 bg-white/10 overflow-hidden"
+                      className="group relative rounded-3xl border border-primary-foreground/20 bg-white/10 overflow-hidden"
                       variants={revealUp}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={scrollViewport}
-                      transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+                      onMouseMove={handleProcessSpotlightMove}
+                      onMouseLeave={handleProcessSpotlightLeave}
+                      style={
+                        {
+                          "--spotlight-x": "50%",
+                          "--spotlight-y": "50%",
+                          "--spotlight-opacity": "0",
+                        } as React.CSSProperties
+                      }
                     >
-                      <img src={item.image} alt={item.title} className="w-full h-[180px] object-cover" />
-                      <div className="p-6 text-center">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-3 text-primary-foreground">{item.title}</h3>
+                      <div
+                        className="pointer-events-none absolute inset-0 transition-opacity duration-300 z-10"
+                        style={{
+                          opacity: "var(--spotlight-opacity)",
+                          background:
+                            "radial-gradient(220px circle at var(--spotlight-x) var(--spotlight-y), rgba(255, 255, 255, 0.2), transparent 80%)",
+                        }}
+                      />
+                      <div className="overflow-hidden">
+                        <img src={item.image} alt={item.title} className="w-full h-[200px] object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" />
+                      </div>
+                      <div className="p-6 md:p-8 text-center relative z-20">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4 text-primary-foreground">{item.title}</h3>
                         <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90">{item.desc}</p>
                       </div>
                     </motion.article>
                   ))}
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-background">
-              <motion.div
-                className={pageWidthClass}
-                variants={revealUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={scrollViewport}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-foreground">
+            {/* ── WHY CHOOSE US ── */}
+            <section className="py-16 md:py-24 bg-background">
+              <div className={pageWidthClass}>
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-12 md:mb-16 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Why Choose Us
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
-                  {marketingWhyChooseUs.map((item, index) => {
+                <motion.div
+                  className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
+                  {marketingWhyChooseUs.map((item) => {
                     const Icon = item.icon;
                     return (
                       <motion.article
                         key={item.title}
-                        className="rounded-3xl bg-card border border-border text-foreground p-6 md:p-7 min-h-[170px] flex flex-col items-center justify-center text-center"
+                        className="group rounded-3xl bg-card border border-border/70 hover:border-primary/40 text-foreground p-6 md:p-8 min-h-[190px] flex flex-col items-center justify-center text-center shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
                         variants={revealUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={scrollViewport}
-                        transition={{ duration: 0.35, delay: index * 0.05, ease: "easeOut" }}
+                        whileHover={{ y: -8, scale: 1.03 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
                       >
-                        <Icon size={38} className="mb-4 text-primary" />
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold leading-snug">{item.title}</h3>
+                        <div className="w-16 h-16 rounded-2xl bg-primary/5 group-hover:bg-primary/10 flex items-center justify-center mb-5 transition-colors duration-300">
+                          <Icon size={32} className="text-primary group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-heading font-bold leading-snug">{item.title}</h3>
                       </motion.article>
                     );
                   })}
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-card">
+            {/* ── PROJECTS & SUCCESS STORIES CAROUSEL ── */}
+            <section className="py-16 md:py-24 bg-card">
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-3xl md:text-4xl font-heading font-bold mb-10 md:mb-14 text-foreground">
+                <motion.h2
+                  className="text-3xl md:text-4xl font-heading font-bold mb-12 md:mb-16 text-foreground"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Our Projects &amp; Success Stories
-                </h2>
+                </motion.h2>
 
                 <div className="grid grid-cols-1 xl:grid-cols-[1fr_auto_1.1fr_auto] gap-8 md:gap-10 items-center">
-                  <div className="max-w-3xl">
-                    <h3 className="text-2xl md:text-3xl font-heading font-semibold leading-snug mb-6">
+                  <motion.div
+                    className="max-w-3xl overflow-hidden"
+                    key={`text-${activeMarketingProjectIndex}`}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                  >
+                    <h3 className="text-3xl md:text-4xl font-heading font-semibold leading-snug mb-6">
                       {activeMarketingProject.summaryTitle}
                     </h3>
                     <p className="text-lg md:text-xl leading-relaxed text-foreground/95">
                       {activeMarketingProject.summary}
                     </p>
-                  </div>
+                  </motion.div>
 
                   <button
                     type="button"
@@ -3125,24 +4207,32 @@ const ServiceDetail = () => {
                         prev === 0 ? marketingProjectStories.length - 1 : prev - 1,
                       )
                     }
-                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
+                    className="mx-auto xl:mx-0 w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 inline-flex items-center justify-center shadow-md transition-all duration-300"
                     aria-label="Previous project"
                   >
-                    <ArrowLeft size={18} />
+                    <ArrowLeft size={20} />
                   </button>
 
-                  <div className="w-full">
-                    <div className="rounded-[14px] overflow-hidden border border-border bg-background p-4 md:p-6">
+                  <motion.div
+                    className="w-full relative group"
+                    key={`img-${activeMarketingProjectIndex}`}
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                  >
+                    <div className="rounded-[20px] overflow-hidden border border-border/80 bg-background shadow-md group-hover:shadow-xl transition-shadow duration-500">
                       <img
                         src={activeMarketingProject.image}
                         alt={activeMarketingProject.title}
-                        className="w-full h-[250px] md:h-[340px] object-cover rounded-md"
+                        className="w-full h-[320px] md:h-[450px] object-cover"
                       />
                     </div>
-                    <h4 className="text-center text-4xl md:text-5xl font-heading font-bold mt-5 text-foreground">
-                      {activeMarketingProject.title}
-                    </h4>
-                  </div>
+                    <div className="absolute inset-x-4 bottom-4 inset-y-auto pt-16 pb-6 px-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-[16px] pointer-events-none">
+                      <h4 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2 leading-tight">
+                        {activeMarketingProject.title}
+                      </h4>
+                    </div>
+                  </motion.div>
 
                   <button
                     type="button"
@@ -3151,31 +4241,46 @@ const ServiceDetail = () => {
                         prev === marketingProjectStories.length - 1 ? 0 : prev + 1,
                       )
                     }
-                    className="mx-auto xl:mx-0 w-10 h-10 rounded-full bg-primary-foreground text-primary inline-flex items-center justify-center"
+                    className="mx-auto xl:mx-0 w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 inline-flex items-center justify-center shadow-md transition-all duration-300"
                     aria-label="Next project"
                   >
-                    <ArrowRight size={18} />
+                    <ArrowRight size={20} />
                   </button>
                 </div>
               </div>
             </section>
 
-            <section className="py-16 md:py-20 bg-primary">
+            {/* ── TESTIMONIALS ── */}
+            <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
               <div className={pageWidthClass}>
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-center mb-10 md:mb-12 text-primary-foreground">
+                <motion.h2
+                  className="text-3xl md:text-5xl font-heading font-bold text-center mb-12 md:mb-16 text-primary-foreground relative z-10"
+                  initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
                   Testimonials
-                </h2>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 relative z-10"
+                  variants={staggerCards}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                >
                   {marketingTestimonials.map((item) => (
-                    <SocialTestimonialCard
-                      key={item.name}
-                      quote={item.quote}
-                      name={item.name}
-                      role={item.role}
-                    />
+                    <motion.div key={item.name} variants={revealUp}>
+                      <SocialTestimonialCard
+                        quote={item.quote}
+                        name={item.name}
+                        role={item.role}
+                      />
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </section>
           </>

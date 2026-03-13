@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
+import { Plus } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,7 +8,10 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-heading font-bold text-gradient mb-3">Pravaah Consulting</h3>
+            <div className="flex items-center gap-0.5 text-foreground hover:text-primary transition-colors mb-3">
+              <Plus strokeWidth={4} className="h-6 w-6 text-primary" />
+              <span className="font-heading font-black text-2xl tracking-tighter mt-1">plus</span>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Empowering businesses with Agentic AI, digital transformation, and innovative technology solutions.
             </p>
@@ -35,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Pravaah Consulting. All rights reserved.
+          © {new Date().getFullYear()} plus Consulting. All rights reserved.
         </div>
       </div>
     </footer>

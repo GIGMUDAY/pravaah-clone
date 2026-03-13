@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -18,16 +18,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo - dot grid */}
-        <a href="/#home" className="flex items-center">
-          <div className="grid grid-cols-2 gap-1.5">
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-          </div>
+        {/* Logo - +plus */}
+        <a href="/#home" className="flex items-center gap-0.5 text-foreground hover:text-primary transition-colors">
+          <Plus strokeWidth={4} className="h-6 w-6 text-primary" />
+          <span className="font-heading font-black text-2xl tracking-tighter mt-1">plus</span>
         </a>
 
         {/* Desktop nav */}
